@@ -1,0 +1,276 @@
+.modal-title-structure {
+  font-size: 2.4rem;
+  font-family: var(--primary-font-family);
+  color: var(--not-active-font-color);
+  font-weight: var(--primary-font-weight);
+  text-shadow: 0rem 0.2rem 0rem var(--secondary-font-color);
+  text-align: center;
+}
+
+.bright-font {
+  color: var(--primary-font-color);
+}
+
+.darking-font {
+  color: var(--not-active-font-color);
+}
+
+/* -------------showcase */
+
+.box-headline {
+  margin-top: 0.96rem;
+  width: 100%;
+  height: 2.9rem;
+  color: var(--secondary-font-color);
+  font-family: var(--primary-font-family);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.input-box {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  color: var(--placeholder-form-font-color);
+  background: #d9d9d9;
+  height: 5rem;
+  font-family: var(--placeholder-form-font);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #d9d9d9;
+}
+
+.coming-soon {
+  font-family: var(--primary-font-family);
+  color: #676767;
+  background-color: #d9d9d9;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: var(--primary-font-weight);
+  line-height: 1.1rem;
+}
+/* ===================================== Green button ============================== */
+.btn {
+  box-shadow: 0rem 0.5rem 0.1rem 0rem rgba(0, 0, 0, 0.6);
+  border: 0.4rem solid var(--black-001);
+  border-radius: 0.8rem;
+}
+.green-btn {
+  background: var(--green-button-outer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.green-btn span {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+}
+.green-btn::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background: var(--green-button-inner);
+  border-radius: 0.8rem;
+}
+.red-button {
+  background: var(--red-button-outer);
+}
+
+.add-squaddie-btn {
+  margin-top: 3rem;
+  margin-right: 3.4rem;
+  margin-left: 3rem;
+  width: 28.5rem;
+  height: 5rem;
+  color: var(--white-001);
+  font-size: 3.3rem;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  line-height: 3.9rem;
+  letter-spacing: 0.1rem;
+  text-shadow: var(--text-outline);
+}
+.add-squaddie-btn span {
+  margin-top: 0.2rem;
+}
+.add-squaddie-btn::after {
+  top: -3.7rem;
+  width: 27.4rem;
+  height: 3.4rem;
+  filter: blur(1px);
+  border-radius: 0.8rem;
+}
+
+/* .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 23.6rem;
+      border-radius: 0.8rem;
+      background: var(
+        --green-button-outer,
+        linear-gradient(180deg, #66fa73 0%, #0d8011 100%)
+      );
+      box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.6);
+      border: 0.4rem solid #000;
+    }
+    .mid-btn-container {
+      display: flex;
+      justify-content: center;
+      background: var(
+        --green-button-inner,
+        linear-gradient(180deg, #3dbe42 0%, #3bb827 100%)
+      );
+      border-radius: 0.8rem 0.8rem 0.4rem 0.4rem;
+      width: 100%;
+    }
+    
+    .create-account-btn {
+      display: flex;
+      height: 3.6rem;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--primary-font-color);
+      background-color: #3bb827;
+      -webkit-text-stroke: black 0.85px;
+      font-family: var(--primary-font-family);
+      font-size: 3rem;
+      font-weight: var(--primary-font-weight);
+      letter-spacing: 0.09rem;
+      border: 1px #3bb827 solid;
+    } */
+
+/* ====== stats component =================== */
+
+.modal-stats-items-container {
+  width: 78rem;
+  height: fit-content;
+  background: var(--white-001);
+  display: grid;
+  column-gap: 2.1rem;
+  row-gap: 2.1rem;
+  grid-template-columns: repeat(5, 1fr) ;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.stats-item-box {
+  width: 14rem;
+  height: 14rem;
+  border: 0.3rem solid var(--black-001);
+  display: flex;
+  flex-direction: column;  
+}
+
+.stats-item-value {
+  display: flex;
+  justify-content: center;
+  height: 8.7rem;  
+  color: #000;  
+  background: var(--white-001);
+  align-items: center;
+  font-family: var(--primary-font-family);
+  font-size: 7.2rem;
+  font-weight: var(--primary-font-weight);
+}
+
+.stats-item-category {  
+  height: 5rem;
+  width: 100%;
+  background: var(--black-001);
+  color: var(--primary-font-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-font-family);
+  font-size: var(--login-title-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 1.9rem;
+  padding: 0.9rem 3.3rem;
+  align-self: flex-end;
+}
+
+.stats-item-box:first-child {
+  grid-row: span 2; 
+  width: 14rem;
+  /* height: 31rem; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: space-between;
+  align-items: center;
+  color: #000; 
+  /* height: 100%; */
+  font-family: var(--primary-font-family);  
+  font-weight: var(--primary-font-weight);
+}
+
+.stats-item-first-box-inner {  
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-item-box h4 {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 2rem;
+  line-height: 1.9rem;
+}
+
+.favorite-squaddie-values-container {
+  display: flex;
+  gap: .25em;
+  justify-content: center; 
+  align-items: center;
+  height: 2.3rem;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.favorite-squaddie-icon-precision {
+  /* display: flex; */
+  color: #000;
+  width: 1.4rem;
+  height: 1.4rem; 
+  background-image: url('../../public/assets/images_modal/precision.png'); 
+  background-repeat: no-repeat;
+
+}
+
+.favorite-squaddie-icon-kills {  
+  display: flex;
+  color: #000;
+  width: 1.4rem;
+  height: 1.2rem; 
+  background-image: url('../../public/assets/images_modal/kills.png');    
+  background-repeat: no-repeat;
+
+}
+
+.modal-stats-character-image {
+  display: flex;
+    width: 10.3rem;
+    height: 17.5rem;   
+    /* flex-shrink: 0; */
+}
+
+.image-bald-survivor {
+  background-image: url('../../public/assets/images_modal/character_skinner.png');
+  width: 100%;
+  height: 100%;    
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}

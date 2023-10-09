@@ -1,0 +1,13 @@
+:root {
+    --font-family: "Poppins", sans-serif;
+    --font-size: "2rem";
+    --primary-font-weight: 700;
+    --login-title-font-size: 2.4rem;
+    --primary-bg-color: #fff;
+    --primary-font-color: #000;
+    --home-nav-font-color: #fff;
+    --placeholder-form-font-color: #8f8f8f;
+    --primary-color: #ffbc00;
+    --secondary-color-dark: #333;
+    --secondary-color-light: #555;
+}
