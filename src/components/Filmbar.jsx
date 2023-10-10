@@ -1,17 +1,11 @@
 import { nanoid } from "nanoid";
-// import { useScenes } from './ScenesContext';
 import { useState, useEffect } from "react";
-
-// import { nanoid } from "nanoid";
-// import { useScenes } from './ScenesContext';
 
 const Filmbar = ({getRandomScene}) => {
   const [logos, setLogos] = useState([]);
 
-  // const { getRandomScene } = useScenes();
-
   const altToRomanNumeral = (altText) => {
-    console.log("altText", altText)
+    // console.log("altText", altText)
     const altToRomanMap = {
       episode01: 'I',
       episode02: 'II',
@@ -24,7 +18,7 @@ const Filmbar = ({getRandomScene}) => {
       episode09: 'IX',
     };
   
-    console.log("altToRomanMap[altText]", altToRomanMap[altText])
+    // console.log("altToRomanMap[altText]", altToRomanMap[altText])
 
       return altToRomanMap[altText];
 
@@ -35,7 +29,7 @@ const Filmbar = ({getRandomScene}) => {
     for (let i = 0; i < 9; i++) {
       logoArr.push({
         id: nanoid(),
-        src: `../../src/assets/films/logo_episode0${i + 1}.png`,
+        src: `../../src/assets/logos/logo_episode0${i + 1}.png`,
         alt: `episode0${i + 1}`,
       });
     }
@@ -44,35 +38,24 @@ const Filmbar = ({getRandomScene}) => {
   }, []);
 
   return (
-    <nav className="main-nav">
+   <>
       {logos && (
         <ul>
           {logos.map((logo) => {
             // const isCurrentFilm = doesFilmTitleContainAlt(displayedFilm, logo.alt);
-
             return (
               <li key={logo.id}>
                 <img
-                  className="logo"
+                  className="film-logo"
                   src={logo.src}
                   alt={logo.alt}
-                  onClick={() => {getRandomScene(altToRomanNumeral(logo.alt))}} />
-                    {/* () => {
-                    handleLogoClick(
-                      logo.alt,
-                       isCurrentFilm,
-                       getRandomScene
-                       ); }
-                       Pass isCurrentFilm for scoring
-                  }
-                /> */}
-                {/* {isCurrentFilm && <span> (Current Film)</span>} */}
+                  onClick={() => {getRandomScene(altToRomanNumeral(logo.alt))}} />                 
               </li>
             );
           })}
         </ul>
       )}
-    </nav>
+    </>
   );
 };
 

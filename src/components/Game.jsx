@@ -1,18 +1,31 @@
-// import React, { useState } from 'react';
-import Filmbar from './Filmbar';
-import DisplayImage from './DisplayImage';
-import Score from './Score';
-import { useScenes } from './ScenesContext';
+import Filmbar from "./Filmbar";
+import DisplayImage from "./DisplayImage";
+import Score from "./Score";
+import Loading from "./Loading";
+
+import { useScenes } from "./ScenesContext";
+import { useEffect, useState } from "react";
 
 const Game = () => {
-  const { getRandomScene, displayedScene, score } = useScenes();
-  
-    return (
-    <div>
-      <Score score={score}/>
-      <Filmbar getRandomScene={getRandomScene}/>
-      <DisplayImage selectedScene={displayedScene}/>
-    </div>
+  const { getRandomScene, displayedScene, score, isLoading } = useScenes();
+  const [isGameOver, setIsGameOver] = useState(false);
+
+  useEffect(() => {}, []);
+
+  return (
+    <>
+      { isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <nav className="main-nav">
+            <Score score={score} />
+            <Filmbar getRandomScene={getRandomScene} />
+          </nav>
+          <DisplayImage selectedScene={displayedScene} />
+        </>
+      )}
+    </>
   );
 };
 
