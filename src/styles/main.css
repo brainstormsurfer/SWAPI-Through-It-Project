@@ -362,7 +362,19 @@ p.lead {
 .quiz-title span {    
   font-family: 'SfDistantGalaxy', sans-serif;
   color: #fbff00;
-  font-size: 7rem;
+  font-size: 7rem;  
+}
+.quiz-title .span {
+  padding-right: 1rem;
+}
+.quiz-title .special-s {
+  font-family: "Star Wars", sans-serif;
+  font-size: 6rem;
+  margin-left: 4rem;
+  margin-right: .2rem;
+  margin-top: .9rem;
+  display: flex;
+  align-items: center;  
 }
 
 

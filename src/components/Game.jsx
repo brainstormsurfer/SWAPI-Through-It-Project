@@ -31,7 +31,10 @@ const Game = () => {
         <Loading />
       ) : (
         <>
-          <h4 className="quiz-title">The Ultimate  <span>Star Wars</span> Quiz</h4>
+          <h4 className="quiz-title">
+            The Ultimate
+            <span className="special-s">S</span>
+          <span className="span">tar Wars</span> Quiz</h4>
           <nav className="main-nav">
             <Filmbar getRandomScene={getRandomScene}  decrementCounter={decrementCounter} />
           </nav>
