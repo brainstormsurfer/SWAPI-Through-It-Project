@@ -338,13 +338,19 @@ p.lead {
   cursor: pointer;
 }
 .quiz-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-wrap: nowrap;
   font-size: 6rem;
   font-family: 'SoloistHalftone', sans-serif;
   height: 8rem;
+  min-height: 8rem;
   color: #ffffff;  
   font-weight: 100;
+  white-space: nowrap;
 }
-.quiz-title span {
+.quiz-title span {    
   font-family: 'SfDistantGalaxy', sans-serif;
   color: #fbff00;
   font-size: 7rem;
@@ -371,6 +377,9 @@ p.lead {
   gap: 1.2rem;
   height: 10rem;
   align-items: center;
+}
+.main-nav li {
+  min-width: 15rem;
 }
 
 .film-logo {
@@ -487,8 +496,8 @@ main {
     box-shadow: inset 0px 0px 0px 0px transparent;
   }
   50% {
-    box-shadow: inset 0px 0px 30px 0px #001aff, 0px 0px 23px 0px #fff;
-    color: #1024da;
+    box-shadow: inset 0px 0px 30px 0px #1325c9, 0px 0px 23px 0px #fff;
+    color: #265bec;
   }
 }
 
