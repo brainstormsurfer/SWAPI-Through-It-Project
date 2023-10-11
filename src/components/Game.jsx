@@ -5,48 +5,58 @@ import Loading from "./Loading";
 
 import { useScenes } from "./ScenesContext";
 import { useEffect, useState } from "react";
-import QuizCounter from "./QuizCounter"; 
+import QuizCounter from "./QuizCounter";
 
 const Game = () => {
-  const { getRandomScene, displayedScene, score, isLoading, setIsLoading } = useScenes();
+  const { getRandomScene, displayedScene, score, isLoading, setIsLoading } =
+    useScenes();
   const [quizCounter, setQuizCounter] = useState(10);
-  
+
   const decrementCounter = () => {
     if (quizCounter > 0) {
       setQuizCounter(quizCounter - 1);
     }
-    //  else {
-
-    // }
   };
 
-  useEffect(() => {    
-    console.log("isLoading", isLoading)
-      setIsLoading(false)      
+  useEffect(() => {
+    console.log("isLoading", isLoading);
+    setIsLoading(false);
   }, []);
 
   return (
     <>
-      { isLoading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
           <h4 className="quiz-title">
             The Ultimate
             <span className="special-s">S</span>
-          <span className="span">tar Wars</span> Quiz</h4>
+            <span className="span">tar Wars</span> Quiz
+          </h4>
           <nav className="main-nav">
-            <Filmbar getRandomScene={getRandomScene}  decrementCounter={decrementCounter} />
+            <Filmbar
+              getRandomScene={getRandomScene}
+              decrementCounter={decrementCounter}
+            />
           </nav>
           <div className="showcase">
             <section className="container left-container">
-              <Score score={score} />
+              {/* className={`container left-container ${quizCounter > 0 ? '' : 'shrink'}`} > */}
+              <Score score={score}  quizCounter={quizCounter}/>
             </section>
-            <DisplayImage selectedScene={displayedScene} />
+            <DisplayImage
+              selectedScene={displayedScene}
+              quizCounter={quizCounter}
+            />
             <section className="container right-container">
-             <div>
-      <QuizCounter quizCounter={quizCounter} decrementCounter={decrementCounter} />
-    </div>
+              {/* className={`container right-container ${quizCounter > 0 ? '' : 'shrink'}`} >              */}
+              <div>
+                <QuizCounter
+                  quizCounter={quizCounter}
+                  decrementCounter={decrementCounter}
+                />
+              </div>
             </section>
           </div>
         </>
