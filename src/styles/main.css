@@ -3,14 +3,17 @@
 
 @font-face {
   font-family: DistantGalaxy;
-  /* font-weight: bold; */
   src: url("../assets/fonts/SfDistantGalaxy-0l3d.ttf") format("opentype");
 }
 
 @font-face {
   font-family: Soloist3D;
-  /* font-weight: bold; */
   src: url("../assets/fonts/Soloist3D-3vP6.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SoloistHalftone;
+  src: url("../assets/fonts/SoloistHalftone-l6ny.otf") format("opentype");
 }
 
 @font-face {
@@ -19,10 +22,17 @@
   src: url("../assets/fonts/Starjedi.ttf") format("opentype");
 }
 
+@font-face {
+  font-family: SfDistantGalaxy;
+  font-weight: bold;
+  src: url("../assets/fonts/SfDistantGalaxy-0l3d.ttf") format("opentype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;  
+  border: 2px solid red;
 }
 
 .loading {
@@ -50,7 +60,7 @@
 }
 
 body {  
-  padding: 3rem 1rem;
+  padding: 0 1rem;
   font-family: var(--font-family);
   background-image: url("../assets/background-stars-desktop.jpeg");
   background-size: cover;
@@ -66,10 +76,36 @@ li {
   list-style: none;
 }
 
-h2,
-h3,
-h4 {
-  /* text-transform: uppercase; */
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 45rem;  
+  height: 100%;
+  margin-top: 15rem;
+}
+.container-right,
+.left-container {  
+  display: flex;
+  justify-content: center;
+  width: 25rem;    
+}
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fbff00;
+  font-family: "SfDistantGalaxy", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  background: transparent;
+  position: relative;
 }
 
 /* 
@@ -301,6 +337,24 @@ p.lead {
   color: var(--home-nav-font-color);
   cursor: pointer;
 }
+.quiz-title {
+  font-size: 6rem;
+  font-family: 'SoloistHalftone', sans-serif;
+  height: 8rem;
+  color: #ffffff;  
+  font-weight: 100;
+}
+.quiz-title span {
+  font-family: 'SfDistantGalaxy', sans-serif;
+  color: #fbff00;
+  font-size: 7rem;
+}
+
+
+
+
+
+
 
 .main-nav {  
   width: 100%;
@@ -343,15 +397,6 @@ main {
   height: 55rem;
   border-radius: 25px;
 }
-/* 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1.5rem;
-  margin: auto;
-  max-width: 60%;
-} */
 
 .scene {
   width: 100%;
@@ -391,7 +436,8 @@ main {
   z-index: 2;
 }
 
-.score-value {
+.score-value,
+.counter h3 {
   display: flex;
   justify-content: center;
   font-family: "DistantGalaxy", sans-serif;
@@ -407,9 +453,9 @@ main {
   border-radius: 50%;
   animation: greenScore 3s ease-in-out forwards alternate-reverse;
 }
-.blueEffect {
+.redEffect {
   border-radius: 50%;
-  animation: blueScore 3s ease-in-out forwards alternate-reverse;
+  animation: redScore 3s ease-in-out forwards alternate-reverse;
 }
 
 @keyframes greenScore {
@@ -422,13 +468,27 @@ main {
   }
 }
 
-@keyframes blueScore {
+@keyframes redScore {
   0% {
     box-shadow: inset 0px 0px 0px 0px transparent;
   }
   50% {
-    box-shadow: inset 0px 0px 30px 0px #0026ff, 0px 0px 23px 0px #fff;
-    color: #102eda;
+    box-shadow: inset 0px 0px 30px 0px #ff0000, 0px 0px 23px 0px #fff;
+    color: #da1010;
+  }
+}
+
+.blueEffect {
+  border-radius: 50%;
+  animation: blueCount 3s ease-in-out forwards alternate-reverse;
+}
+@keyframes blueCount {
+  0% {
+    box-shadow: inset 0px 0px 0px 0px transparent;
+  }
+  50% {
+    box-shadow: inset 0px 0px 30px 0px #001aff, 0px 0px 23px 0px #fff;
+    color: #1024da;
   }
 }
 
@@ -447,7 +507,7 @@ main {
   width: 100rem;
   height: 20rem;
   content: "Hover for a Hint";
-  font-family: "DistantGalaxy", sans-serif;
+  /* font-family: "DistantGalaxy", sans-serif; */
   color: #fbff00;
   text-align: center;
   align-items: center;
@@ -472,11 +532,11 @@ main {
   content: "Hover for a Hint";
   font-family: "DistantGalaxy", sans-serif;
   width: 100%;
-  height: 100%;
-  color: #fbff00;
+  height: 25rem;
+  color: #ffffff;
   /* text-align: center; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   backdrop-filter: blur(25px);
   font-size: 6rem;
@@ -491,13 +551,15 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
   padding: 1rem;
-  color: #fbff00;
+  color: #ffee00;
   background: #000;
   width: 100%;
-  height: 100%;
-  font-size: 2rem;
+  height: min-content;
+  max-height: 25rem;
+  font-size: 2.2rem;
   font-family: "Soloist3D", sans-serif;
 }
 

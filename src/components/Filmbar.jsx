@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 
-const Filmbar = ({getRandomScene}) => {
+const Filmbar = ({getRandomScene , decrementCounter}) => {
   const [logos, setLogos] = useState([]);
 
   const altToRomanNumeral = (altText) => {
@@ -18,7 +18,6 @@ const Filmbar = ({getRandomScene}) => {
       episode09: 'IX',
     };
   
-    // console.log("altToRomanMap[altText]", altToRomanMap[altText])
 
       return altToRomanMap[altText];
 
@@ -49,7 +48,10 @@ const Filmbar = ({getRandomScene}) => {
                   className="film-logo"
                   src={logo.src}
                   alt={logo.alt}
-                  onClick={() => {getRandomScene(altToRomanNumeral(logo.alt))}} />                 
+                  onClick={() => {
+                    decrementCounter();
+                    getRandomScene(altToRomanNumeral(logo.alt));
+                  }} />  
               </li>
             );
           })}

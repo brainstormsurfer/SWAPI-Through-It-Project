@@ -5,12 +5,25 @@ import Loading from "./Loading";
 
 import { useScenes } from "./ScenesContext";
 import { useEffect, useState } from "react";
+import QuizCounter from "./QuizCounter"; 
 
 const Game = () => {
-  const { getRandomScene, displayedScene, score, isLoading } = useScenes();
-  const [isGameOver, setIsGameOver] = useState(false);
+  const { getRandomScene, displayedScene, score, isLoading, setIsLoading } = useScenes();
+  const [quizCounter, setQuizCounter] = useState(10);
+  
+  const decrementCounter = () => {
+    if (quizCounter > 0) {
+      setQuizCounter(quizCounter - 1);
+    }
+    //  else {
 
-  useEffect(() => {}, []);
+    // }
+  };
+
+  useEffect(() => {    
+    console.log("isLoading", isLoading)
+      setIsLoading(false)      
+  }, []);
 
   return (
     <>
@@ -18,11 +31,21 @@ const Game = () => {
         <Loading />
       ) : (
         <>
+          <h4 className="quiz-title">The Ultimate  <span>Star Wars</span> Quiz</h4>
           <nav className="main-nav">
-            <Score score={score} />
-            <Filmbar getRandomScene={getRandomScene} />
+            <Filmbar getRandomScene={getRandomScene}  decrementCounter={decrementCounter} />
           </nav>
-          <DisplayImage selectedScene={displayedScene} />
+          <div className="showcase">
+            <section className="container left-container">
+              <Score score={score} />
+            </section>
+            <DisplayImage selectedScene={displayedScene} />
+            <section className="container right-container">
+             <div>
+      <QuizCounter quizCounter={quizCounter} decrementCounter={decrementCounter} />
+    </div>
+            </section>
+          </div>
         </>
       )}
     </>

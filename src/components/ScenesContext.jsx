@@ -10,7 +10,8 @@ export const ScenesProvider = ({ children }) => {
   const [displayedFilm, setDisplayedFilm] = useState(null);
   const [score, setScore] = useState(0)
   const [isLoading, setIsLoading] = useState(true);
-
+  const [quizCounter, setQuizCounter] = useState(0)
+  const [sceneInfo, setSceneInfo] = useState(null)
 
   useEffect(() => {
     // Flatten the scenes from all movies into a single array
@@ -35,32 +36,17 @@ export const ScenesProvider = ({ children }) => {
       console.log("displayedScene.film", displayedScene.film)
       setScenes(newScenes);
       setDisplayedScene(displayedScene);
-      setDisplayedFilm(displayedScene.film); // Set the displayed film
-      setIsLoading(false)
+      setDisplayedFilm(displayedScene.film); // Set the displayed film      
     }
   }, []);
 
   const getRandomScene = (episode) => {
     console.log("episode", episode)
-    // if (game.length === 0) {
-    //   setDisplayedScene(null);
-    //   setDisplayedFilm(null);
-    //   return;
-    // }
-
-    if (scenes.length === 0) {
-      setDisplayedScene(null);
-      setDisplayedFilm(null);
-      return;
-    }
 
     if (episode)
-    if (displayedFilm.includes(` ${episode} `)) {
-      console.log("call sore correct")
+    if (displayedFilm.includes(` ${episode} `)) {      
       setScore(prev => prev + 1)
-      // setIsChanged(true);
-        // console.log("episode1", episode)
-        // console.log("displayedFilm1", displayedFilm)
+      setQuizCounter(prev => prev + 1)
     }  else {
       console.log("call socre wrong")
       // setIsChanged(false);
@@ -76,6 +62,7 @@ export const ScenesProvider = ({ children }) => {
     setScenes(newScenes);
     setDisplayedScene(newScene);
     setDisplayedFilm(newScene.film);
+    // setIsLoading(false)
   };
 
   // const contextValue = {
@@ -86,7 +73,7 @@ export const ScenesProvider = ({ children }) => {
   // };
 
   return (
-    <ScenesContext.Provider value={{score, displayedScene, displayedFilm, getRandomScene, isLoading}}>
+    <ScenesContext.Provider value={{score, displayedScene, displayedFilm, getRandomScene, isLoading, setIsLoading, quizCounter}}>
       {children}
     </ScenesContext.Provider>
   );

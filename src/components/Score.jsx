@@ -10,7 +10,7 @@ const Score = ({ score }) => {
   return (
     <div className='score'>
       <h2>Score</h2>
-      <h2 className={`score-value ${isChanged ? 'greenEffect' : 'blueEffect'}`}>
+      <h2 className={`score-value ${isChanged ? 'greenEffect' : 'redEffect'}`}>
         {score}
       </h2>
     </div>
