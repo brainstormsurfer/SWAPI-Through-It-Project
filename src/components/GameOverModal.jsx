@@ -1,15 +1,35 @@
-const GameOverModal = () => {
-  return (
-    <div className="game-over">
-    <div className="darken-filter">
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-        <h2>one1</h2>
-      <div className="modal-showcase-container">
-            <h2>three1</h2>
-        </div>
-        <h2>one2</h2>
-    </div>
-    </div>
-  );
-};
-export default GameOverModal;
+
+
+const GameOverModal = ({ allQuizScenes, score }) => {
+    const sliderSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
+  
+    return (
+      <div className="scene-container">
+        <h2>{score} scenes were correct</h2>
+        <Slider {...sliderSettings}>
+          {allQuizScenes.map((scene) => (
+            <div key={scene.id}>                
+              <img 
+              className="mini-scene" 
+              src={scene.image} 
+              alt="" />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    );
+  };
+  
+  export default GameOverModal;
+  

@@ -9,9 +9,7 @@ export const ScenesProvider = ({ children }) => {
   const [displayedScene, setDisplayedScene] = useState(null);
   const [displayedFilm, setDisplayedFilm] = useState(null);
   const [score, setScore] = useState(0)
-  const [isLoading, setIsLoading] = useState(true);
   const [quizCounter, setQuizCounter] = useState(0)
-  const [sceneInfo, setSceneInfo] = useState(null)
 
   useEffect(() => {
     // Flatten the scenes from all movies into a single array
@@ -73,7 +71,7 @@ export const ScenesProvider = ({ children }) => {
   // };
 
   return (
-    <ScenesContext.Provider value={{score, displayedScene, displayedFilm, getRandomScene, isLoading, setIsLoading, quizCounter}}>
+    <ScenesContext.Provider value={{score, displayedScene, displayedFilm, getRandomScene, quizCounter}}>
       {children}
     </ScenesContext.Provider>
   );

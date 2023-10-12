@@ -1,22 +1,22 @@
+
 import Hint from "./Hint";
 
-const DisplayImage = ({ selectedScene, quizCounter }) => {
+const DisplayImage = ({selectedScene, quizCounter}) => {
+
   return (
-    <main>
+    <div className={`scene-container ${quizCounter > 0 ? '' : 'expand'}`}>
       {selectedScene && (
-        <div
-          className={`scene-container ${
-            quizCounter > 0 ? "" : "expand"
-          }`}
-        >
-          {/* <div className="scene-container"> */}
-          {quizCounter > 0 && (
-            <img className="scene" src={selectedScene?.image} alt="Random" />
-          )}
+        <div>
+        {/* <div className="scene-container"> */}
+          { quizCounter > 0 &&          
+          <img className="scene" src={selectedScene?.image} alt="" />
+          }
         </div>
       )}
-      {quizCounter > 0 && <Hint description={selectedScene?.description} />}
-    </main>
+      { quizCounter > 0 &&                    
+          <Hint description={selectedScene?.description} />
+      }
+    </div>
   );
 };
 
