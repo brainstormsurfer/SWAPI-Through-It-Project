@@ -8,7 +8,7 @@ import GameOverModal from "./GameOverModal";
 import { useScenes } from "./ScenesContext";
 
 const Game = () => {
-  const {getRandomScene, displayedScene, score } = useScenes();
+  const { getRandomScene, displayedScene, score } = useScenes();
   const [isLoading, setIsLoading] = useState(true);
   const [quizCounter, setQuizCounter] = useState(10);
   const [showGameOverModal, setShowGameOverModal] = useState(false);
@@ -21,30 +21,31 @@ const Game = () => {
   };
 
   useEffect(() => {
-    if (displayedScene) setIsLoading(false);
+    if (displayedScene && getRandomScene) {
+      const delay2 = setTimeout(() => {
+        setIsLoading(false);
+      }, 6000);
+      return () => clearTimeout(delay2);
+    }
   }, [displayedScene]);
 
-  // Check if quizCounter reaches zero
   useEffect(() => {
     if (quizCounter === 0) {
-      // After a delay, set showGameOverModal to true
-      const delay = setTimeout(() => {
+      const delay1 = setTimeout(() => {
         setShowGameOverModal(true);
-      }, 3000); // Adjust the delay time as needed
+      }, 4000);
 
-      // Return a cleanup function to clear the timeout (optional)
-      return () => clearTimeout(delay);
+      return () => clearTimeout(delay1);
     }
+
     if (displayedScene) {
-      setQuizSummary(() => {
-        let allScenes = [...quizSummary]
-         allScenes.push(displayedScene)
-         return allScenes
-      });
-      }
+      console.log("inGAME quizSummary,", quizSummary);
+      setQuizSummary((prevSummary) => [...prevSummary, displayedScene]);
+    }
   }, [quizCounter, displayedScene]);
+
   return (
-    <>
+    <main>
       {isLoading ? (
         <Loading />
       ) : (
@@ -60,23 +61,21 @@ const Game = () => {
                 getRandomScene={getRandomScene}
                 decrementCounter={decrementCounter}
               />
-            </nav>
+            </nav>    
+
             <div className="showcase">
-              <section className="container">
-                <Score score={score} quizCounter={quizCounter} />
-              </section>
+              <Score score={score} quizCounter={quizCounter} />
               <DisplayImage
                 selectedScene={displayedScene}
                 quizCounter={quizCounter}
+                isLoading={isLoading}
               />
-              <section className="container">
-                <div>
-                  <QuizCounter
-                    quizCounter={quizCounter}
-                    decrementCounter={decrementCounter}
-                  />
-                </div>
-              </section>
+              <div>
+                <QuizCounter
+                  quizCounter={quizCounter}
+                  decrementCounter={decrementCounter}
+                />
+              </div>
             </div>
             {showGameOverModal && (
               <GameOverModal allQuizScenes={quizSummary} score={score} />
@@ -84,7 +83,8 @@ const Game = () => {
           </>
         )
       )}
-    </>
+    </main>
   );
 };
+
 export default Game;

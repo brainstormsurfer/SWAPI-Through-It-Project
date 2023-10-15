@@ -1,9 +1,11 @@
 const Loading = () => {
   return (
-    <div className="loading">
-      <div className="spinner"></div>
-      <h4 className="loading-title">Star Wars</h4>
-    </div>
+<div className="loading">
+  <div className="spinner"></div>
+  <div className="loading-title">Star Wars</div>
+  <div className="loading-title-upper">the ultimate</div>
+  <div className="loading-title-lower">quiz</div>
+</div>
   );
 };
 

@@ -17,10 +17,7 @@ const Filmbar = ({getRandomScene , decrementCounter}) => {
       episode08: 'VIII',
       episode09: 'IX',
     };
-  
-
       return altToRomanMap[altText];
-
   };
   
   useEffect(() => {
@@ -47,7 +44,7 @@ const Filmbar = ({getRandomScene , decrementCounter}) => {
                 <img
                   className="film-logo"
                   src={logo.src}
-                  alt={logo.alt}
+                  alt={logo.alt}                  
                   onClick={() => {
                     decrementCounter();
                     getRandomScene(altToRomanNumeral(logo.alt));

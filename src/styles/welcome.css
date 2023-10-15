@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap');
+
+ .buttons-container {
+    position: relative;
+    display:flex;
+    height: 10rem;    
+    width: 100%;
+    padding: 2rem;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+ /* .buttons-container::after {
+    display:flex;
+    height:100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.btn-audio,
+.btn-start {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #ffc909;
+    font-size: 2rem ;
+    font-weight: 600;    
+    cursor: pointer;
+    border:#ffc909 1px solid;          
+    outline:none;
+    box-shadow: inset #ffc909 0 0 10px 0;    
+}
+
+.btn-audio {
+    border-radius: 50%;
+}
+
+.btn-audio:hover,
+.btn-start:hover {
+    outline:#ffc909 1.5px solid;    
+    box-shadow: inset #ffc909 0 0 17px 0;
+} 
+
+.btn-audio:active,
+.btn-start:active {
+    box-shadow: #ffc909 0 0 30px 0;
+    border: none;
+    outline: none;
+}
+
+.welcome-container {
+    background: rgba(0, 0, 0, 1);
+    overflow: hidden;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    margin: 0;
+    position: relative;
+  }
+  
+  .welcome-container::after {
+    border: purple 8px solid;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 40%; /* Match the viewport height */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  .wrapper {
+    display: flex;
+    height: 100vh;
+    width: 70%;
+    margin: 0 auto;
+    perspective: 50rem;
+  }
+  
+  .scroll-text {    
+    background-color: aqua;
+    margin-top: 100vh;
+    color: #ffc909;
+    font-size: 2vw;
+    line-height: 2em;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+    animation: scroll 190s linear forwards;
+  }
+  
+  @keyframes scroll {
+    from { top: 0; transform: translateZ(0px) rotateX(35deg); }
+    to { top: -7500px; transform: 
+        /* overall text dimension*/
+        translateZ(-4800px) 
+        rotateX(36deg); }
+  }
+  
+
+h1, h2 {
+    text-align: center;
+}

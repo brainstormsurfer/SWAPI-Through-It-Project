@@ -1,35 +1,37 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import SlideContainer from "./SlideContainer";
+import { useState, useEffect } from 'react';
 
 
 const GameOverModal = ({ allQuizScenes, score }) => {
-    const sliderSettings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
-  
-    return (
-      <div className="scene-container">
-        <h2>{score} scenes were correct</h2>
-        <Slider {...sliderSettings}>
-          {allQuizScenes.map((scene) => (
-            <div key={scene.id}>                
-              <img 
-              className="mini-scene" 
-              src={scene.image} 
-              alt="" />
+  console.log("SCENES in GameMOdal", allQuizScenes)
+  const [quizScenes, setQuizScenes] = useState([])
+
+  useEffect(()=>{
+    
+    setQuizScenes(allQuizScenes)
+  },[quizScenes])
+
+  return (
+    <div>
+      {allQuizScenes &&  
+      <SlideContainer 
+      quizScenes={allQuizScenes} 
+      score={score} />
+}
+    </div>
+  );
+};
+
+export default GameOverModal;
+
+/*
+   <Slider {...sliderSettings}>
+          {allQuizScenes?.map((scene) => (
+          <div className="scene-container ">
+            <div key={nanoid()}>
+              <img className="mini-scene" src={scene.image} alt="" />
             </div>
+        </div>
           ))}
-        </Slider>
-      </div>
-    );
-  };
-  
-  export default GameOverModal;
-  
+      </Slider>
+*/

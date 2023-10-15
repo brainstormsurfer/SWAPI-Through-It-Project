@@ -8,17 +8,23 @@ const QuizCounter = ({ quizCounter }) => {
       setCounterClass("blueEffect");
       
       const timer = setTimeout(() => {
-        setCounterClass(""); // Clear the class after the animation finishes
+        setCounterClass(""); 
       }, 3000);
 
       return () => clearTimeout(timer);
     } else {
       setCounterClass("final-blue-shrink");
+      const timer = setTimeout(() => {
+        setCounterClass(""); 
+      }, 3000);
+      console.log("counterClass",counterClass)
+      console.log("quizCounter",quizCounter)
+      return () => clearTimeout(timer);
     }
   }, [quizCounter]);
 
   return (
-    <div>
+    <div className={(quizCounter === 0 && counterClass === "") ? 'dis-play' :''}>
       <h3 className={`counter-value counter ${counterClass}`}>
         {quizCounter}
       </h3>

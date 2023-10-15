@@ -18,28 +18,30 @@ const Score = ({ score, quizCounter }) => {
   useEffect(() => {
     setIsQuizCounterChanged(true);
 
-    const timeout = setTimeout(() => {
+    const timeout2 = setTimeout(() => {
       setIsQuizCounterChanged(false);
     }, 3000);
 
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(timeout2);
   }, [quizCounter]);
 
   useEffect(() => {
     if (quizCounter === 0 && !finalEffect) {
       setFinalEffect(true);
-      const timeout = setTimeout(() => {
-        setFinalEffect(false);
-      }, 3000); // Assuming 3000ms is the duration of your final effect
-      return () => clearTimeout(timeout);
-    }
-  }, [quizCounter, finalEffect]);
+      const timeout3 = setTimeout(() => {
+       setFinalEffect(false);
+      }, 3000); 
+      return () => clearTimeout(timeout3);
+    } 
+    console.log("finalEffect",finalEffect)
+console.log("quizCounter",quizCounter)
+  }, [quizCounter]);
 
   return (
-    <div className="score">
+    <div className={(quizCounter === 0 && !finalEffect) ? "" : "score"}>
       <h2 className={`${quizCounter > 0 ? "" : "shrink-vertical"}`}>Score</h2>
       <h2
-        className={`score-value ${
+        className={`score-value container-left ${
           quizCounter > 0
             ? isScoreChanged
               ? "greenEffect"

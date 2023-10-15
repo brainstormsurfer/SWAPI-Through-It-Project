@@ -1,21 +1,10 @@
 import { useState, useEffect } from "react";
 import { FaQuoteRight } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { nanoid } from 'nanoid';
 
 const Carousel = ({ scenes }) => {
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
-
-  const prevSlide = () => {
-    setCurrentSceneIndex((prevIndex) =>
-      (prevIndex - 1 + scenes.length) % scenes.length
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrentSceneIndex((prevIndex) =>
-      (prevIndex + 1) % scenes.length
-    );
-  };
 
   useEffect(() => {
     let sliderId = setInterval(() => {
@@ -23,16 +12,31 @@ const Carousel = ({ scenes }) => {
     }, 2000);
 
     return () => {
-      clearInterval(sliderId);
+      clearInterval(sliderId);  border: #10ff30 solid 2px;
+
     };
-  }, [currentSceneIndex, scenes.length]);
+  }, [currentSceneIndex, scenes]);
+
+      
+  const prevSlide = () => {
+    setCurrentSceneIndex((prevIndex) =>
+      (prevIndex - 1 + scenes?.length) % scenes?.length
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentSceneIndex((prevIndex) =>
+      (prevIndex + 1) % scenes?.length
+    );
+
+}
 
   return (
-    <section className="slider-container">
-      {scenes.map((scene, sceneIndex) => (
+    <section className="slide-container scene-container">
+      {scenes?.map((scene, sceneIndex) => (
         <article
-          className="slide"
-          key={sceneIndex}
+          className="slide scene"
+          key={nanoid()}
           style={{
             transform: `translateX(${
               100 * (sceneIndex - currentSceneIndex)

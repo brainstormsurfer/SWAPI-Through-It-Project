@@ -1,12 +1,17 @@
-import Game from "./components/Game";
-import GameOverModal from "./components/GameOverModal";
+
+// import Game from "./components/Game";
+import Welcome from "./components/Welcome";
+// import Welcomebar from "./components/Welcomebar";
+// import GameOverModal from "./components/GameOverModal";
 
 function App() {
+  
   return (
-    <main>
-      <Game />
-      {/* <GameOverModal /> */}
-    </main>
+    <div>
+        {/* <Game />  */}
+        {/* <Welcomebar /> */}
+        <Welcome />
+    </div>
   );
 }
 

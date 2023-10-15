@@ -9,7 +9,6 @@ export const ScenesProvider = ({ children }) => {
   const [displayedScene, setDisplayedScene] = useState(null);
   const [displayedFilm, setDisplayedFilm] = useState(null);
   const [score, setScore] = useState(0)
-  const [quizCounter, setQuizCounter] = useState(0)
 
   useEffect(() => {
     // Flatten the scenes from all movies into a single array
@@ -32,6 +31,7 @@ export const ScenesProvider = ({ children }) => {
       const newScenes = allScenes.filter((scene) => scene !== displayedScene);
       console.log("displayedScene", displayedScene)
       console.log("displayedScene.film", displayedScene.film)
+      // console.log("displayedScene.film", displayedScene.poster)
       setScenes(newScenes);
       setDisplayedScene(displayedScene);
       setDisplayedFilm(displayedScene.film); // Set the displayed film      
@@ -44,11 +44,7 @@ export const ScenesProvider = ({ children }) => {
     if (episode)
     if (displayedFilm.includes(` ${episode} `)) {      
       setScore(prev => prev + 1)
-      setQuizCounter(prev => prev + 1)
-    }  else {
-      console.log("call socre wrong")
-      // setIsChanged(false);
-      } 
+    } 
 
     const randomIndex = Math.floor(Math.random() * scenes.length);
     const newScene = scenes[randomIndex];
@@ -71,7 +67,7 @@ export const ScenesProvider = ({ children }) => {
   // };
 
   return (
-    <ScenesContext.Provider value={{score, displayedScene, displayedFilm, getRandomScene, quizCounter}}>
+    <ScenesContext.Provider value={{score, displayedScene, displayedFilm, getRandomScene }}>
       {children}
     </ScenesContext.Provider>
   );
