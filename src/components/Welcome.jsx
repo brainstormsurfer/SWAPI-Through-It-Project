@@ -60,7 +60,7 @@ const Welcome = () => {
             But we're welcoming you nonetheless.<br />
             Welcome to The Ultimate Star Wars Quiz planet!<br />
             Also known as:<br />
-            'Nagashu-Basamba-Folkloro-Kishkashta'.<br />
+            'Pisenlavos-Kakadoom-Folkloro-Kishkashta'.<br />
             The Rules are quite simple...<br />
             Have you ever played inter-galactic Monopoly?<br />
             The board is quite huge, but the game is surprisingly short...{" "}
@@ -72,7 +72,7 @@ const Welcome = () => {
             Who am I..?<br />
             What 42 is all about..? <br />
             Oh! I remembered:<br />
-            'Nagashu-Basamba-Folkloro-Kishkashta'!<br />
+            'Pisenlavos-Kakadoom-Folkloro-Kishkashta'!<br />
             Will you be able to recognize which episodes<br />
             The following scenes are from?<br />
             The answer will hide up above<br />
@@ -87,8 +87,9 @@ const Welcome = () => {
             Farewell, young padawn. Farewell.
           <br /><br />
             My Dear People,<br />
-            I come before you now with this ambitious revolutionary vision:
-          <br />
+            I come before you now with this ambitious revolutionary vision.<br />
+            Listen carefully because your lives are about to change:
+          <br /><br />
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
             sapiente omnis ex aut molestiae quas harum corporis rem nesciunt?
             Soluta est dolor fuga perspiciatis illum, officia, vero quibusdam
