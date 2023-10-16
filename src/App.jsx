@@ -3,15 +3,16 @@
 import Welcome from "./components/Welcome";
 // import Welcomebar from "./components/Welcomebar";
 // import GameOverModal from "./components/GameOverModal";
+import './styles/welcome.css'
 
 function App() {
   
   return (
-    <div>
+    <body className="background-void">
         {/* <Game />  */}
         {/* <Welcomebar /> */}
         <Welcome />
-    </div>
+    </body>
   );
 }
 
