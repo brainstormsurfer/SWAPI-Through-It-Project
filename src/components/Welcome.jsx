@@ -47,10 +47,10 @@ const Welcome = () => {
           </button>
         </div>
       </div>
+
       <div className="welcome-container">
         <div className="wrapper">
           <div className="scroll-text">
-            <div className="buttons-container">
             <h2>
             Young padawan,
           <br />
@@ -87,8 +87,8 @@ const Welcome = () => {
             Farewell, young padawn. Farewell.
           <br /><br />
             My Dear People,<br />
-            I come before you now with this ambitious revolutionary vision.<br />
-            Listen carefully because your lives are about to change:
+            I come before you now with this ambitious revolutionary vision!<br />
+            Listen up carefully because your lives are about to change:
           <br /><br />
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
             sapiente omnis ex aut molestiae quas harum corporis rem nesciunt?
@@ -116,7 +116,6 @@ const Welcome = () => {
             ratione quas laudantium architecto dolores blanditiis eius,
             molestiae excepturi?
           </h2>
-            </div>
           </div>
         </div>
       </div>

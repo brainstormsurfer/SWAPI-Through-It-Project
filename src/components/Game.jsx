@@ -8,7 +8,7 @@ import GameOverModal from "./GameOverModal";
 import { useScenes } from "./ScenesContext";
 
 const Game = () => {
-  const { getRandomScene, displayedScene, score } = useScenes();
+  const {getRandomScene, displayedScene, score } = useScenes();
   const [isLoading, setIsLoading] = useState(true);
   const [quizCounter, setQuizCounter] = useState(10);
   const [showGameOverModal, setShowGameOverModal] = useState(false);
