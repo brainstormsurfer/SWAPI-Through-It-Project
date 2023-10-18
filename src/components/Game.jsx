@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Filmbar from "./Filmbar";
 import DisplayImage from "./DisplayImage";
-import Score from "./Score";
+import Score from "./Score"; 
 import QuizCounter from "./QuizCounter";
 import GameOverModal from "./GameOverModal";
 import { useScenes } from "./ScenesContext";
@@ -11,8 +11,8 @@ const Game = () => {
   const {getRandomScene, displayedScene, score } = useScenes();
   const [isLoading, setIsLoading] = useState(true);
   const [quizCounter, setQuizCounter] = useState(10);
-  const [showGameOverModal, setShowGameOverModal] = useState(false);
   const [quizSummary, setQuizSummary] = useState([]);
+  const [isGameOver, setIsGameOver] = useState(false);
 
   const decrementCounter = () => {
     if (quizCounter > 0) {
@@ -32,13 +32,12 @@ const Game = () => {
   useEffect(() => {
     if (quizCounter === 0) {
       const delay1 = setTimeout(() => {
-        setShowGameOverModal(true);
+        setIsGameOver(true);
       }, 4000);
-
       return () => clearTimeout(delay1);
     }
 
-    if (displayedScene) {
+    if (displayedScene && !quizSummary.includes(displayedScene)) {
       console.log("inGAME quizSummary,", quizSummary);
       setQuizSummary((prevSummary) => [...prevSummary, displayedScene]);
     }
@@ -47,7 +46,7 @@ const Game = () => {
   return (
     <main>
       {isLoading ? (
-        <Loading />
+        <Loading isGameOver={isGameOver} />
       ) : (
         displayedScene && (
           <>
@@ -70,16 +69,14 @@ const Game = () => {
                 quizCounter={quizCounter}
                 isLoading={isLoading}
               />
-              <div>
                 <QuizCounter
                   quizCounter={quizCounter}
                   decrementCounter={decrementCounter}
                 />
+            {isGameOver && (
+              <GameOverModal scenes={quizSummary} score={score} />
+              )}
               </div>
-            </div>
-            {showGameOverModal && (
-              <GameOverModal allQuizScenes={quizSummary} score={score} />
-            )}
           </>
         )
       )}

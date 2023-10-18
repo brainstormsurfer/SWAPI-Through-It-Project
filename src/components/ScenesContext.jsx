@@ -15,7 +15,7 @@ export const ScenesProvider = ({ children }) => {
     const allScenes = data.reduce((accumulator, movie) => {
       const scenesWithFilm = movie.scenes.map((scene) => ({
         ...scene,
-        film: movie.title // Attach the film title to each scene
+        film: movie.title // Attaching the film title to each scene (for the endgame)
       }));
       return accumulator.concat(scenesWithFilm);
     }, []);
@@ -34,7 +34,7 @@ export const ScenesProvider = ({ children }) => {
       // console.log("displayedScene.film", displayedScene.poster)
       setScenes(newScenes);
       setDisplayedScene(displayedScene);
-      setDisplayedFilm(displayedScene.film); // Set the displayed film      
+      setDisplayedFilm(displayedScene.film); 
     }
   }, []);
 

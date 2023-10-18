@@ -29,7 +29,7 @@ const QuizCounter = ({ quizCounter }) => {
         {quizCounter}
       </h3>
       <h4 className={`counter-title ${quizCounter > 0 ? "" : "shrink-vertical"}`}>
-        scenes left
+        <span className="special-s">S</span>cenes left
       </h4>
     </div>
   );

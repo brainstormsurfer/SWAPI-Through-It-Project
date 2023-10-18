@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: .5px solid orangered;
+ }
+ .dots-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: min-content;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color:aqua;
+  background-color: antiquewhite;
+}
+ .slideContainer {
+    width: 500px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+ .sliderStyles {
+     height: 100%;
+     position: relative;
+ }
+
+ .slideStyles {
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+     background-position: center;
+     background-size: cover;
+    }
+    
+    .leftArrowStyles {
+     position: absolute;
+     top: 50%;
+     Transform: translate(0, -50%);
+     left: 32px;
+     font-size: 45px;
+     color: #fff;
+     z-index: 1;
+     cursor: pointer;
+    }
+
+    .rightArrowStyles {
+     position: absolute;
+     top: 50%;
+     Transform: translate(0, -50%);
+     right: 32px;
+     font-size: 45px;
+     color: #fff;
+     z-index:  1;
+     cursor: pointer;
+ }
+
+
+/*   
+  .slideStyles {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+   */
+     /* background-image:  `url(${quizScenes[currentIndex].image})`; */

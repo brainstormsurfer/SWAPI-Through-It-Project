@@ -4,6 +4,7 @@ const Score = ({ score, quizCounter }) => {
   const [isScoreChanged, setIsScoreChanged] = useState(false);
   const [isQuizCounterChanged, setIsQuizCounterChanged] = useState(true);
   const [finalEffect, setFinalEffect] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     setIsScoreChanged(true);
@@ -29,13 +30,14 @@ const Score = ({ score, quizCounter }) => {
     if (quizCounter === 0 && !finalEffect) {
       setFinalEffect(true);
       const timeout3 = setTimeout(() => {
-       setFinalEffect(false);
+        setFinalEffect(false);
+        setIsVisible(false); 
       }, 3000); 
       return () => clearTimeout(timeout3);
     } 
-    console.log("finalEffect",finalEffect)
-console.log("quizCounter",quizCounter)
   }, [quizCounter]);
+
+  if (!isVisible) return null; 
 
   return (
     <div className={(quizCounter === 0 && !finalEffect) ? "" : "score"}>

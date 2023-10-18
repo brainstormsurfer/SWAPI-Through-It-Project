@@ -32,7 +32,7 @@ const Carousel = ({ scenes }) => {
 }
 
   return (
-    <section className="slide-container scene-container">
+    <section className="slide-container">
       {scenes?.map((scene, sceneIndex) => (
         <article
           className="slide scene"

@@ -1,22 +1,40 @@
 
 import Slider from './Slider'
 
-const SlideContainer = ({ quizScenes, score }) => {
-    
-      const containerStyles = {
-        width: "500px",
-        height: "280px",
-        margin: "0 auto",
-      };
+const SlideContainer = ({ scenes, score }) => {
+      // const containerStyles = {
+      //   width: "1500px",
+      //   height: "280px",
+      //   margin: "0 auto",
+      // };
     
   return (
-    <div>
-    <h1 style={{ color: "red" }}>Your Score: {score}</h1>
-    <div style={containerStyles}>      
-      <Slider quizScenes={quizScenes} />        
+    <div className='scene-container'>
+    <div className="slideContainer">      
+    {/* <div className="sliderStyles">       */}
+    {/* <div style={{containerStyles}}>       */}
+    <Slider scenes={scenes} />        
     </div>
-  </div>
+    </div>
   )
 }
 
 export default SlideContainer
+
+// const SlideContainer = ({ scenes, score }) => {
+    
+//       const containerStyles = {
+//         width: "1500px",
+//         height: "280px",
+//         margin: "0 auto",
+//       };
+    
+//   return (
+//     <div className="modal-container">      
+//     {/* // <div style={{containerStyles}}>       */}
+//       <Slider scenes={scenes} />        
+//     </div>
+//   )
+// }
+
+// export default SlideContainer

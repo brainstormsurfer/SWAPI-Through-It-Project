@@ -70,7 +70,7 @@ const Welcome = () => {
             where was I..?<br /> 
             Who are you..?<br />
             Who am I..?<br />
-            What 42 is all about..? <br />
+            What is this '42' all about..? <br />
             Oh! I remembered:<br />
             'Pisenlavos-Kakadoom-Folkloro-Kishkashta'!<br />
             Will you be able to recognize which episodes<br />
