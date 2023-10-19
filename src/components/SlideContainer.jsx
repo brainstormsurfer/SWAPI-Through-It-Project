@@ -1,7 +1,7 @@
 
 import Slider from './Slider'
 
-const SlideContainer = ({ scenes, score }) => {
+const SlideContainer = ({ scenes }) => {
       // const containerStyles = {
       //   width: "1500px",
       //   height: "280px",
@@ -9,13 +9,15 @@ const SlideContainer = ({ scenes, score }) => {
       // };
     
   return (
-    <div className='scene-container'>
-    <div className="slideContainer">      
+    // <div className='slides-container'>
+    <>
+    {/* <div className="slider-container">       */}
+    <div className="scene-container">      
     {/* <div className="sliderStyles">       */}
     {/* <div style={{containerStyles}}>       */}
     <Slider scenes={scenes} />        
-    </div>
-    </div>
+    // </div>
+    </>
   )
 }
 

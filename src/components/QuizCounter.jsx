@@ -16,9 +16,7 @@ const QuizCounter = ({ quizCounter }) => {
       setCounterClass("final-blue-shrink");
       const timer = setTimeout(() => {
         setCounterClass(""); 
-      }, 3000);
-      console.log("counterClass",counterClass)
-      console.log("quizCounter",quizCounter)
+      }, 3000);    
       return () => clearTimeout(timer);
     }
   }, [quizCounter]);

@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/star-wars");
 
 @font-face {
@@ -9,7 +9,8 @@
 
 @font-face {
   font-family: SfDistantGalaxyAlternate;
-  src: url("../assets/fonts/SfDistantGalaxyAlternate-OE4d.ttf") format("opentype");
+  src: url("../assets/fonts/SfDistantGalaxyAlternate-OE4d.ttf")
+    format("opentype");
 }
 @font-face {
   font-family: Soloist3D;
@@ -33,12 +34,11 @@
   src: url("../assets/fonts/SfDistantGalaxy-0l3d.ttf") format("opentype");
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;  
-  border: .5px solid orangered;
+  padding: 0;
+  border: 0.5px solid orangered;
 }
 
 /* .scroll-text {
@@ -55,7 +55,6 @@
   width: 60%;
   margin: 0 auto;
 } */
-
 
 /* Other existing styles */
 .loading {
@@ -79,10 +78,9 @@
 }
 
 @keyframes bg-lights {
-    50% {
-      box-shadow: inset 0px 0px 150px 0px #ffffff,
-       0px 0px 50px 0px #ffffff;
-    }
+  50% {
+    box-shadow: inset 0px 0px 150px 0px #ffffff, 0px 0px 50px 0px #ffffff;
+  }
 }
 @keyframes spinner {
   50% {
@@ -111,18 +109,18 @@
   animation: fade-in-white 6s linear infinite;
 }
 @keyframes fade-in-white {
-    45% {
-      color: #ffffff8a;
-    }
-    56% {
-      color: #fbff00;
-    }
-      75% {
-      color: #ffffff83;
-    }
-      92% {
-      color: #000;
-    }
+  45% {
+    color: #ffffff8a;
+  }
+  56% {
+    color: #fbff00;
+  }
+  75% {
+    color: #ffffff83;
+  }
+  92% {
+    color: #000;
+  }
 }
 
 .loading-title-upper {
@@ -143,8 +141,8 @@
   left: 50%;
   transform: translateX(-50%);
   color: #fbff00;
-   font-family: "DistantGalaxy", sans-serif;
-   white-space: nowrap;
+  font-family: "DistantGalaxy", sans-serif;
+  white-space: nowrap;
 }
 
 .loading-quiz {
@@ -153,7 +151,7 @@
   font-size: 2.8rem;
 }
 
-body {  
+body {
   padding: 0 1rem;
   font-family: var(--font-family);
   background-image: url("../assets/background-stars-desktop.jpeg");
@@ -171,7 +169,8 @@ li {
 }
 
 .showcase {
-  display: flex;  
+  display: flex;
+  position: relative;
   width: 90vw;
   height: 55rem;
   /* grid-template-rows: 1fr 1fr; */
@@ -184,15 +183,18 @@ li {
 .scene-container {
   width: 100rem;
   height: 55rem;
-  border-radius: 25px;  
+  border-radius: 25px;
   margin-right: 5rem;
   padding-top: 1rem;
+  position: relative;
 }
 
 .scene {
+  position: relative;
+
   width: 105rem;
-  height: 55rem;  
-  border-radius: 25px;  
+  height: 55rem;
+  border-radius: 25px;
 }
 
 /* 
@@ -210,12 +212,12 @@ li {
   align-items: center;
   /* height: 100%; */
   /* margin-top: 15rem; */
-  }
+}
 
 .container-left {
   display: flex;
   align-self: flex-end;
-  }
+}
 
 .counter-title {
   display: flex;
@@ -230,14 +232,14 @@ li {
   position: relative;
 }
 .counter-title .special-s {
-    font-family: "Star Wars", sans-serif;
-    font-size: 3.9rem;
-    font-weight: 300;
-    margin-left: 4rem;
-    margin-right: .2rem;
-    margin-top: .9rem;
-    display: flex;
-    /* align-items: center;   */
+  font-family: "Star Wars", sans-serif;
+  font-size: 3.9rem;
+  font-weight: 300;
+  margin-left: 4rem;
+  margin-right: 0.2rem;
+  margin-top: 0.9rem;
+  display: flex;
+  /* align-items: center;   */
 }
 
 /*! the expand effect*/
@@ -247,24 +249,27 @@ li {
 
 @keyframes expand {
   to {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    width: 90vw;    
+    width: 90vw;
     margin: 0 auto;
-    /* height: 65rem;  */
-    /* margin-top: 15rem auto; */
   }
 }
+
 .shrink-horizontal {
-  animation: shrink-horizontal 1.5s ease-out forwards;
+  animation: shrink-horizontal 3s ease-out forwards;
 }
+
 @keyframes shrink-horizontal {
-  to {
-  transform: rotateX(90deg);
-  opacity: 0;
+
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(90deg);
+    opacity: 0;
+    margin-right: 10rem;
   }
 }
+
 .shrink-vertical {
   animation: shrink-vertical 1.5s ease-out forwards;
 }
@@ -315,11 +320,11 @@ li {
   animation: final-green-shrink 3s ease-out forwards;
 }
 @keyframes final-green-shrink {
- 50% {
-      box-shadow: inset 0px 0px 30px 0px #71fc4e, 0px 0px 23px 0px #fff;
-      color: #71fc4e;
-    }  
-    90% {
+  50% {
+    box-shadow: inset 0px 0px 30px 0px #71fc4e, 0px 0px 23px 0px #fff;
+    color: #71fc4e;
+  }
+  90% {
     opacity: 1;
   }
   100% {
@@ -470,22 +475,22 @@ p.lead {
 .quiz-title {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   flex-wrap: nowrap;
   margin: 1rem 0;
   font-size: 7rem;
-  font-family: 'SoloistHalftone', sans-serif;
+  font-family: "SoloistHalftone", sans-serif;
   height: 8rem;
   max-height: fit-content;
-  color: #ffffff;  
+  color: #ffffff;
   font-weight: 100;
   white-space: nowrap;
 }
 
-.quiz-title span {    
-  font-family: 'SfDistantGalaxy', sans-serif;
+.quiz-title span {
+  font-family: "SfDistantGalaxy", sans-serif;
   color: #fbff00;
-  font-size: 7rem;  
+  font-size: 7rem;
 }
 
 .quiz-title .span {
@@ -496,13 +501,13 @@ p.lead {
   font-family: "Star Wars", sans-serif;
   font-size: 6rem;
   margin-left: 4rem;
-  margin-right: .2rem;
+  margin-right: 0.2rem;
   margin-top: 1.1rem;
   display: flex;
   /* align-items: center;   */
 }
 
-.main-nav {  
+.main-nav {
   width: 100%;
   /* height: 10rem; */
   display: flex;
@@ -523,7 +528,7 @@ p.lead {
 .main-nav ul li {
   height: 12rem;
   width: 18rem;
-position: relative;
+  position: relative;
 }
 
 .main-nav li:hover {
@@ -550,15 +555,15 @@ position: relative;
 }
 
 .main-nav li:active::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   border-radius: 50px;
-  box-shadow: inset #ff0000 0 0 30px 0; 
-  pointer-events: none; 
+  box-shadow: inset #ff0000 0 0 30px 0;
+  pointer-events: none;
 }
 
 main {
@@ -589,7 +594,7 @@ main {
   font-size: 3rem;
   text-align: center;
   background: transparent;
-  position: relative;    
+  position: relative;
   /* height: 10rem; */
   z-index: 2;
 }
@@ -625,10 +630,10 @@ main {
 }
 
 .greenEffect {
-  animation: greenScore 3s ease-in-out forwards alternate-reverse;
+  animation: greenScore 2.85s ease-in-out forwards alternate-reverse;
 }
 .redEffect {
-  animation: redScore 3s ease-in-out forwards alternate-reverse;
+  animation: redScore 2.85s ease-in-out forwards alternate-reverse;
 }
 
 @keyframes greenScore {
@@ -652,7 +657,7 @@ main {
 }
 
 .blueEffect {
-  animation: blueCount 3s ease-out forwards alternate-reverse;
+  animation: blueCount 2.85s ease-out forwards alternate-reverse;
 }
 
 @keyframes blueCount {
@@ -706,7 +711,7 @@ main {
   height: min-content;
   max-height: 25rem;
   font-size: 2.25rem;
-  font-weight: 300;  
+  font-weight: 300;
   /* font-family: "Soloist3D", sans-serif; */
   font-family: "Poppins", sans-serif;
 }
@@ -754,7 +759,7 @@ main {
   }
 }
 
- .darken-filter {
+.darken-filter {
   height: 100vh;
   width: 100vw;
   background-color: rgba(252, 26, 26, 0.527);
@@ -762,16 +767,34 @@ main {
 }
 
 .slides-container {
-  position: fixed;  
-  top: 0rem;
-  left: 0rem;
-  transform: translate(40%, 70%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* transform: translate(100%, 70%); */
   /* background: rgba(231, 7, 7, 0.8); */
   padding: 20px;
   border-radius: 10px;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 5;
+}
+
+.endgame-container {
+  display: flex;
+  width: 100rem;
+  height: 55rem;
+  border-radius: 25px;
+  margin-right: 5rem;
+  padding-top: 1rem;
+}
+
+.mini-scene {
+  display: flex;
+  align-self: flex-end;
+  width: 30rem;
+  height: 17rem;
+  border-radius: 13px;
 }
 
 /* .login-modal {
@@ -787,12 +810,6 @@ main {
   margin: 0 auto;
   animation: expand 3s ease-in-out forwards;
 } */
-
-.mini-scene {
-  width: 30rem;
-  height: 17rem;  
-  border-radius: 13px;
-}
 
 /* .login-modal::before {
   position: absolute;
@@ -812,7 +829,6 @@ main {
   font-size: 8rem;
   z-index: 10;
 } */
-
 
 /* .game-over {
   display: flex;
@@ -864,97 +880,6 @@ main {
   height: 100%;  
 } */
 
-/* ============= PROJECT CSS =============== */
-
-.slider-container {
-  margin: 0 auto;
-  margin-top: 10rem;
-  /* width: 80vw; */
-  width: 100%;
-  /* max-width: 800px; */
-  position: relative;
-  height: 450px;
-  /* overflow: hidden;   */
-  background-color:rgb(255, 252, 80);
-}
-
-.slide {
-  background-color:coral;
-  /* margin: 0 auto; */
-  margin-top: 10rem;
-  /* width: 80vw; */
-  /* max-width: 800px; */
-  position: relative;
-  border: #10ff30 solid 2px;
-  width: 50%;
-  height: 50%;  
-}
-
-.slide::after {
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color:rgb(80, 255, 95);
-
-}
-
-.person-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  border: 4px solid var(--primary-200);
-  box-shadow: var(--shadow-3);
-}
-
-.name {
-  text-transform: uppercase;
-  color: var(--primary-500);
-  margin-bottom: 0.75rem;
-}
-.title {
-  text-transform: capitalize;
-  color: var(--grey-700);
-  margin-bottom: 0.75rem;
-}
-.text {
-  max-width: 35em;
-  margin: 0 auto;
-  margin-top: 2rem;
-  line-height: 2;
-  color: var(--grey-500);
-}
-.icon {
-  font-size: 3rem;
-  margin-top: 1rem;
-  color: var(--primary-500);
-}
-.prev,
-.next {
-  position: absolute;
-  top: 200px;
-  color: var(--white);
-  width: 1.25rem;
-  height: 1.25rem;
-  display: grid;
-  place-items: center;
-  background-color: blueviolet;
-  /* border-radius: var(--borderRadius); */
-  cursor: pointer;
-  /* transition: var(--transition); */
-}
-.prev:hover,
-.next:hover {
-  background-color:coral;
-}
-.prev {
-  left: 0;
-}
-.next {
-  right: 0;
-}
 /* @media screen and (min-width: 800px) {
   .text {
     max-width: 45em;

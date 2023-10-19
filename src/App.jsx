@@ -9,7 +9,7 @@ import './styles/welcome.css'
 function App() {
   
   return (
-    <body className="background-void">
+    <body>
         {/* <Welcome /> */}
         <Game />       
         <GameOverModal />  

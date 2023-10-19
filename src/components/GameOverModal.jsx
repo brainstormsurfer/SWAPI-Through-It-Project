@@ -1,16 +1,20 @@
 import SlideContainer from "./SlideContainer";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const GameOverModal = ({ scenes }) => {
-  console.log("SCENES in GameMOdal", scenes)
-  const [quizScenes, setQuizScenes] = useState([])
+const GameOverModal = ({ scenes, score }) => {
+  // console.log("SCENES in GameMOdal", scenes);
+  const [quizScenes, setQuizScenes] = useState([]);
 
-  useEffect(()=>{
-    setQuizScenes(scenes)
-  },[quizScenes])
+  useEffect(() => {
+    setQuizScenes(scenes);
+  }, [quizScenes]);
 
-  return (    
-    scenes && <SlideContainer scenes={scenes} />              
+  return (
+    <> 
+    {
+      scenes && <SlideContainer scenes={scenes} />
+    }   
+    </>
   );
 };
 

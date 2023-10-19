@@ -1,64 +1,59 @@
 import React, { useState, useEffect } from "react";
 
 const Score = ({ score, quizCounter }) => {
-  const [isScoreChanged, setIsScoreChanged] = useState(false);
-  const [isQuizCounterChanged, setIsQuizCounterChanged] = useState(true);
   const [finalEffect, setFinalEffect] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  const [prevScore, setPrevScore] = useState(0);
+  const [difference, setDifference] = useState(0);
+  const [effect, setEffect] = useState("");
+
 
   useEffect(() => {
-    setIsScoreChanged(true);
+    
+    setDifference((prevDifference) => {
+      const currentDifference = score - prevScore;
+      if (currentDifference > prevDifference) {
+        if (quizCounter > 0) {
+          setEffect("greenEffect");
+        } else {
+          setEffect("final-green-shrink");
+        }
+      } else {
+        if (quizCounter > 0) {
+          setEffect("redEffect");
+        } else {
+          setEffect("final-red-shrink");
+        }
+      }
+
+      return currentDifference;
+    });
 
     const timeout = setTimeout(() => {
+
+      setEffect("");
       setIsScoreChanged(false);
-    }, 3000);
-
-    return () => clearTimeout(timeout);
-  }, [score]);
-
-  useEffect(() => {
-    setIsQuizCounterChanged(true);
-
-    const timeout2 = setTimeout(() => {
       setIsQuizCounterChanged(false);
     }, 3000);
 
-    return () => clearTimeout(timeout2);
-  }, [quizCounter]);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [score, quizCounter]);
 
   useEffect(() => {
     if (quizCounter === 0 && !finalEffect) {
       setFinalEffect(true);
       const timeout3 = setTimeout(() => {
         setFinalEffect(false);
-        setIsVisible(false); 
-      }, 3000); 
+      }, 3000);
       return () => clearTimeout(timeout3);
-    } 
+    }
   }, [quizCounter]);
 
-  if (!isVisible) return null; 
-
   return (
-    <div className={(quizCounter === 0 && !finalEffect) ? "" : "score"}>
+    <div className={quizCounter === 0 && !finalEffect ? "dis-play" : "score"}>
       <h2 className={`${quizCounter > 0 ? "" : "shrink-vertical"}`}>Score</h2>
-      <h2
-        className={`score-value container-left ${
-          quizCounter > 0
-            ? isScoreChanged
-              ? "greenEffect"
-              : isQuizCounterChanged
-              ? "redEffect"
-              : ""
-            : finalEffect
-            ? isScoreChanged
-              ? "final-green-shrink"
-              : "final-red-shrink"
-            : ""
-        }`}
-      >
-        {score}
-      </h2>
+      <h2 className={`score-value container-left ${effect}`}>{score}</h2>
     </div>
   );
 };

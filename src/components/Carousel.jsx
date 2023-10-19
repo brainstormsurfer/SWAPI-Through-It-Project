@@ -12,8 +12,7 @@ const Carousel = ({ scenes }) => {
     }, 2000);
 
     return () => {
-      clearInterval(sliderId);  border: #10ff30 solid 2px;
-
+      clearInterval(sliderId);  
     };
   }, [currentSceneIndex, scenes]);
 
