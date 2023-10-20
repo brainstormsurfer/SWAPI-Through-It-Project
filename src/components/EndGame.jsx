@@ -1,8 +1,8 @@
+import Carousel from "./Carousel";
 import SlideContainer from "./SlideContainer";
 import { useState, useEffect } from "react";
-
-const GameOverModal = ({ scenes, score }) => {
-  // console.log("SCENES in GameMOdal", scenes);
+const EndGame = ({ scenes, score }) => {
+  console.log("SCENES in GameMOdal", scenes);
   const [quizScenes, setQuizScenes] = useState([]);
 
   useEffect(() => {
@@ -10,15 +10,13 @@ const GameOverModal = ({ scenes, score }) => {
   }, [quizScenes]);
 
   return (
-    <> 
-    {
-      scenes && <SlideContainer scenes={scenes} />
-    }   
-    </>
+    <div className="endgame-container">
+      {/* { scenes && <SlideContainer scenes={quizScenes} /> } */}
+      { scenes && <Carousel scenes={scenes} /> }
+    </div>
   );
 };
-
-export default GameOverModal;
+export default EndGame;
 
 /*
    <Slider {...sliderSettings}>

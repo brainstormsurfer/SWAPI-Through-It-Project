@@ -29,10 +29,7 @@ const Score = ({ score, quizCounter }) => {
     });
 
     const timeout = setTimeout(() => {
-
       setEffect("");
-      setIsScoreChanged(false);
-      setIsQuizCounterChanged(false);
     }, 3000);
 
     return () => {

@@ -1,19 +1,18 @@
 
 // import Game from "./components/Game";
 // import Welcome from "./components/Welcome";
-// import GameOverModal from "./components/GameOverModal";
+// import EndGame from "./components/EndGame";
 import Game from './components/Game';
-import GameOverModal from './components/GameOverModal';
-import './styles/welcome.css'
+// import EndGame from './components/EndGame';
+// import './styles/welcome.css'
 
 function App() {
   
   return (
-    <body>
+    <main>
         {/* <Welcome /> */}
         <Game />       
-        <GameOverModal />  
-    </body>
+    </main>
   );
 }
 

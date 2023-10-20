@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Filmbar from "./Filmbar";
 import DisplayImage from "./DisplayImage";
-import Score from "./Score"; 
+import Score from "./Score";
 import QuizCounter from "./QuizCounter";
-import GameOverModal from "./GameOverModal";
+import EndGame from "./EndGame";
 import { useScenes } from "./ScenesContext";
 
 const Game = () => {
-  const {getRandomScene, displayedScene, score } = useScenes();
+  const { getRandomScene, displayedScene, score } = useScenes();
   const [isLoading, setIsLoading] = useState(true);
   const [quizCounter, setQuizCounter] = useState(10);
   const [quizSummary, setQuizSummary] = useState([]);
@@ -44,7 +44,7 @@ const Game = () => {
   }, [quizCounter, displayedScene]);
 
   return (
-    <main>
+    <>
       {isLoading ? (
         <Loading isGameOver={isGameOver} />
       ) : (
@@ -60,27 +60,27 @@ const Game = () => {
                 getRandomScene={getRandomScene}
                 decrementCounter={decrementCounter}
               />
-            </nav>    
-
-            <div className="showcase">
-              <Score score={score} quizCounter={quizCounter} />
-              <DisplayImage
-                selectedScene={displayedScene}
-                quizCounter={quizCounter}
-                isLoading={isLoading}
-              />
+            </nav>
+            {!isGameOver ? (
+              <div className="showcase">
+                <Score score={score} quizCounter={quizCounter} />
+                <DisplayImage
+                  selectedScene={displayedScene}
+                  quizCounter={quizCounter}
+                  isLoading={isLoading}
+                />
                 <QuizCounter
                   quizCounter={quizCounter}
                   decrementCounter={decrementCounter}
                 />
-            {isGameOver && (
-              <GameOverModal scenes={quizSummary} score={score} />
-              )}
               </div>
+            ) : (
+                <EndGame scenes={quizSummary} score={score} />
+                )}
           </>
         )
       )}
-    </main>
+    </>
   );
 };
 

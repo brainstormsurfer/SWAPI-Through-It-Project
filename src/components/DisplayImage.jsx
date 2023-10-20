@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Hint from "./Hint";
 import Loading from "./Loading";
-import GameOverModal from "./GameOverModal";
+// import EndGame from "./EndGame";
 const DisplayImage = ({ selectedScene, quizCounter, isLoading }) => {
   const [isDisplayed, setIsDisplayed] = useState(true);
 

@@ -1,60 +1,87 @@
-import { useState, useEffect } from "react";
-import { FaQuoteRight } from "react-icons/fa";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { nanoid } from 'nanoid';
+import { useState } from "react";
 
 const Carousel = ({ scenes }) => {
-  const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    let sliderId = setInterval(() => {
-      nextSlide();
-    }, 2000);
+  // const dynamicStyles = {
+   
+  // };
 
-    return () => {
-      clearInterval(sliderId);  
-    };
-  }, [currentSceneIndex, scenes]);
 
-      
-  const prevSlide = () => {
-    setCurrentSceneIndex((prevIndex) =>
-      (prevIndex - 1 + scenes?.length) % scenes?.length
-    );
+  const slideStyles = {
+    position: "relative",
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "30%",
+    height: "100%",
+    borderRadius: "10px",
+     backgroundPosition: "center",
+     backgroundSize: "cover",
+     backGroundRepeat: "no-repeat",
+    backgroundImage: `url(${scenes[currentIndex].image})`,
   };
 
-  const nextSlide = () => {
-    setCurrentSceneIndex((prevIndex) =>
-      (prevIndex + 1) % scenes?.length
-    );
+  const leftArrowStyles = {
+    position: "absolute",
+    top: "50%",
+    transform: "translate(0, -50%)",
+    left: "32px",
+    fontSize: "45px",
+    color: "#fff",
+    zIndex: 1,
+    cursor: "pointer",
+  };
 
-}
+  const rightArrowStyles = {
+    position: "absolute",
+    top: "50%",
+    transform: "translate(0, -50%)",
+    right: "32px",
+    fontSize: "45px",
+    color: "#fff",
+    zIndex: 1,
+    cursor: "pointer",
+  };
+
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? scenes.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === scenes.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
 
   return (
-    <section className="slide-container">
-      {scenes?.map((scene, sceneIndex) => (
-        <article
-          className="slide scene"
-          key={nanoid()}
-          style={{
-            transform: `translateX(${
-              100 * (sceneIndex - currentSceneIndex)
-            }%)`,
-            opacity: sceneIndex === currentSceneIndex ? "1" : "0",
-            visibility: sceneIndex === currentSceneIndex ? "visible" : "hidden",
-          }}
-        >
-          <img src={scene.image} alt="" className="mini-scene" />
-          <FaQuoteRight className="icon" />
-        </article>
-      ))}
-      <button type="btn-prev" className="prev" onClick={prevSlide}>
-        <FiChevronLeft />
-      </button>
-      <button type="btn-next" className="next" onClick={nextSlide}>
-        <FiChevronRight />
-      </button>
-    </section>
+    <div className="carousel-container">
+      <div className="slider-container">
+         <div style={leftArrowStyles} onClick={goToPrevious}>
+        ‹
+      </div>
+      <div style={rightArrowStyles} onClick={goToNext}>
+        ›
+      </div>
+      <div style={slideStyles}>
+      </div>
+      </div>
+      <div className="navigation-dots">
+          {scenes.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentIndex ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+            >●</span>
+          ))}
+        </div>
+    </div>
   );
 };
 
