@@ -28,7 +28,7 @@ const DisplayImage = ({ selectedScene, quizCounter, isLoading }) => {
       {selectedScene && (
         <>
           <img
-            className={"scene"}
+            // className={"scene"}
             src={selectedScene?.image}
             alt=""
           />

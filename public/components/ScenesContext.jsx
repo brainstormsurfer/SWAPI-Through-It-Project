@@ -1,15 +1,14 @@
 // ScenesContext.js
 import { createContext, useContext, useState, useEffect } from 'react';
-import data from '../api/data.json';
+import data from '../../../../../SWAPIT-Project/src/api/data.json';
 
 const ScenesContext = createContext();
 
 export const ScenesProvider = ({ children }) => {
   const [scenes, setScenes] = useState([]);
   const [displayedScene, setDisplayedScene] = useState(null);
-  const [score, setScore] = useState(0)
-  // for checking if answer is correct or wrong :
   const [displayedFilm, setDisplayedFilm] = useState(null);
+  const [score, setScore] = useState(0)
 
   useEffect(() => {
 
@@ -17,7 +16,7 @@ export const ScenesProvider = ({ children }) => {
 
     // create (a flat) array of scenes from (imported) 'data' of all movies
     const allScenes = data.reduce((accumulator, movie) => {      
-    // each scene object contains properties of: image (url), description, a film (title) and its poster (url)
+    // each scene object contains the following properties: image (url), description, a film (title) and its poster (url)
     const sceneObject = movie.scenes.map((scene) => {
       return ({
         ...scene,
@@ -35,9 +34,10 @@ export const ScenesProvider = ({ children }) => {
       const displayedScene = allScenes[randomIndex];
 
       const newScenes = allScenes.filter((scene) => scene !== displayedScene);
+      // console.log("newScenes", newScenes)
       console.log("displayedScene", displayedScene)
       console.log("displayedScene.film", displayedScene.film)
-      // console.log("displayedScene.poster", displayedScene.poster)
+      console.log("displayedScene.poster", displayedScene.poster)
       setScenes(newScenes);
       setDisplayedScene(displayedScene);
       setDisplayedFilm(displayedScene.film); 
@@ -47,12 +47,10 @@ export const ScenesProvider = ({ children }) => {
   const getRandomScene = (episode) => {
     console.log("episode", episode)
 
-    if (episode) {
-      console.log("displayedFilm", displayedFilm)
-      if (displayedFilm.includes(` ${episode} `)) {      
-        setScore(prev => prev + 1)
-      } 
-    }
+    if (episode)
+    if (displayedFilm.includes(` ${episode} `)) {      
+      setScore(prev => prev + 1)
+    } 
 
     const randomIndex = Math.floor(Math.random() * scenes.length);
     const newScene = scenes[randomIndex];

@@ -1,25 +1,45 @@
 import { useState } from "react";
 
 const Carousel = ({ scenes }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);    
 
-  // const dynamicStyles = {
-   
-  // };
-
-
-  const slideStyles = {
+  const dynamicStyles = {
     position: "relative",
-    overflow: "hidden",
     justifyContent: "center",
-    alignItems: "center",
+    // alignItems: "center",
     width: "30%",
-    height: "100%",
-    borderRadius: "10px",
-     backgroundPosition: "center",
-     backgroundSize: "cover",
-     backGroundRepeat: "no-repeat",
-    backgroundImage: `url(${scenes[currentIndex].image})`,
+    height: "95%",  
+    borderRadius: "15px",    
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    border: `3px ridge grey`,
+    zIndex:'2'
+  };
+
+  const currentSlideStyles = {
+    ...dynamicStyles, 
+    backgroundImage: `url(${scenes[currentIndex].image})`,    
+    borderRadius: "10px",     
+    border: `5px ridge ${scenes[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "rgb(255, 0, 0)"}`,
+    zIndex:'3'
+  };
+
+  const prevSlideStyles = {
+    ...dynamicStyles,     
+    backgroundImage: `${currentIndex === 0 ? 'none' : `url(${scenes[currentIndex - 1].image})`}`,
+    alignSelf: '5rem',
+    filter: 'grayscale(100%)',
+    transform: "translate(23%, -22%) scale(0.8)",
+    animation: "slideTransform 2s linear forwards"
+  };
+
+  const nextSlideStyles = {
+    ...dynamicStyles, 
+    backgroundImage: `${currentIndex === scenes.length - 1 ? 'none' : `url(${scenes[currentIndex + 1].image})`}`,
+    filter: 'grayscale(100%)',
+    transform: "translate(-23%, -22%) scale(0.8)",    
+    animation: "slideTransformBack 2s linear forwards"
   };
 
   const leftArrowStyles = {
@@ -69,16 +89,20 @@ const Carousel = ({ scenes }) => {
       <div style={rightArrowStyles} onClick={goToNext}>
         ›
       </div>
-      <div style={slideStyles}>
+      
+      <div
+      style={prevSlideStyles}></div>
+      <div style={currentSlideStyles}></div>
+      <div style={nextSlideStyles}></div>
       </div>
-      </div>
-      <div className="navigation-dots">
-          {scenes.map((_, index) => (
+      <div className="nav-dots">
+          {scenes.map((scene, index) => (
             <span
               key={index}
               className={`dot ${index === currentIndex ? "active" : ""}`}
+              style={{backgroundColor: scene.score === 1 ? "rgb(0, 223, 67)" : "rgb(255, 0, 0)"}}
               onClick={() => goToSlide(index)}
-            >●</span>
+            ></span>
           ))}
         </div>
     </div>
