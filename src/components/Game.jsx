@@ -48,7 +48,7 @@ const Game = () => {
     if (quizCounter === 0) {
       const delay1 = setTimeout(() => {
         setIsGameOver(true);
-      }, 4000);
+      }, 5000);
       return () => clearTimeout(delay1);
     }})
 
@@ -90,6 +90,7 @@ const Game = () => {
               <>
             <nav className="main-nav">
               <Filmbar
+               quizCounter={quizCounter}
                 getRandomScene={getRandomScene}
                 decrementCounter={decrementCounter}
               />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Carousel = ({ scenes }) => {
+const Carousel = ({ scenes, score}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // const [isPosterFrameGlow, setIsPosterFrameGlow] = useState(false);
 
@@ -10,15 +10,14 @@ const Carousel = ({ scenes }) => {
   // overflow: "hidden",
   // background: `url(${scenes[currentIndex].poster})`,
   // border: "5px solid #ff0000",
+  //  outline: `15px solid  ${scenes[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "#ff0000"}`,
   const dynamicPosterStyles = {
     zIndex: "-1",
     borderRadius: "50%",
     height: "51rem",
-    width: "44rem",
+    width: "42rem",
     transform: "translateY(-7.5rem)",
-    // border: 'none',
-    // outline: 'none',
-    boxShadow: `0px 0px 500px 0px ${scenes[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "#ff0000"}`
+    boxShadow: `0px 0px 45px 15px ${scenes[currentIndex].score === 1 ? "rgba(3, 255, 66, 0.945)" : "#ff0000"}`
   };
 
   const dynamicStyles = {
