@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Carousel from "./Carousel";
-
+import '../styles/welcome.css'
 const EndGame = ({ scenes, score }) => {
   const [combinedArray, setCombinedArray] = useState([]);
 
@@ -25,6 +25,9 @@ const EndGame = ({ scenes, score }) => {
 
   return (
     <div className="endgame-container">
+       <div>
+        <button className="btn-start-endgame pulse-endgame">Start New Game</button>
+      </div>
       <div className="endgame-score">
       <h1>Final Score :  {score} <span>pts.</span></h1>
       </div>

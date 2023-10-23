@@ -14,8 +14,8 @@ const Carousel = ({ scenes, score}) => {
   const dynamicPosterStyles = {
     zIndex: "-1",
     borderRadius: "50%",
-    height: "51rem",
-    width: "42rem",
+    height: "45rem",
+    width: "35rem",
     transform: "translateY(-7.5rem)",
     boxShadow: `0px 0px 45px 15px ${scenes[currentIndex].score === 1 ? "rgba(3, 255, 66, 0.945)" : "#ff0000"}`
   };
