@@ -86,13 +86,15 @@ const Game = () => {
               <span className="special-s">S</span>
               <span className="span">tar Wars</span> Quiz
             </h4>
+            {!isGameOver ? (
+              <>
             <nav className="main-nav">
               <Filmbar
                 getRandomScene={getRandomScene}
                 decrementCounter={decrementCounter}
               />
             </nav>
-            {!isGameOver ? (
+            
               <div className="showcase">
                 <Score score={score} quizCounter={quizCounter} />
                 <DisplayImage
@@ -105,6 +107,7 @@ const Game = () => {
                   decrementCounter={decrementCounter}
                 />
               </div>
+              </>
             ) : (
                 <EndGame scenes={quizSummary} score={score} />
                 )}

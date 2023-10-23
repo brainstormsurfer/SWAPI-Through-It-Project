@@ -25,7 +25,7 @@ const EndGame = ({ scenes, score }) => {
 
   return (
     <div className="endgame-container">
-      <h1 style={{ color: "greenyellow" }}>{score}</h1>
+      {/* <h1 style={{ color: "greenyellow" }}>{score}</h1> */}
       {combinedArray && combinedArray.length >= 10 ? (
         <Carousel scenes={combinedArray} />
       ) : null}
