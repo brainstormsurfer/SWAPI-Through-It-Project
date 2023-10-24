@@ -98,11 +98,11 @@ const Game = () => {
             
               <div className="showcase">
                 <Score score={score} quizCounter={quizCounter} />
-                <DisplayImage
+                {quizCounter !== 0 && <DisplayImage
                   selectedScene={displayedScene}
-                  quizCounter={quizCounter}
+                  // quizCounter={quizCounter}
                   isLoading={isLoading}
-                />
+                />}
                 <QuizCounter
                   quizCounter={quizCounter}
                   decrementCounter={decrementCounter}

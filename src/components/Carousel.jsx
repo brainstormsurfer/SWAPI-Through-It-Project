@@ -2,22 +2,13 @@ import { useState } from "react";
 
 const Carousel = ({ scenes, score}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const [isPosterFrameGlow, setIsPosterFrameGlow] = useState(false);
-
-  // backgroundPosition: "top",
-  // backgroundSize: "cover",
-  // backgroundRepeat: "no-repeat",
-  // overflow: "hidden",
-  // background: `url(${scenes[currentIndex].poster})`,
-  // border: "5px solid #ff0000",
-  //  outline: `15px solid  ${scenes[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "#ff0000"}`,
   const dynamicPosterStyles = {
     zIndex: "-1",
     borderRadius: "50%",
-    height: "45rem",
-    width: "35rem",
-    transform: "translateY(-7.5rem)",
-    boxShadow: `0px 0px 45px 15px ${scenes[currentIndex].score === 1 ? "rgba(3, 255, 66, 0.945)" : "#ff0000"}`
+    height: "44rem",
+    width: "33rem",
+    transform: "translateY(-9.5rem)",
+    boxShadow: `0px 0px 10px 15px ${scenes[currentIndex].score === 1 ? "rgba(3, 255, 66, 0.945)" : "#ff0000"}`
   };
 
   const dynamicStyles = {
@@ -37,8 +28,7 @@ const Carousel = ({ scenes, score}) => {
   const currentSlideStyles = {
     ...dynamicStyles,
     width: "48rem",
-    height: "23rem",
-    justifySelf: "end",
+    height: "23rem",    
     backgroundImage: `url(${scenes[currentIndex].image})`,
     borderRadius: "10px",
     border: `5px ridge ${

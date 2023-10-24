@@ -7,7 +7,6 @@ const Welcome = () => {
   const [isAudioLoaded, setIsAudioLoaded] = useState(false);
 
   useEffect(() => {
-    // console.log("1", audioRef.current);
 
     playAudio();
 

@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
 import Hint from "./Hint";
 import Loading from "./Loading";
-// import EndGame from "./EndGame";
+
 const DisplayImage = ({ selectedScene, isLoading }) => {
 
   if (isLoading && !selectedScene) {
@@ -14,7 +13,6 @@ const DisplayImage = ({ selectedScene, isLoading }) => {
         {selectedScene && (
           <>
             <img
-              // className={"scene"}
               src={selectedScene?.image}
               alt=""
             />
