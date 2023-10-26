@@ -50,54 +50,54 @@
 
 .endgame-container {  
   width: 80vw;
-  height: 80vh;
+  height: 85vh;
   margin: 0 auto;
-  /* display: flex; */
 }
 
 .endgame-score {
-  display: flex;  
+  font-family: SfDistantGalaxy, Arial, Helvetica, sans-serif;
+  white-space: nowrap; 
   position: absolute;
-  top: 20rem;
-  left: 8rem;
-  font-family: 'Soloist3D', sans-serif;
-  font-size: 2rem;
-  width: fit-content;
-  color:#fff;  
+  top: 5rem;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient( to right, #000000, #394dff, transparent);
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color:transparent;
+  background-position: -720px 0;
+  animation: 15s blue_gust 10s ease-in-out infinite both;
+   z-index: 7;
 }
 
-.endgame-score span {
-  font-size: 1.8rem;
+@keyframes blue_gust {
+  /* from {
+    background-position: 100% 0;
+  } */
+  50% {
+    background-position: 200px 0;
+  }
+  100% {
+    /* background-position: 0 0; */
+  }
 }
-
-/* .endgame-score::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-family: 'Soloist3D', sans-serif;
-  font-size: 4rem;
-  width: 50rem;
-  color:#ffffff;
-} */
 
 .btn-start-endgame {
   position: relative;
   display: flex;
-  margin-top: 2rem;  
   align-items: center;
   border-radius: 25px;
   font-family: 'Poppins', sans-serif;
   background: transparent;
   white-space: nowrap;
-  color: #0922ff;
+  color: #253bff;
   font-size: 2rem;   
   cursor: pointer;
-  border:#0922ff 1px solid;          
+  border:#152dff 1px solid;          
   outline:none;
-  box-shadow: inset #0922ff 0 0 10px 0;    
+  box-shadow: inset #1027f7 0 0 10px 0;    
   z-index: 1;
 }
 
@@ -108,7 +108,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* z-index: 5; */
   opacity: 0.5;
   background: transparent;
   animation: 2s pulse-endgame ease-in-out infinite;
@@ -179,15 +178,6 @@ color: #000;
   animation: paused;
 }
 
-
-
-/* .wrapper {
-  display: flex;
-  height: 100%;
-  width: 60%;
-  margin: 0 auto;
-} */
-
 /* Other existing styles */
 .loading {
   display: flex;
@@ -238,9 +228,9 @@ color: #000;
   font-family: "Star Wars", sans-serif;
   font-size: 3.5rem;
   white-space: nowrap;
-  animation: fade-in-white 6s linear infinite;
+  animation: loading-title-anim 6s linear infinite;
 }
-@keyframes fade-in-white {
+@keyframes loading-title-anim {
   45% {
     color: #ffffff8a;
   }
@@ -305,7 +295,7 @@ main {
   max-width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  /* gap: 1.5rem; */
   /* justify-content: center;  */
   align-items: center;
 }
@@ -337,23 +327,9 @@ main {
   border-radius: 25px;
 }
 
-
-/* 
-.scene-container h4 {
-  width: 120rem;
-  height: fit-content;
-  font-family: "SoloistLaser", sans-serif;
-  font-weight: 100;
-  text-align: center;
-} */
-
 .container {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* margin: 1rem; */
-  /* height: 100%; */
-  /* margin-top: 15rem; */
 }
 
 .container-left {
@@ -363,10 +339,8 @@ main {
 
 .counter-title {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   color: #fbff00;
-  /* font-family: "SfDistantGalaxy", sans-serif; */
   font-family: "SfDistantGalaxy", sans-serif;
   font-size: 4.5rem;
   text-align: center;
@@ -477,44 +451,6 @@ main {
     margin-right: 10rem;
   }
 }
-/* 
-.main-footer {
-  width: 100%;
-  bottom: 0;
-  background: var(--secondary-color-dark);
-  color: var(--home-nav-font-color);
-  height: 5rem;
-}
-.main-footer .footer-content {
-  display: flex;
-  justify-content: space-between;
-  height: 5rem;
-  align-items: center;
-}
-.main-footer .social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-footer .footer-content .social .fab {
-  margin-right: 1rem;
-  border: 2px #fff solid;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  text-align: center;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-footer .footer-content .social .fab:hover {
-  cursor: pointer;
-  background: var(--primary-color);
-} */
 
 /* ============================================= */
 /*              Typewriter Style                 */
@@ -617,11 +553,12 @@ p.lead {
 }
 
 .quiz-title {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 1.8rem 0;
+  margin: 1rem 0;
   font-size: 7rem;
   font-family: "SoloistHalftone", sans-serif;
   height: 7.7rem;
@@ -652,13 +589,58 @@ p.lead {
   /* align-items: center;   */
 }
 
+.into_black {  
+  position: relative;  
+} 
+
+.into_black::before {
+  content: "";    
+  white-space: nowrap; 
+  position: absolute;
+  top:0;
+  left:100;  
+  width: 100%;
+  height: 100%;
+  background-color: #000000;    
+  animation: 10s into_black ease-in-out forwards;  
+  /* z-index:1; */
+}
+
+/* .quiz-title::after {
+  content: "";
+  font-family: SfDistantGalaxy, Arial, Helvetica, sans-serif;
+  white-space: nowrap; 
+  position: absolute;
+  top:0;
+  left: 0;  
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  animation: 10s into_black 8s ease-in-out infinite;
+z-index:1;
+} */
+
+@keyframes into_black {
+  /* from {
+    background-position: 100% 0;
+  } */
+  50% {
+    width: 0%;
+    /* background-color: #00000000; */
+    /* transform: translate(50%, 50%); */
+  }
+  100% {
+    
+    background-color: #000000;
+    /* transform: translate(50%, 50%); */
+  }
+}
+
 .main-nav {
   width: 100%;
-  /* height: 10rem; */
   display: flex;
-  /* gap: 1rem; */
+  margin-bottom: 1rem;
   background-color: transparent;
-  /* z-index: 2; */
 }
 
 .main-nav ul {
@@ -711,7 +693,6 @@ p.lead {
   text-align: center;
   background: transparent;
   position: relative;
-  /* height: 10rem; */
   z-index: 2;
 }
 
@@ -719,7 +700,6 @@ p.lead {
   display: flex;
   justify-content: center;
   font-family: "DistantGalaxy", sans-serif;
-  /* position: relative; */
   width: 12rem;
   height: 10rem;
   font-size: 6rem;
@@ -773,7 +753,7 @@ p.lead {
 }
 
 .blueEffect {
-  animation: blueCount 2.85s ease-out forwards alternate-reverse;
+  animation: 10s blueCount 10s ease-out alternate-reverse;
 }
 
 @keyframes blueCount {

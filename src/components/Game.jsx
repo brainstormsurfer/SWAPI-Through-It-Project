@@ -44,7 +44,7 @@ import { useGameContext } from "./context";
         ) : (
           displayedScene && (
             <>
-              <h4 className="quiz-title">
+              <h4 className={isGameOver ? 'quiz-title into_black' : 'quiz-title' }>
                 The Ultimate
                 <span className="special-s">S</span>
                 <span className="span">tar Wars</span> Quiz
