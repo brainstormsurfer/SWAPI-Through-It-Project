@@ -13,11 +13,7 @@ import {
 import {
   SET_QUIZ_SCENES,
   SET_DISPLAYED_SCENE,
-  // SET_SCORE,
   LOADING,
-  // SET_QUIZ_SUMMARY,
-  // SET_QUIZ_COUNTER,
-  // GAME_OVER,
 } from "./ACTIONS";
 
 import { getRandomScene } from "./utils";
@@ -85,4 +81,3 @@ export const useGameContext = () => {
   }
   return context;
 };
-// export const useGameContext = () => useContext(GameContext);

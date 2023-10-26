@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import {Loading, CounterUI, ScoreUI, Filmbar, DisplayImage, EndGame} from './index'
-import { LOADING,  } from "./ACTIONS";
+import { GAME_OVER, LOADING,  } from "./ACTIONS";
 import { useGameContext } from "./context";
 
   
@@ -15,7 +15,18 @@ import { useGameContext } from "./context";
           isGameOver,
         } = state; 
     
+        console.log("counter", counter)
+        console.log("counter", counter)
   
+      useEffect(() => { 
+          // a delay for an endgame effects (score and counter animations)
+      if (counter === 0) {
+            const delay1 = setTimeout(() => {
+              dispatch({ type: GAME_OVER, payload: true });}, 
+              5000);
+            return () => clearTimeout(delay1);
+          }})
+
     useEffect(() => {
       console.log("IN GAME displayedScene", displayedScene)
       if (displayedScene) {

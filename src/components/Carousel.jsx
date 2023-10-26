@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { useGameContext } from "./context";
 
-const Carousel = ({scenes}) => {
+const Carousel = () => {
+  const { state: { quizSummary }} = useGameContext();
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  console.log("Carousel quizSummary", quizSummary)
 
   const dynamicStyles = {
-    // position: "relative",
-    // justifyContent: "center",
-    // alignSelf: "flex-end",
-    // alignItems: "center",
     width: "23%",
     height: "100%",
     borderRadius: "15px",
@@ -21,10 +21,10 @@ const Carousel = ({scenes}) => {
     ...dynamicStyles,
     width: "48rem",
     height: "23rem",    
-    backgroundImage: `url(${scenes[currentIndex].image})`,
+    backgroundImage: `url(${quizSummary[currentIndex].image})`,
     borderRadius: "10px",
     border: `5px ridge ${
-      scenes[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "rgb(255, 0, 0)"
+      quizSummary[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "rgb(255, 0, 0)"
     }`,
     zIndex: "3",
     marginBottom: "1rem",
@@ -34,7 +34,7 @@ const Carousel = ({scenes}) => {
     ...dynamicStyles,
     border: `${currentIndex === 0 ? "none" : "3px ridge grey"}`,
     backgroundImage: `${
-      currentIndex === 0 ? "none" : `url(${scenes[currentIndex - 1].image})`
+      currentIndex === 0 ? "none" : `url(${quizSummary[currentIndex - 1].image})`
     }`,
     filter: "grayscale(100%)",
     transform: "translate(26%, -46%) scale(0.8)",
@@ -43,11 +43,11 @@ const Carousel = ({scenes}) => {
 
   const nextSlideStyles = {
     ...dynamicStyles,
-    border: `${currentIndex === scenes.length - 1 ? "none" : "3px ridge grey"}`,
+    border: `${currentIndex === quizSummary.length - 1 ? "none" : "3px ridge grey"}`,
     backgroundImage: `${
-      currentIndex === scenes.length - 1
+      currentIndex === quizSummary.length - 1
         ? "none"
-        : `url(${scenes[currentIndex + 1].image})`
+        : `url(${quizSummary[currentIndex + 1].image})`
     }`,
     filter: "grayscale(100%)",
     transform: "translate(-26%, -46%) scale(0.8)",
@@ -81,12 +81,12 @@ const Carousel = ({scenes}) => {
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? scenes.length - 1 : currentIndex - 1;
+    const newIndex = isFirstSlide ? quizSummary.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === scenes.length - 1;
+    const isLastSlide = currentIndex === quizSummary.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -97,11 +97,11 @@ const Carousel = ({scenes}) => {
 
   return (
     <div className="carousel-container">
-      <div className={`poster-container ${scenes[currentIndex].score === 1 ? "posterStylesLight" : "posterStylesDark"}`}      >
+      <div className={`poster-container ${quizSummary[currentIndex].score === 1 ? "posterStylesLight" : "posterStylesDark"}`}      >
         <img 
           className="posterStyles"
           alt=""
-          src={scenes[currentIndex].poster}
+          src={quizSummary[currentIndex].poster}
         />
       </div>
       <div style={arrowContainerStyles}>
@@ -121,7 +121,7 @@ const Carousel = ({scenes}) => {
         </div>
 
         <div className="nav-dots">
-          {scenes.map((scene, index) => (
+          {quizSummary.map((scene, index) => (
             <span
               key={index}
               className={`dot ${index === currentIndex ? "active" : ""}`}
