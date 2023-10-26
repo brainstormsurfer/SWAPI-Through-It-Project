@@ -76,7 +76,7 @@ const Filmbar = () => {
               );
             })
           ) : (          
-            <SpinningLetters gameOverChars={gameOverChars} />
+            <SpinningLetters />
           )}
         </ul>
       )}

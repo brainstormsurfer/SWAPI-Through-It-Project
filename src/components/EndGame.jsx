@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import Carousel from "./Carousel";
 import Loading from "./Loading";
-import '../styles/welcome.css'
+import { useGameContext } from "./context";
+
 const EndGame = () => {
-  const { state } = useGameContext();
-  const { score, quizSummary } = state;
+  const { state: { score, quizSummary }} = useGameContext();
+  console.log("ENDGAME score", score)
+  console.log("ENDGAME quizSummary", quizSummary)
+
   const [combinedArray, setCombinedArray] = useState([]);
 
   useEffect(() => {
@@ -14,9 +17,9 @@ const EndGame = () => {
       const scoreArray = quizSummary.slice(1, 11).map((scene) => scene?.sceneScore || 0);
 
       const mergedArrays = Array.from({ length: 10 }, (_, index) => ({
-        image: quizSummary[index]?.image || "",
-        score: quizSummary[index + 1]?.score || 0,
-        poster: quizSummary[index]?.poster || "",
+        image: imageArray[index]?.image || "",
+        score: posterArray[index + 1]?.score || 0,
+        poster: scoreArray[index]?.poster || "",
       }));
 
       setCombinedArray(mergedArrays);

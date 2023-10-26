@@ -6,8 +6,6 @@ import { useGameContext } from "./context";
   
   const Game = () => {    
     const { state, dispatch } = useGameContext();
-    // const [prevScore, setPrevScore] = useState(0);
-
     
     const {
       isLoading,

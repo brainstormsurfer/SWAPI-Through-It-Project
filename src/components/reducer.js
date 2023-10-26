@@ -50,10 +50,7 @@ const gameReducer = (state, action) => {
         };
 
     case GAME_OVER:
-      return {
-        ...state,
-        isGameOver: true,
-      };
+      return { ...state, isGameOver: payload, };
 
     default:
       throw new Error(`No matching action type: ${action.type}`);
