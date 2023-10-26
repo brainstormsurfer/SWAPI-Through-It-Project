@@ -40,35 +40,19 @@
   padding: 0;
 }
 
-.spin-letter {
-  font-family: 'SoloistHalftone', sans-serif;
-  font-size: 4rem;
-  color:#fbff00;
-  visibility: hidden;
-  animation: spin-letter 2.5s ease-in-out forwards;
-  background: transparent;
-  box-shadow: 0px 0px 10px 1px #fbff00;
-  opacity: 0;  
-}
-
-@keyframes spin-letter {
-
-  50% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0.5;
-    /* visibility: hidden; */
-    transform: rotateY(360deg);
-  }
-}
 /* .scroll-text {
   font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
 } */
 
 .dis-play {
   display: none;
+}
+
+.endgame-container {  
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  /* display: flex; */
 }
 
 .endgame-score {
@@ -637,14 +621,15 @@ p.lead {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 1rem 0;
+  margin: 1.8rem 0;
   font-size: 7rem;
   font-family: "SoloistHalftone", sans-serif;
-  height: 8rem;
+  height: 7.7rem;
   max-height: fit-content;
   color: #ffffff;
   font-weight: 100;
   white-space: nowrap;
+  z-index: 5;
 }
 
 .quiz-title span {
@@ -662,7 +647,7 @@ p.lead {
   font-size: 6rem;
   margin-left: 4rem;
   margin-right: 0.2rem;
-  margin-top: 0.9rem;
+  margin-top: 1rem;
   display: flex;
   /* align-items: center;   */
 }
@@ -692,23 +677,13 @@ p.lead {
 }
 
 .main-nav li:hover {
-  /* z-index: 2; */
   background-color: #af0000;
 }
-/* .main-nav li:active {
-  background-color: #fff;
-} */
-
-/* .main-nav li:active {
-  z-index: 2;
-  background-color: #ff0000d0;
-} */
 
 .film-logo {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  /* text-transform: uppercase; */
   border: 5px #000 solid;
   cursor: pointer;
   position: relative;
@@ -724,16 +699,6 @@ p.lead {
   border-radius: 50px;
   box-shadow: inset #ff0000 0 0 30px 0;
   pointer-events: none;
-}
-
-
-.btn-next {
-  width: 10rem;
-  height: 6rem;
-  background-color: rgb(89, 165, 140);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .score {
@@ -893,7 +858,7 @@ p.lead {
   }
 
   85% {
-    color: #414141;
+    color: #222222;
     backdrop-filter: blur(25px);
     white-space: pre;
     content: "               Hint";
@@ -907,5 +872,34 @@ p.lead {
     color: transparent;
     backdrop-filter: blur(0px);
     border: none;
+  }
+}
+
+.main-nav ul li.game-over-letter {
+  font-family: 'SoloistHalftone', sans-serif;
+  font-size: 4rem;
+  color:#fbff00;
+  visibility: hidden;
+  animation: spin-letter 2.5s ease-in-out forwards;
+  background: transparent;
+  box-shadow: 0px 0px 10px 1px #fbff00;
+  opacity: 0;  
+}
+
+.main-nav ul li.game-over-letter:hover {
+  color: #ffffff;
+  box-shadow: 0px 0px 10px 1px #ffffff;
+}
+
+@keyframes spin-letter {
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0.5;
+    /* visibility: hidden; */
+    transform: rotateY(360deg);
   }
 }

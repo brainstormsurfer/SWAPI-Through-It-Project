@@ -1,15 +1,7 @@
 import { useState } from "react";
 
-const Carousel = ({ scenes, score}) => {
+const Carousel = ({scenes}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const dynamicPosterStyles = {
-    zIndex: "-1",
-    borderRadius: "50%",
-    height: "44rem",
-    width: "33rem",
-    transform: "translateY(-9.5rem)",
-    boxShadow: `0px 0px 10px 15px ${scenes[currentIndex].score === 1 ? "rgba(3, 255, 66, 0.945)" : "#ff0000"}`
-  };
 
   const dynamicStyles = {
     // position: "relative",
@@ -105,9 +97,8 @@ const Carousel = ({ scenes, score}) => {
 
   return (
     <div className="carousel-container">
-      <div className={`poster-container ${scenes[currentIndex].score === 1 ? "posterStylesLight" : "posterStylesDark"}`}
-      style={dynamicPosterStyles}>
-        <img
+      <div className={`poster-container ${scenes[currentIndex].score === 1 ? "posterStylesLight" : "posterStylesDark"}`}      >
+        <img 
           className="posterStyles"
           alt=""
           src={scenes[currentIndex].poster}
@@ -121,14 +112,14 @@ const Carousel = ({ scenes, score}) => {
           ›
         </div>
       </div>
-  
+      <div className="dotsContainer">
+
         <div className="slider-container">
           <div style={prevSlideStyles}></div>
           <div style={currentSlideStyles}></div>
           <div style={nextSlideStyles}></div>
         </div>
 
-        {/* <div className="dotsContainer"> */}
         <div className="nav-dots">
           {scenes.map((scene, index) => (
             <span
@@ -142,7 +133,7 @@ const Carousel = ({ scenes, score}) => {
             ></span>
           ))}
         </div>
-      {/* </div> */}
+      </div>
     </div>
   );
 };

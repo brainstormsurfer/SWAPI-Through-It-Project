@@ -1,29 +1,45 @@
 import { nanoid } from "nanoid";
-import { useState, useEffect, quizCounter } from "react";
+import { useState, useEffect } from "react";
+import { useGameContext } from "./context";
+import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, GAME_OVER, SET_QUIZ_SUMMARY } from "./ACTIONS";
+import SpinningLetters from "./SpinningLetters";
+import { filteredScenes, getRandomScene } from "./utils";
 
-const Filmbar = ({ getRandomScene, decrementCounter, quizCounter }) => {
+const Filmbar = () => {
+
   const [logos, setLogos] = useState([]);
-  // const [delayedChars, setDelayedChars] = useState([]);
-  const gameOverChars = ["G", "A", "M", "E", "", "O", "V", "E", "R", ""];
+  const { state: { displayedScene, quizScenes, counter }, dispatch } = useGameContext();
 
-console.log("quizCounter", quizCounter)
+  const handleLogoClick = (logoAlt) => {
+    const clickedFilm = numToRomanHandler(logoAlt);
+    let quizSummaryScore = 0; 
 
-  const altToRomanNumeral = (altText) => {
-    // console.log("altText", altText)
-    const altToRomanMap = {
-      episode01: "I",
-      episode02: "II",
-      episode03: "III",
-      episode04: "IV",
-      episode05: "V",
-      episode06: "VI",
-      episode07: "VII",
-      episode08: "VIII",
-      episode09: "IX",
+    if (displayedScene.film.includes(` ${clickedFilm} `)) {
+      dispatch({ type: INCREMENT_SCORE });
+      quizSummaryScore = 1; 
+    }
+    dispatch({ type: DECREMENT_COUNTER });
+
+    // Construct the scene object for the quiz summary
+    const sceneWithScoringEffect = {
+      ...displayedScene,
+      sceneScore: quizSummaryScore,
     };
-    return altToRomanMap[altText];
-  };
+    console.log("filmbar quizSum", sceneWithScoringEffect)
 
+    dispatch({ type: SET_QUIZ_SUMMARY, payload: sceneWithScoringEffect });
+    
+    const newScene = getRandomScene(quizScenes);
+    // const filteredScenes = filteredScenes(quizScenes, newScene);
+
+    dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene  });
+    dispatch({ type: SET_QUIZ_SCENES, payload: {quizScenes : filteredScenes(quizScenes, newScene) } });
+    
+    if (counter <= 0) {
+      dispatch({ type: GAME_OVER });
+    }
+    
+  };
 
   useEffect(() => {
     const logoArr = [];
@@ -44,9 +60,8 @@ console.log("quizCounter", quizCounter)
     <>
       {logos && (
         <ul>
-          {quizCounter !== 0 ? (
+          {counter !== 0 ? (
             logos.map((logo) => {
-              // const isCurrentFilm = doesFilmTitleContainAlt(displayedFilm, logo.alt);
               return (
                 <li key={logo.id}>
                   <img
@@ -54,15 +69,14 @@ console.log("quizCounter", quizCounter)
                     src={logo.src}
                     alt={logo.alt}
                     onClick={() => {
-                      decrementCounter();
-                      getRandomScene(altToRomanNumeral(logo.alt));
+                      handleLogoClick(logo.alt);
                     }}
                   />
                 </li>
               );
             })
           ) : (          
-              <SpinningLetters gameOverChars={gameOverChars} />
+            <SpinningLetters gameOverChars={gameOverChars} />
           )}
         </ul>
       )}
@@ -74,24 +88,18 @@ export default Filmbar;
 
 
 
-function SpinningLetters({ gameOverChars }) {
-  const [delayedChars, setDelayedChars] = useState([]);
-
-useEffect(() => {
-  const delay = 0.25; 
-
-  const delayedChars = gameOverChars.map((char, index) => (
-    <li
-      key={nanoid()}
-      className="spin-letter"
-      style={{ animationDelay: `${index * delay}s` }}
-    >
-      <h1>{char}</h1>
-    </li>
-  ));
-
-  setDelayedChars(delayedChars);
-}, [gameOverChars]);
-
-return <ul className="spinning-letters">{delayedChars}</ul>; 
-}
+function numToRomanHandler (logoAltText) {
+  // console.log("logoAltText", logoAltText)
+  const numToRoman = {
+    episode01: "I",
+    episode02: "II",
+    episode03: "III",
+    episode04: "IV",
+    episode05: "V",
+    episode06: "VI",
+    episode07: "VII",
+    episode08: "VIII",
+    episode09: "IX",
+  };
+  return numToRoman[logoAltText];
+};

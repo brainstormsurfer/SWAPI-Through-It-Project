@@ -1,4 +1,8 @@
-const Loading = ({ isGameOver }) => {
+import { useGameContext } from "./context";
+
+const Loading = () => {
+  const { state } = useGameContext();
+  const { isGameOver } = state; 
   return (
     <>
       {!isGameOver && (

@@ -1,22 +1,25 @@
 import Hint from "./Hint";
 import Loading from "./Loading";
+import { useGameContext } from "./context";
 
-const DisplayImage = ({ selectedScene, isLoading }) => {
-
-  if (isLoading && !selectedScene) {
+const DisplayImage = () => {
+  const { state } = useGameContext();
+  const {isLoading, displayedScene} = state; 
+console.log("INSIDE DISPLAY")
+  if (isLoading && !displayedScene) {
     return <Loading />;
   }
 
   return (
     !isLoading && (
       <div className="scene-container">
-        {selectedScene && (
+        {displayedScene && (
           <>
             <img
-              src={selectedScene?.image}
+              src={displayedScene?.image}
               alt=""
             />
-            <Hint description={selectedScene?.description} />
+            <Hint description={displayedScene?.description} />
           </>
         )}
       </div>

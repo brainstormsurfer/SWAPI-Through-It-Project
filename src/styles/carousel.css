@@ -1,18 +1,16 @@
-.endgame-container {  
-  width: 80vw;
-  height: 85vh;
-  margin: 0 auto;
-  /* display: flex; */
-}
 
+
+* {
+  /* border:#ff0000 2px solid; */
+}
     
 .carousel-container {
   width: 100%;
   height: 100%;  
   display: flex;
   /* padding-bottom: 1.5rem; */
-  /* gap: 2rem; */
-  padding-bottom: 6rem;
+  /* gap: 2rem; */  
+  /* padding-bottom: 6rem; */
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
@@ -31,6 +29,7 @@
   align-self: center;
   /* justify-self: flex-end; */
   z-index: 3;
+  transform: translateY(-2rem);
   /* background-color: rgb(255, 127, 223); */
   align-items: center; 
   justify-content: center;
@@ -69,40 +68,57 @@
 
   .dotsContainer {
     position: relative;
-    height: 6rem;
+    height: 100%;
     width: 100%;
     display: flex;  
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: center; */
     /* justify-self: flex-end; */
     /* background-color: lime; */
     /* align-items: center; */
-    z-index: 5;
+    /* z-index: 4; */
     }
     
 .poster-container {
   position: relative;
-  border-radius: 50%; 
-  /* height: 48rem;
-  width: 38rem; */
+  padding: 4rem;
+  height: 45rem;
+  width: 45rem;  
+  /* transform: translate(1rem, -1rem); */
+  /* overflow: hidden; */
 }
+.poster-container::before {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;    
+  /* transform: translate(1rem, -4rem); */
+  overflow: hidden;
+}
+
 
 .posterStyles {
   position: relative; 
-  border-radius: 50%;
-  height: 44rem;
-  width: 33rem;
-  z-index: 0;
+  /* /* border-radius: 25px; */
+  height: 43rem;
+  width: 35rem;
+  transform: translate(1rem, -4rem);
+  z-index: -2;
 } 
+
 
 .posterStylesLight {
   position: relative; 
   border-radius: 50%;
+  z-index: 2;
+  background-color: #fff;
 } 
 
 .posterStylesLight::after {
-  
   position: absolute;
   border-radius: 50%;
   content: "";
@@ -110,18 +126,29 @@
   left: 0;
   width: 100%;
   height: 100%;  
-    z-index: 3;
-  /* border: .5rem solid #fff; */
-  outline: .45rem solid #fff;
-  box-shadow: inset 0px 0px 20px 25px #ffffff;
+  /* outline: .45rem solid #fff;  */
+  box-shadow: inset 0px 0px 20px 30px #ffffff,
+  0px 0px 10px 15px rgba(3, 255, 66, 0.945);
+  z-index: -1;
+} 
+
+.posterStylesLight::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;    
+  border-radius: 50%;
+  z-index:-1;
+  box-shadow: 0px 0px 0px 100px #000000;
 } 
 
 .posterStylesDark {
   position: relative; 
   border-radius: 50%;
-  /* height: 50rem;
-  width: 42rem; */
-
+  z-index: 2;
+  background-color: #000;  
 } 
 
 .posterStylesDark::after {
@@ -132,7 +159,21 @@
   left: 0;
   width: 100%;
   height: 100%;  
-  outline: .45rem solid #000;
-  z-index: 3;
-  box-shadow: inset 0px 0px 20px 35px #000000;
+  outline: 1rem solid #000;
+  box-shadow: inset 0px 0px 25px 50px #000,
+  0px 0px 15px 25px #ff0000;
+  z-index: 2;
 } 
+
+.posterStylesDark::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;    
+  border-radius: 50%;  
+  box-shadow: 0px 0px 0px 100px #000000;
+  z-index: 1;
+} 
+
