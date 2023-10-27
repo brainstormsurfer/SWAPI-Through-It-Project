@@ -15,8 +15,6 @@ import { useGameContext } from "./context";
           isGameOver,
         } = state; 
     
-        console.log("counter", counter)
-        console.log("counter", counter)
   
       useEffect(() => { 
           // a delay for an endgame effects (score and counter animations)
@@ -47,7 +45,7 @@ import { useGameContext } from "./context";
               <h4 className={isGameOver ? 'quiz-title into_black' : 'quiz-title' }>
                 The Ultimate
                 <span className="special-s">S</span>
-                <span className="span">tar Wars</span> Quiz
+                <span className="span">tarwars</span> Quiz
               </h4>
               {!isGameOver ? (
                 <>

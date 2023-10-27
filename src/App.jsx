@@ -3,6 +3,7 @@
 // import Welcome from "./components/Welcome";
 // import EndGame from "./components/EndGame";
 import Game from './components/Game';
+import Footer from './shared/Footer';
 // import EndGame from './components/EndGame';
 // import './styles/welcome.css'
 
@@ -12,6 +13,7 @@ function App() {
     <main>
         {/* <Welcome /> */}
         <Game />       
+        <Footer />
     </main>
   );
 }
