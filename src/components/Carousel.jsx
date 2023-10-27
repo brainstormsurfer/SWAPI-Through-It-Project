@@ -71,12 +71,12 @@ const Carousel = () => {
 
   const leftArrowStyles = {
     ...arrowStyles,
-    transform: "translate(35rem, -50%)",
+    transform: "translate(25rem, -50%)",
   };
 
   const rightArrowStyles = {
     ...arrowStyles,
-    transform: "translate(-35rem, -50%)",
+    transform: "translate(-25rem, -50%)",
   };
 
   const goToPrevious = () => {

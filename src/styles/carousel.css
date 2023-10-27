@@ -13,7 +13,7 @@
 }
 
 .nav-dots {    
-  display: flex;
+  display: flex;  
   justify-content: space-evenly;
   align-items: center;
   width: 30%;
@@ -26,6 +26,7 @@
 
 .dot {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   height: 1.5rem;
@@ -67,9 +68,11 @@
   padding: 4rem;
   height: 45rem;
   width: 45rem;  
+  
   /* transform: translateY(-2rem); */
   /* overflow: hidden; */
 }
+
 .poster-container::before {
   position: absolute;
   border-radius: 50%;
@@ -78,16 +81,17 @@
   left: 0;
   width: 100%;
   height: 100%;    
-  overflow: hidden;
+  /* animation: fade-in-poster 2s ease-in-out forwards;   */
 }
 
 
 .posterStyles {
   position: relative; 
-  height: 43rem;
-  width: 35rem;
-  transform: translate(1rem, -4rem);
-  z-index: -2;
+  height: 37rem;
+  width: 28rem;
+  transform: translate(4.5rem, 0rem);
+  z-index:-1;
+  overflow: hidden;
 } 
 
 
@@ -95,8 +99,16 @@
   position: relative; 
   border-radius: 50%;
   z-index: 2;
-  background-color: #fff;
+  background-color: rgb(7, 207, 57);
+  animation: fade-in-light 5s ease-in-out infinite;  
 } 
+
+@keyframes fade-in-light {
+  50% {
+    background-color: #ece8e8;
+  }
+}
+
 
 .posterStylesLight::after {
   position: absolute;
@@ -106,9 +118,9 @@
   left: 0;
   width: 100%;
   height: 100%;  
-  box-shadow: inset 0px 0px 20px 30px #ffffff,
-  0px 0px 10px 15px rgba(3, 255, 66, 0.945);
-  z-index: -1;
+  box-shadow: inset 0px 0px 20px 30px #ece8e8,
+  0px 0px 10px 15px rgb(26, 250, 82);
+  z-index: 5;
 } 
 
 .posterStylesLight::before {
@@ -120,16 +132,20 @@
   height: 100%;    
   border-radius: 50%;
   z-index:-1;
-  box-shadow: 0px 0px 0px 100px #000000;
+  /* box-shadow: 0px 0px 0px 100px #000000; */
 } 
 
 .posterStylesDark {
   position: relative; 
   border-radius: 50%;
-  z-index: 2;
-  background-color: #000;  
+  z-index: 2;   
+  animation: fade-in-dark 5s ease-in-out infinite;  
 } 
-
+@keyframes fade-in-dark {
+  50% {
+    background-color: #ff0000;
+  }
+}
 .posterStylesDark::after {
   position: absolute;
   border-radius: 50%;
@@ -139,7 +155,7 @@
   width: 100%;
   height: 100%;  
   outline: 1rem solid #000;
-  box-shadow: inset 0px 0px 25px 50px #000,
+  box-shadow: inset 0px 0px 25px 40px #000,
   0px 0px 15px 25px #ff0000;
   z-index: 2;
 } 

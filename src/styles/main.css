@@ -52,6 +52,7 @@
   width: 80vw;
   height: 85vh;
   margin: 0 auto;
+  animation: fade-in-poster 5s ease-in-out forwards;
 }
 
 .endgame-score {
@@ -68,8 +69,11 @@
   -webkit-background-clip: text;
   color:transparent;
   background-position: -720px 0;
-  animation: 15s blue_gust 10s ease-in-out infinite both;
+  animation: 10s blue_gust 7s ease-in-out infinite both;
    z-index: 7;
+}
+.endgame-score span {
+  font-size: 2rem;
 }
 
 @keyframes blue_gust {
@@ -98,7 +102,7 @@
   border:#152dff 1px solid;          
   outline:none;
   box-shadow: inset #1027f7 0 0 10px 0;    
-  z-index: 1;
+  z-index: 10;
 }
 
 .btn-start-endgame::after {
@@ -598,39 +602,24 @@ p.lead {
   white-space: nowrap; 
   position: absolute;
   top:0;
-  left:100;  
+  left: 100;  
   width: 100%;
   height: 100%;
-  background-color: #000000;    
-  animation: 10s into_black ease-in-out forwards;  
-  /* z-index:1; */
+  background-color: transparent;    
+  animation: 7s into_black ease-in-out forwards;  
 }
-
-/* .quiz-title::after {
-  content: "";
-  font-family: SfDistantGalaxy, Arial, Helvetica, sans-serif;
-  white-space: nowrap; 
-  position: absolute;
-  top:0;
-  left: 0;  
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  animation: 10s into_black 8s ease-in-out infinite;
-z-index:1;
-} */
 
 @keyframes into_black {
   /* from {
     background-position: 100% 0;
   } */
   50% {
-    width: 0%;
+    /* width: 0%; */
     /* background-color: #00000000; */
     /* transform: translate(50%, 50%); */
   }
-  100% {
-    
+  100% {  
+    width: 110%;
     background-color: #000000;
     /* transform: translate(50%, 50%); */
   }
@@ -856,7 +845,7 @@ z-index:1;
 }
 
 .main-nav li.game-over-letter {
-  font-family: 'SoloistHalftone', sans-serif;
+  font-family: SfDistantGalaxy, sans-serif;
   font-size: 4rem;
   color:#fbff00;
   visibility: hidden;

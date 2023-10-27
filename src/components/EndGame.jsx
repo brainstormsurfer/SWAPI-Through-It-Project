@@ -10,7 +10,7 @@ const EndGame = () => {
         <button className="btn-start-endgame pulse-endgame">Start New Game</button>
       </div>
       <div className="endgame-score">
-      <h1>Final Score :  {score} <span>pts.</span></h1>
+      <h1>Final Score :  {score}<span>pts.</span></h1>
       </div>     
         <Carousel />        
     </div>
