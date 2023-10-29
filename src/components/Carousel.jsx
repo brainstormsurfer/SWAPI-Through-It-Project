@@ -64,7 +64,6 @@ const Carousel = () => {
 
   const arrowStyles = {
     fontSize: "10rem",
-    // color: "#fbff00",
     color: "#fff",
     cursor: "pointer",    
   };

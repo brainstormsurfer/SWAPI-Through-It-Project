@@ -168,10 +168,10 @@ button:hover {
 .welcome-container {
     background: rgba(0, 0, 0, 1);
     overflow: hidden;
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Poppins', 'Roboto', Helvetica, sans-serif;
     margin: 0;
     position: relative;
-     background-image: url('../assets/background-stars-desktop.jpeg');
+    background-image: url('../assets/background-stars-desktop.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/star-wars");
 
@@ -40,10 +40,6 @@
   padding: 0;
 }
 
-/* .scroll-text {
-  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
-} */
-
 .dis-play {
   display: none;
 }
@@ -76,33 +72,27 @@
   font-size: 2rem;
 }
 
-@keyframes blue_gust {
-  /* from {
-    background-position: 100% 0;
-  } */
+@keyframes blue_gust { 
   50% {
     background-position: 200px 0;
-  }
-  100% {
-    /* background-position: 0 0; */
-  }
+  }  
 }
 
 .btn-start-endgame {
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   font-family: 'Poppins', sans-serif;
   background: transparent;
   white-space: nowrap;
-  color: #253bff;
+  color:  rgb(73, 85, 255);
   font-size: 2rem;   
   cursor: pointer;
-  border:#152dff 1px solid;          
+  border: #002fff 1px solid;          
   outline:none;
-  box-shadow: inset #1027f7 0 0 10px 0;    
-  z-index: 10;
+  box-shadow: inset #002fff 0 0 10px 0;    
+  z-index: 10;  
 }
 
 .btn-start-endgame::after {
@@ -113,13 +103,14 @@
   width: 100%;
   height: 100%;
   opacity: 0.5;
+  /* border-radius: 35px; */
   background: transparent;
   animation: 2s pulse-endgame ease-in-out infinite;
 }
 
 .btn-start-endgame:hover {
-  outline:#0922ff 1.5px solid;
-  box-shadow: inset #0922ff 0 0 17px 0;
+  outline: #002fff 1.5px solid;
+  box-shadow: inset  #002fff 0 0 17px 0;
 } 
 
 .btn-start-endgame:active {
@@ -132,16 +123,17 @@
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   font-family: 'Poppins', sans-serif;
   padding: 1rem 3rem;
   background: transparent;
   font-size: 2rem ;
   font-weight: 500;    
   cursor: pointer;
-  border:#0922ff 1px solid;          
+  border: #002fff 1px solid;          
   outline:none;
-  box-shadow: inset #0922ff 0 0 10px 0;    
+  box-shadow: inset  #002fff 0 0 10px 0;  
+  /* border-radius: 35px;   */
 }
 
 .pulse-endgame::after,
@@ -153,7 +145,8 @@
   top: 0;
   left: 0;
   color: rgb(73, 85, 255);      
-  border-radius: 25px;
+  /* border-radius: 25px; */
+  border-radius: 35px;
 }
 
 .pulse-endgame::after {
@@ -327,9 +320,10 @@ footer .social {
   padding-left: 3rem;
 }
 
-footer .footer-content .social .fab {
+footer .footer-content .social .fa-icon {
   margin-right: 1rem;
   border: 2px #fff solid;
+  color: #fff;
   border-radius: 50%;
   height: 40px;
   width: 40px;  
@@ -339,16 +333,20 @@ footer .footer-content .social .fab {
   justify-content: center;
 }
 
-footer .footer-content .social .fab:hover {
+footer .footer-content .social .fa-icon:hover {
   cursor: pointer;
   border: none;
   outline: none;
   background-color: #021c8f;
   box-shadow: inset #ffffff 0 0 4px 3px;
 }
-footer .footer-content .social .fab:active {
+footer .footer-content .social .fa-icon:active {
   background-color: #1100ff;
     box-shadow: inset   #fff 0 0 6px 4px;
+}
+
+footer p {
+white-space: nowrap;
 }
 
 .showcase {
@@ -559,54 +557,190 @@ p.lead {
     404 page
 =======================*/
 
-.page_404 {
-  padding: 40px 0;
-  background: #fff;
-  height: auto;
+/* .btn-error {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  white-space: nowrap;
+  color:  red;
+  padding: 1rem 2rem;
+  font-size: 2rem;   
+  cursor: pointer;
+  border: red 1px solid;
+  outline:none;
+  box-shadow: inset red 0 0 10px 0;    
 }
 
-.page_404 img {
+.btn-error::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: transparent;
+  animation: 2s pulse-error ease-in-out infinite;
 }
 
-.four_zero_four_bg {
-  /* background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif); */
-  height: 500px;
+.btn-error:hover {
+  outline: red 1.5px solid;
+  box-shadow: inset red 0 0 17px 0;
+} 
+
+.btn-error:active {
+  box-shadow: hsl(0, 100%, 48%) 0 0 30px 5px;
+  border: none;
+  outline: none;
+} */
+
+.page_404 {
+  height: 85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_404-container {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  height: 63rem;  
+  width: 63rem;
+  background-image: url('../assets/404-Deathstar-transparent.png');  
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 73%;
+  position: relative;
+  font-family: SoloistHalftone, Arial, Helvetica, sans-serif;  
+  font-size: 12rem;
+  box-shadow: inset #002fff 0px 0px 50px 10px;
+  border-radius: 50%;
+  text-shadow: #0c28a5 5px 3px 0px;
 }
 
-.page_404 h1 {
-  font-size: 90px;
+.page_404-showcase {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 90%;  
 }
 
-.page_404 h3 {
-  font-size: 40px;
-}
-.page_404 p {
-  font-size: 25px;
-}
-
-.link_404 {
-  color: var(--home-nav-font-color) !important;
-  padding: 20px 50px;
-  background: #39ac31;
-  border: transparent;
-  margin: 20px 0;
-  border-radius: 7px;
-  font-size: 18px;
+.page_404-container::after  {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  contain: "";
+  box-shadow: #002fff 0px 0px 20px 0px;
+  z-index: -2;
 }
 
-.link_404:hover {
-  color: var(--home-nav-font-color);
-  background: #8d8a8a;
+.page_404-showcase h1 {
+  color: #858585;
+  position: relative;  
+}
+
+.page_404-showcase .back {
+  position: relative;
+  display: flex;  
+  margin-right: 2rem;  
+  z-index: -2;
+}
+
+.page_404-showcase .front {
+  position: relative;  
+  z-index: 2;
+}
+
+.page_404 h2 {
+  display: flex;  
+  font-size: 4rem;
+  color: #a5a5a5;  
+  position: absolute;
+  bottom: 10rem;
+  font-weight: 500;
+}
+
+.page_404 .button-container {
+  position: relative;  
+  justify-self: flex-start;
+  justify-self: start;
+  align-self: center;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_404 button {
+padding: 1rem 3rem;
+font-size: 2.5rem;
+border-radius: 35px;
+}
+
+/* 
+.pulse-error {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  font-size: 2.2rem;
+  font-weight: 300;
   cursor: pointer;
+  border: red 1px solid; 
+  outline: none;
+  box-shadow: inset red 0 0 10px 0;
 }
 
-.link_404:active {
-  background: var(--primary-color);
-  color: var(--home-nav-font-color);
-  cursor: pointer;
+.pulse-error::after,
+.pulse-error::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: red; 
+  border-radius: 25px;
 }
+
+.pulse-error::after {
+  color: #000;
+  animation: 2s pulse-error ease-in infinite;
+}
+
+.pulse-error::before {
+  animation: 2s pulse-error ease-in-out infinite;
+}
+
+@keyframes pulse-error {
+  50% {      
+      background: #ff000077; 
+  }
+
+  100% {
+      transform: scale(1.75);
+      opacity: 0;
+  }
+}
+
+.pulse-error:hover,
+.pulse-error::before:hover,
+.pulse-error::after:hover {
+  animation: paused;
+} */
+
+/* =========================== */
 
 .quiz-title {
   position: relative;
@@ -661,15 +795,7 @@ p.lead {
   animation: 7s into_black ease-in-out forwards;  
 }
 
-@keyframes into_black {
-  /* from {
-    background-position: 100% 0;
-  } */
-  50% {
-    /* width: 0%; */
-    /* background-color: #00000000; */
-    /* transform: translate(50%, 50%); */
-  }
+@keyframes into_black { 
   100% {  
     width: 110%;
     background-color: #000000;

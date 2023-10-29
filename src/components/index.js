@@ -5,7 +5,7 @@ import DisplayImage from "./DisplayImage";
 import Filmbar from "./Filmbar";
 import CounterUI from "./CounterUI";
 import ScoreUI from "./ScoreUI";
-import EndGame from "./EndGame";
+import EndGame from "../pages/EndGame";
 
 export  {
     // Welcome,

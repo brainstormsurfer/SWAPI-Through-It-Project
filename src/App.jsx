@@ -1,21 +1,37 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Game, Welcome, EndGame, ErrorPage } from "./pages"
+import SharedLayout from './layouts/SharedLayout';
 
-// import Game from "./components/Game";
-// import Welcome from "./components/Welcome";
-// import EndGame from "./components/EndGame";
-import Game from './components/Game';
-import Footer from './shared/Footer';
-// import EndGame from './components/EndGame';
-// import './styles/welcome.css'
+
+const routes = [
+  {
+    path: "/",
+    element: <SharedLayout />,
+    children: [
+      {
+        index: true,
+        element: <Welcome />,
+      },
+      {
+        path: "/quiz", 
+        element: <Game />,
+      },
+      {
+        path: "/summary", 
+        element: <EndGame />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
+    ],
+  },
+];
 
 function App() {
-  
-  return (
-    <main>
-        {/* <Welcome /> */}
-        <Game />       
-        <Footer />
-    </main>
-  );
+  const router = createBrowserRouter(routes);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

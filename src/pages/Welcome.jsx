@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sound from "../assets/audio/theme.mp3";
 import { VscDebugRestart, VscMute, VscUnmute } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
   const audioRef = useRef(null);
@@ -34,7 +35,11 @@ const Welcome = () => {
   return (
     <div className="welcome">
       <div className="buttons-container">
-        <button className="btn-start pulse">Start</button>
+      <button className="btn-start pulse">
+                  <Link to="/quiz">
+                    Start
+                  </Link>
+                </button>        
         <div className="audio-buttons">
           <audio ref={audioRef}>
             <source src={sound} type="audio/mp3" />

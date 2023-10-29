@@ -1,29 +1,36 @@
 import { useEffect } from "react";
-import {Loading, CounterUI, ScoreUI, Filmbar, DisplayImage, EndGame} from './index'
-import { GAME_OVER, LOADING,  } from "./ACTIONS";
-import { useGameContext } from "./context";
-
+import { Loading, CounterUI, ScoreUI, Filmbar, DisplayImage, EndGame } from '../components/index'
+import { GAME_OVER, LOADING } from "../components/ACTIONS";
+import { useGameContext } from "../components/context";
+// import { useNavigate } from "react-router-dom";
   
   const Game = () => {    
     const { state, dispatch } = useGameContext();
-    
+    // const navigate = useNavigate(); 
+
     const {
       isLoading,
        displayedScene,
         counter,
-         quizSummary,
           isGameOver,
         } = state; 
-    
+        
+    // Callback to change the isGameOver state
+  const handleGameOver = () => {
+    dispatch({ type: GAME_OVER, payload: true });
+  };
   
       useEffect(() => { 
           // a delay for an endgame effects (score and counter animations)
       if (counter === 0) {
             const delay1 = setTimeout(() => {
               dispatch({ type: GAME_OVER, payload: true });}, 
-              5000);
+              5000);           
+              handleGameOver();
+
             return () => clearTimeout(delay1);
-          }})
+      }}, [
+      ])
 
     useEffect(() => {
       console.log("IN GAME displayedScene", displayedScene)
@@ -40,8 +47,8 @@ import { useGameContext } from "./context";
         {!displayedScene ? (
           <Loading />
         ) : (
-          displayedScene && (
-            <>
+          !isGameOver && (
+            <main>
               <h4 className={isGameOver ? 'quiz-title into_black' : 'quiz-title' }>
                 The Ultimate
                 <span className="special-s">S</span>
@@ -62,10 +69,10 @@ import { useGameContext } from "./context";
                   <CounterUI />
                 </div>
                 </>
-              ) : (
-                  <EndGame scenes={quizSummary} />
+              ) : (                
+                <EndGame />
                   )}
-            </>
+            </main>
           )
         )}
       </>
