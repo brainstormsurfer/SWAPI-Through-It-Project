@@ -19,7 +19,7 @@ header .endgame-score {
   -webkit-background-clip: text;
   color:transparent;
   background-position: -720px 0;
-  animation: 10s blue_gust 5s ease-in-out infinite both;
+  animation: blue_gust 7s ease-in-out infinite both;
    z-index: 5;
 }
 .endgame-score span {

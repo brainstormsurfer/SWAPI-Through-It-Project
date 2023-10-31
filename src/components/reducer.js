@@ -12,7 +12,11 @@ import {
 const gameReducer = (state, action) => {
   const {payload} = action
   switch (action.type) {
-    
+     
+    case GAME_OVER: {
+      console.log('GAME_OVER action dispatched with payload:', payload);
+      return { ...state, isGameOver: payload };
+}
     case LOADING:
       return { ...state, isLoading: payload, };
 
@@ -48,9 +52,6 @@ const gameReducer = (state, action) => {
           ...state,
           quizSummary: updatedQuizSummary,
         };
-
-    case GAME_OVER:
-      return { ...state, isGameOver: payload, };
 
     default:
       throw new Error(`No matching action type: ${action.type}`);

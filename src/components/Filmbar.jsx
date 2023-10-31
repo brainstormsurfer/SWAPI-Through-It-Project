@@ -35,10 +35,10 @@ const Filmbar = () => {
     dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene  });
     dispatch({ type: SET_QUIZ_SCENES, payload: {quizScenes : filteredScenes(quizScenes, newScene) } });
     
-    if (counter <= 0) {
-      dispatch({ type: GAME_OVER });
-      console.log("Inside FILMBAR if - isGameOver", isGameOver)
-    }
+    // if (counter <= 0) {
+    //   dispatch({ type: GAME_OVER });
+    //   console.log("Inside FILMBAR if - isGameOver", isGameOver)
+    // }
     
   };
   

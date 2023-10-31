@@ -8,12 +8,10 @@ const Header = () => {
     if (isGameOver) {
         const delay = setTimeout(() => {
          setIsFadeOutEffectOver(true)
-        }, 10000);
+        }, 7000);
         return () => clearTimeout(delay);
       }
   }, [isGameOver])
-
-//   console.log("header isGameOver",isGameOver)
 
   const [isFadeOutEffectOver, setIsFadeOutEffectOver] = useState(false)
 

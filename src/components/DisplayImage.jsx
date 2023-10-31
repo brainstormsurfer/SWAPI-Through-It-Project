@@ -3,8 +3,7 @@ import Loading from "./Loading";
 import { useGameContext } from "./context";
 
 const DisplayImage = () => {
-  const { state } = useGameContext();
-  const {counter, displayedScene} = state; 
+  const { state : {counter, displayedScene}} = useGameContext();  
   return (
     counter > 0 && (
       <div className="scene-container">

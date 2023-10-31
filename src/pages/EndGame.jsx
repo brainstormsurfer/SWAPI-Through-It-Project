@@ -1,34 +1,36 @@
-// import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Carousel from "../components/Carousel";
 import { useGameContext } from "../components/context";
 import ErrorPage from "./ErrorPage";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+// import { useEffect } from "react";
 
 const EndGame = () => {
+  // const navigate = useNavigate();
+  const { state: {quizSummary} } = useGameContext()
 
-  const navigate = useNavigate()
+  function refreshPage() {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 1000);
+  }
 
-  // function refreshPage() {
-  //   window.location.reload(false);
-  // }
-
-  const {
-    state: { quizSummary },
-  } = useGameContext();
-
-  console.log("quizSummary", quizSummary);
+ 
   return (
     <>
       {quizSummary ? (
         <div className="endgame-container">
-          <div className="button-container">         
-            <button className="btn-endgame pulse-endgame"
-              // onClick={refreshPage}
-              // onClick={() => {navigate("quiz")}}
+          <div className="button-container">
+            <button
+              className="btn-endgame pulse-endgame"
+              onClick={refreshPage}
+              // onClick={() => {
+              //   navigate("quiz");
+              // }}
             >
               <Link to="/quiz">
-                Start New Game
+              Start New Game
               </Link>
             </button>
           </div>

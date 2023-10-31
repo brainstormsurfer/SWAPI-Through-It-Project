@@ -1,19 +1,23 @@
 import { Link } from "react-router-dom";
-import { useGameContext } from "../components/context";
-// import { RESET_GAME } from "../components/ACTIONS";
+// import { useGameContext } from "../components/context";
+// import { GAME_OVER } from "../components/ACTIONS";
 
 const ErrorPage = () => {
-const { resetGame } = useGameContext()
+// const { isGameOver, dispatch } = useGameContext()
 
-  const resetHandler = () => {
-        resetGame()
-    }
+// const restartHandler = () => {
+//   if (isGameOver) {
+//     dispatch({type: GAME_OVER, payload: false})
+//   }
+// }
 
   return (
     <section className="page_404">
       <div className="page_404-container">
         <div className="button-container">          
-          <button className="btn-endgame pulse-endgame" onClick={resetHandler}>
+          <button className="btn-endgame pulse-endgame"
+          //  onClick={restartHandler}
+           >
             <Link to="quiz"> Start Playing </Link>
           </button>
         </div>

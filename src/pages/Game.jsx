@@ -10,45 +10,35 @@ import {
 import { GAME_OVER, LOADING } from "../components/ACTIONS";
 import { useGameContext } from "../components/context";
 import { useNavigate } from "react-router-dom";
+// const navigate = useNavigate();
 
 const Game = () => {
-  const { state, dispatch } = useGameContext();
-  const navigate = useNavigate();
-  const { isLoading, displayedScene, counter, quizSummary, isGameOver } = state;
+  const { state: {isLoading, displayedScene, counter, isGameOver}, dispatch } = useGameContext();
 
-  useEffect(() => {
-    // a delay for an endgame effects (score and counter animations)
-    if (counter === 0) {
-      const delay1 = setTimeout(() => {
-        dispatch({ type: GAME_OVER, payload: true });
-        navigate("/summary");
-      }, 5000);
-      return () => clearTimeout(delay1);
-    }
-  },[counter]);
 
-  useEffect(() => {
-    console.log("IN GAME displayedScene", displayedScene);
-      // dispatch({ type: LOADING, payload: true});
+useEffect(() => {
     if (displayedScene) {
-      const delay2 = setTimeout(() => {
+      const delay1 = setTimeout(() => {
         dispatch({ type: LOADING, payload: false });
       }, 6000);
-      return () => clearTimeout(delay2);
-    }
-  }, [displayedScene]);
+      return () => clearTimeout(delay1);
+    } 
+}, [displayedScene]);
+
+useEffect(() => {
+    if (counter === 0) {
+      const delay2 = setTimeout(() => {
+        dispatch({ type: GAME_OVER, payload: true });
+      }, 5000);
+      return () => clearTimeout(delay2);}          
+  }, [counter]);
 
   return (
     <>
       {isLoading && !displayedScene ? (
         <Loading />
       ) : (
-        <>
-          {/* <h4 className={isGameOver ? "quiz-title into_black" : "quiz-title"}>
-            The Ultimate
-            <span className="special-s">S</span>
-            <span className="span">tarwars</span> Quiz
-          </h4> */}
+        <>       
           {!isGameOver ? (
             <>
                 <Filmbar />
@@ -70,3 +60,18 @@ const Game = () => {
 };
 
 export default Game;
+
+
+  // useEffect(() => {
+  //   console.log("IN GAME counter NO 0", counter);
+  //   // a delay for an endgame effects (score and counter animations)
+  //   if (counter === 0) {
+  //     console.log("IN GAME counter YES 0", counter);
+  //     const delay1 = setTimeout(() => {
+  //       dispatch({ type: GAME_OVER, payload: true });
+  //       // navigate("/summary");
+  //     }, 5000);
+  //         console.log("IN GAME isGameOver01", isGameOver);
+  //     return () => clearTimeout(delay1);
+  //   }
+  // },[counter]);
