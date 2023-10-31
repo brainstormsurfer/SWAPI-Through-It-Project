@@ -8,29 +8,29 @@ import {
   GAME_OVER,
 } from "./ACTIONS";
 
-
 const gameReducer = (state, action) => {
-  const {payload} = action
+  const { payload } = action;
   switch (action.type) {
-     
     case GAME_OVER: {
-      console.log('GAME_OVER action dispatched with payload:', payload);
+      console.log("GAME_OVER action dispatched with payload:", payload);
       return { ...state, isGameOver: payload };
-}
-    case LOADING:
-      return { ...state, isLoading: payload, };
+    }
+    case LOADING: {
+      console.log("LOADING action dispatched with payload:", payload);
+      return { ...state, isLoading: payload };
+    }
 
-    case SET_QUIZ_SCENES: {            
-  return {
-    ...state,
-    quizScenes: payload.quizScenes
-        };
-
+    case SET_QUIZ_SCENES: {
+      return {
+        ...state,
+        quizScenes: payload.quizScenes,
+      };
     }
     case SET_DISPLAYED_SCENE:
       return {
         ...state,
-        displayedScene: payload };
+        displayedScene: payload,
+      };
 
     case DECREMENT_COUNTER:
       return {
@@ -44,14 +44,17 @@ const gameReducer = (state, action) => {
         score: state.score + 1,
       };
 
-      case SET_QUIZ_SUMMARY:
-        const sceneWithScoringEffect = { ...state.displayedScene, score: payload.sceneScore };
-        const updatedQuizSummary = [...state.quizSummary, sceneWithScoringEffect];
-  
-        return {
-          ...state,
-          quizSummary: updatedQuizSummary,
-        };
+    case SET_QUIZ_SUMMARY:
+      const sceneWithScoringEffect = {
+        ...state.displayedScene,
+        score: payload.sceneScore,
+      };
+      const updatedQuizSummary = [...state.quizSummary, sceneWithScoringEffect];
+
+      return {
+        ...state,
+        quizSummary: updatedQuizSummary,
+      };
 
     default:
       throw new Error(`No matching action type: ${action.type}`);

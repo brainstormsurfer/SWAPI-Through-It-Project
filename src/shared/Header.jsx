@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useGameContext } from "../components/context";
 
 const Header = () => {
-  const {state: { score, isGameOver } } = useGameContext();
+  const {state: { score, isGameOver, isLoading } } = useGameContext();
 
   useEffect(() => {
     if (isGameOver) {
@@ -18,7 +18,8 @@ const Header = () => {
   return (
     <header>
       {!isGameOver || !isFadeOutEffectOver ? (
-    <h4 className={isGameOver ? "quiz-title into_black" : "quiz-title"}>
+    // <h4 className={isGameOver ? "quiz-title into_black" : "quiz-title"}>
+       <h4 className={`quiz-title ${!isGameOver ? isLoading ? "outta_black" : "" : "into_black"}`}>
         The Ultimate
           <span className="special-s">S</span>
           <span className="span">tarwars</span> Quiz

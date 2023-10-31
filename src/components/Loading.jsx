@@ -5,7 +5,7 @@ const Loading = () => {
   const { isLoading } = state; 
   return (
     <>
-      {!isLoading && (
+      {isLoading && (
         <div className="loading">
           <div className="spinner"></div>
           <div className="loading-title">Star Wars</div>

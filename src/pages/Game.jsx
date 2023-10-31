@@ -9,14 +9,11 @@ import {
 } from "../components/index";
 import { GAME_OVER, LOADING } from "../components/ACTIONS";
 import { useGameContext } from "../components/context";
-import { useNavigate } from "react-router-dom";
-// const navigate = useNavigate();
 
 const Game = () => {
   const { state: {isLoading, displayedScene, counter, isGameOver}, dispatch } = useGameContext();
 
-
-useEffect(() => {
+  useEffect(() => {
     if (displayedScene) {
       const delay1 = setTimeout(() => {
         dispatch({ type: LOADING, payload: false });
@@ -35,7 +32,7 @@ useEffect(() => {
 
   return (
     <>
-      {isLoading && !displayedScene ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>       
