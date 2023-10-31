@@ -6,41 +6,42 @@ import SpinningLetters from "./SpinningLetters";
 import { filteredScenes, getRandomScene } from "./utils";
 
 const Filmbar = () => {
-
+  
   const [logos, setLogos] = useState([]);
-  const { state: { displayedScene, quizScenes, counter }, dispatch } = useGameContext();
-
+  const { state: { displayedScene, quizScenes, counter, isGameOver }, dispatch } = useGameContext();
+  
   const handleLogoClick = (logoAlt) => {
     const clickedFilm = numToRomanHandler(logoAlt);
     let quizSummaryScore = 0; 
-
+    
     if (displayedScene.film.includes(` ${clickedFilm} `)) {
       dispatch({ type: INCREMENT_SCORE });
       quizSummaryScore = 1; 
     }
     dispatch({ type: DECREMENT_COUNTER });
-
+    
     // Construct the scene object for the quiz summary
     const sceneWithScoringEffect = {
       ...displayedScene,
       sceneScore: quizSummaryScore,
     };
     console.log("filmbar quizSum", sceneWithScoringEffect)
-
+    
     dispatch({ type: SET_QUIZ_SUMMARY, payload: sceneWithScoringEffect });
     
     const newScene = getRandomScene(quizScenes);
     // const filteredScenes = filteredScenes(quizScenes, newScene);
-
+    
     dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene  });
     dispatch({ type: SET_QUIZ_SCENES, payload: {quizScenes : filteredScenes(quizScenes, newScene) } });
     
     if (counter <= 0) {
       dispatch({ type: GAME_OVER });
+      console.log("Inside FILMBAR if - isGameOver", isGameOver)
     }
     
   };
-
+  
   useEffect(() => {
     const logoArr = [];
     for (let i = 0; i < 9; i++) {
@@ -57,7 +58,7 @@ const Filmbar = () => {
 
 
   return (
-    <>
+    <> 
       {logos && (
         <ul>
           {counter !== 0 ? (

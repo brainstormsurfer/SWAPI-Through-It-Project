@@ -27,6 +27,7 @@ const Welcome = () => {
       setIsAudioLoaded(true);
     }
   };
+  const handleClick = (e) => {console.log(e.target)}
 
   function refreshPage() {
     window.location.reload(false);
@@ -35,9 +36,9 @@ const Welcome = () => {
   return (
     <div className="welcome">
       <div className="buttons-container">
-      <button className="btn-start pulse">
-                  <Link to="/quiz">
-                    Start
+      <button className="btn-start pulse" onClick={(e) => {handleClick(e)}}>
+                  <Link to="quiz">
+                    Start Playing
                   </Link>
                 </button>        
         <div className="audio-buttons">
@@ -87,8 +88,7 @@ const Welcome = () => {
             May the forth be with you. Always.<br /><br />
             Now, if you'll excuse me,<br />
             There's an important speech that I must give to my people.<br />
-            They are yearning for it.<br />
-            So you'll have to excuse me now.<br />
+            They are yearning for it.<br />           
             Farewell, young padawn. Farewell.
           <br /><br />
             My Dear People,<br />

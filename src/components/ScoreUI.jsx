@@ -6,7 +6,7 @@ const ScoreUI = () => {
   const [difference, setDifference] = useState(0);
   const [effect, setEffect] = useState("");
   
-  const { state: { score, counter } } = useGameContext();  console.log("inside Score counter", counter)
+  const { state: { score, counter } } = useGameContext();  
 
   useEffect(() => {    
     const currentDifference = score - difference;

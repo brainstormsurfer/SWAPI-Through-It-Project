@@ -24,6 +24,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 3rem 5rem; 
 }
 
  .buttons-container::before {
@@ -45,7 +46,11 @@
     width: fit-content;
     height: max-content;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+}
+
+.btn-start a {
+    color: #ffc909;
 }
 
 .btn-audio,
@@ -63,11 +68,12 @@
     border:#ffc909 1px solid;          
     outline:none;
     box-shadow: inset #ffc909 0 0 10px 0;    
-    z-index: 1;
+    /* z-index: 1; */
+    height: 6rem;    
 }
 
-.btn-start::before,
-.btn-start::after {
+button::before,
+button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -77,10 +83,6 @@
     z-index: -1;
     opacity: 0.7;
     background: transparent;
-}
-
-.btn-start {
-    height: 7rem;     
 }
 
 .pulse {
@@ -107,6 +109,7 @@
     width: 100%;
     color: #ffc909;      
     border-radius: 25px;
+    z-index: -1;
 }
 
 .pulse::after {
@@ -133,7 +136,7 @@ color: #000;
 
 .pulse:hover,
 .pulse::before:hover,
-.pulse::after:hover {
+.pulse::after:hover  {
     animation: paused;
 }
 
@@ -168,10 +171,10 @@ button:hover {
 .welcome-container {
     background: rgba(0, 0, 0, 1);
     overflow: hidden;
-    font-family: 'Poppins', 'Roboto', Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
     margin: 0;
     position: relative;
-    background-image: url('../assets/background-stars-desktop.jpeg');
+     background-image: url('../assets/background-stars-desktop.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

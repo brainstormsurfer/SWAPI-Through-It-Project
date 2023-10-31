@@ -4,14 +4,9 @@ import { useGameContext } from "./context";
 
 const DisplayImage = () => {
   const { state } = useGameContext();
-  const {isLoading, displayedScene} = state; 
-console.log("INSIDE DISPLAY")
-  if (isLoading && !displayedScene) {
-    return <Loading />;
-  }
-
+  const {counter, displayedScene} = state; 
   return (
-    !isLoading && (
+    counter > 0 && (
       <div className="scene-container">
         {displayedScene && (
           <>

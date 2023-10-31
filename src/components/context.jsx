@@ -31,7 +31,8 @@ export const GameProvider = ({ children }) => {
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
   const fetchDataAndInitialize = () => {
-    dispatch({ type: LOADING });
+    dispatch({ type: LOADING, payload: true });
+
     const allScenes = data.reduce((accumulator, movie) => {      
       const sceneObject = movie.scenes.map((scene) => {
         return ({
@@ -43,16 +44,16 @@ export const GameProvider = ({ children }) => {
       return accumulator.concat(sceneObject);
     }, []); 
     
-
-
     dispatch({ type: SET_QUIZ_SCENES, payload: { quizScenes: allScenes } });
 
     if (allScenes.length > 0) {
       const displayedScene = getRandomScene(allScenes)
       dispatch({ type: SET_DISPLAYED_SCENE, payload: displayedScene });
+      
     } else {
       throw new Error("Failed to fetch data")
     }
+    dispatch({ type: LOADING, payload: true });
   };
 
   useEffect(() => {

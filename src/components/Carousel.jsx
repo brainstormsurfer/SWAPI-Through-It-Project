@@ -1,11 +1,22 @@
 import { useState } from "react";
 import { useGameContext } from "./context";
+import { useNavigate } from "react-router-dom"; 
 
 const Carousel = () => {
   const { state: { quizSummary }} = useGameContext();
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  console.log("Carousel quizSummary", quizSummary)
+  const navigate = useNavigate();  
+
+  if (!quizSummary || quizSummary.length === 0) {
+    console.log("error : quizSummary has no data")
+    return null; // Return null when quizSummary is empty
+  }
+
+
+  if (!quizSummary || quizSummary.length === 0) {
+    navigate("/quiz"); 
+    return null; // Return null to prevent rendering the carousel
+  }
 
   const dynamicStyles = {
     width: "23%",

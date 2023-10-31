@@ -2,10 +2,10 @@ import { useGameContext } from "./context";
 
 const Loading = () => {
   const { state } = useGameContext();
-  const { isGameOver } = state; 
+  const { isLoading } = state; 
   return (
     <>
-      {!isGameOver && (
+      {!isLoading && (
         <div className="loading">
           <div className="spinner"></div>
           <div className="loading-title">Star Wars</div>

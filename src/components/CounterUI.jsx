@@ -4,7 +4,7 @@ import { useGameContext } from "./context";
 const CounterUI = () => {
   const { state: { counter } } = useGameContext();
   const [counterClass, setCounterClass] = useState("");
-  // console.log("inside CounterUI counter", counter)
+  console.log("inside CounterUI counter", counter)
 
   useEffect(() => {
     if (counter > 0) {
