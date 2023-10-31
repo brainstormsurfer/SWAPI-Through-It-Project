@@ -1003,7 +1003,7 @@ main li:active::after {
 }
 
 main li.game-over-letter {
-  font-family: SfDistantGalaxy, sans-serif;
+  font-family: "Soloist3D", sans-serif;
   font-size: 4rem;
   color:#fbff00;
   visibility: hidden;

@@ -1,4 +1,4 @@
-import { Game, Welcome, EndGame, ErrorPage } from "./pages";
+import { Game, Welcome, ErrorPage } from "./pages";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,11 +18,7 @@ const routes = [
       {
         path: "/quiz",
         element: <Game />,
-      },
-      {
-        path: "/summary",
-        element: <EndGame />,
-      },
+      },      
     ],
   },
   {

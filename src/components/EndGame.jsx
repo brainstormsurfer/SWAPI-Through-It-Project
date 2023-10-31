@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Carousel from "../components/Carousel";
-import { useGameContext } from "../components/context";
-import ErrorPage from "./ErrorPage";
+import Carousel from "./Carousel";
+import { useGameContext } from "./context";
+import ErrorPage from "../pages/ErrorPage";
 import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 // import { useEffect } from "react";

@@ -4,6 +4,6 @@
 import Welcome from "./Welcome";
 import ErrorPage from "./ErrorPage";
 import Game from "./Game";
-import EndGame from "./EndGame";
+import EndGame from "../components/EndGame";
 
 export { Welcome, ErrorPage, Game, EndGame };
