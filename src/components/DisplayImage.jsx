@@ -1,36 +1,24 @@
-// import { useEffect } from "react";
-// import { LOADING } from "./ACTIONS";
 import Hint from "./Hint";
-// import Loading from "./Loading";
 import { useGameContext } from "./context";
 
 const DisplayImage = () => {
-  const { state : { counter, displayedScene }} = useGameContext();  
-
-//   useEffect(() => {
-//     if (displayedScene) {
-//       const delay1 = setTimeout(() => {
-//         dispatch({ type: LOADING, payload: false });
-//       }, 6000);
-//       return () => clearTimeout(delay1);
-//     } 
-// }, []);
+  const {
+    state: { counter, displayedScene },
+  } = useGameContext();
 
   return (
-    counter > 0 && (
-      <div className="scene-container">
-        {displayedScene && (
-          <>
-            <img
-              src={displayedScene?.image}
-              alt=""
-            />
-            <Hint description={displayedScene?.description} />
-          </>
-        )}
-      </div>
+    displayedScene && counter > 0 ? (
+      <>
+        <div className="scene-container">
+        <img src={displayedScene?.image} alt="" />
+        <Hint description={displayedScene?.description} />
+        </div>
+      </> ) : (
+          <div className="scene-container border_black">
+          <img className="vanish" src={displayedScene?.image} alt="" />          
+          </div>
+      )
     )
-  );
 };
 
 export default DisplayImage;

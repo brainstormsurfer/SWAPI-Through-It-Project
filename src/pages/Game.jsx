@@ -41,9 +41,7 @@ useEffect(() => {
                 <Filmbar />
               <div className="showcase">
                 <ScoreUI />
-                {counter !== 0 && (
                   <DisplayImage />
-                )}
                 <CounterUI />
               </div>
             </>

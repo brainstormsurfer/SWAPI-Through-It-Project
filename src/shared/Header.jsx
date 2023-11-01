@@ -22,7 +22,7 @@ const Header = () => {
        <h4 className={`quiz-title ${!isGameOver ? isLoading ? "outta_black" : "" : "into_black"}`}>
         The Ultimate
           <span className="special-s">S</span>
-          <span className="span">tarwars</span> Quiz
+          <span className="span">tar wars</span> Quiz
         </h4>
       ) : (
         <div className="endgame-score">

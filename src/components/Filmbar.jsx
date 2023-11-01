@@ -1,14 +1,14 @@
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 import { useGameContext } from "./context";
-import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, GAME_OVER, SET_QUIZ_SUMMARY } from "./ACTIONS";
+import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, SET_QUIZ_SUMMARY } from "./ACTIONS";
 import SpinningLetters from "./SpinningLetters";
 import { filteredScenes, getRandomScene } from "./utils";
 
 const Filmbar = () => {
   
   const [logos, setLogos] = useState([]);
-  const { state: { displayedScene, quizScenes, counter, isGameOver }, dispatch } = useGameContext();
+  const { state: { displayedScene, quizScenes, counter }, dispatch } = useGameContext();
   
   const handleLogoClick = (logoAlt) => {
     const clickedFilm = numToRomanHandler(logoAlt);
@@ -20,26 +20,18 @@ const Filmbar = () => {
     }
     dispatch({ type: DECREMENT_COUNTER });
     
-    // Construct the scene object for the quiz summary
+    // creating quiz summary object
     const sceneWithScoringEffect = {
       ...displayedScene,
       sceneScore: quizSummaryScore,
     };
-    console.log("filmbar quizSum", sceneWithScoringEffect)
     
     dispatch({ type: SET_QUIZ_SUMMARY, payload: sceneWithScoringEffect });
     
     const newScene = getRandomScene(quizScenes);
-    // const filteredScenes = filteredScenes(quizScenes, newScene);
     
     dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene  });
-    dispatch({ type: SET_QUIZ_SCENES, payload: {quizScenes : filteredScenes(quizScenes, newScene) } });
-    
-    // if (counter <= 0) {
-    //   dispatch({ type: GAME_OVER });
-    //   console.log("Inside FILMBAR if - isGameOver", isGameOver)
-    // }
-    
+    dispatch({ type: SET_QUIZ_SCENES, payload: {quizScenes : filteredScenes(quizScenes, newScene) } });    
   };
   
   useEffect(() => {
