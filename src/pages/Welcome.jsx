@@ -37,7 +37,7 @@ const Welcome = () => {
     <div className="welcome">
       <div className="buttons-container">
       <button className="btn-start pulse" onClick={(e) => {handleClick(e)}}>
-                  <Link to="quiz">
+                  <Link to="/quiz">
                     Start Playing
                   </Link>
                 </button>        

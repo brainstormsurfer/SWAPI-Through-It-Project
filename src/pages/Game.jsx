@@ -55,18 +55,3 @@ useEffect(() => {
 };
 
 export default Game;
-
-
-  // useEffect(() => {
-  //   console.log("IN GAME counter NO 0", counter);
-  //   // a delay for an endgame effects (score and counter animations)
-  //   if (counter === 0) {
-  //     console.log("IN GAME counter YES 0", counter);
-  //     const delay1 = setTimeout(() => {
-  //       dispatch({ type: GAME_OVER, payload: true });
-  //       // navigate("/summary");
-  //     }, 5000);
-  //         console.log("IN GAME isGameOver01", isGameOver);
-  //     return () => clearTimeout(delay1);
-  //   }
-  // },[counter]);
