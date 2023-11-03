@@ -46,9 +46,15 @@ const Welcome = () => {
             <source src={sound} type="audio/mp3" />
           </audio>
           <button className="btn-audio" onClick={playAudio}>
+            <i>
+              
+            </i>
             {isAudioLoaded ? <VscMute /> : <VscUnmute />}
           </button>
           <button className="btn-audio" onClick={refreshPage}>
+            <i>
+              
+            </i>
             <VscDebugRestart />
           </button>
         </div>

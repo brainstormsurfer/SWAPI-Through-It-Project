@@ -1,36 +1,48 @@
 import { useEffect, useState } from "react";
 import { useGameContext } from "./context";
-import { GAME_OVER } from "../components/ACTIONS";
 
 const CounterUI = () => {
-  const { state: { counter, isGameOver } , dispatch} = useGameContext();
-  const [counterClass, setCounterClass] = useState("");
-  console.log("inside CounterUI counter", counter)
+  const {
+    state: { counter },
+  } = useGameContext();
+  const [counterEffect, setCounterEffect] = useState("");
+  console.log("inside CounterUI counter", counter);
 
   useEffect(() => {
+    console.log("use effect 1  counter",counter)
     if (counter > 0) {
-      setCounterClass("blueEffect");
-      
+      setCounterEffect("blueCounterEffect");
+
       const timer = setTimeout(() => {
-        setCounterClass(""); 
-      }, 3000);
+        setCounterEffect("");
+      }, 2900);
 
       return () => clearTimeout(timer);
     } else if (counter === 0) {
-      // console.log("IN COUNTER BEFORE CHANGE isGameOver", isGameOver);
-
-      setCounterClass("final-blue-shrink");
+      setCounterEffect("final-blue-effect");
       const timer = setTimeout(() => {
-        setCounterClass("");   
-        // dispatch({ type: GAME_OVER, payload : true })  
-        // console.log("IN COUNTER AFTER CHANGE isGameOver", isGameOver);
-      }, 5000);    
+        setCounterEffect("");
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [counter]);
 
   return (
-    <div className={(counter === 0 && counterClass === "") ? 'dis-play' :''}>
+    <div className={counter === 0 && counterEffect === "" ? "dis-play" : "counter-container"}>
+      {/* // <div> */}
+      <h2 className={`counter-value ${counterEffect}`}>{counter}</h2>
+     
+      <h2 className={`counter-title ${counter > 0 ? "" : "effect-vertical"}`}>
+        Scenes left
+      </h2>
+    </div>
+  );
+};
+
+export default CounterUI;
+
+/*
+<div className={(counter === 0 && counterClass === "") ? 'dis-play' :''}>
       <h3 className={`counter-value counter ${counterClass}`}>
         {counter}
       </h3>
@@ -38,7 +50,4 @@ const CounterUI = () => {
         <span className="special-s">S</span>cenes left
       </h4>
     </div>
-  );
-};
-
-export default CounterUI;
+    */

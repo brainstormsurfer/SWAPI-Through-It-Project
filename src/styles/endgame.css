@@ -6,7 +6,7 @@
 }
 
 header .endgame-score {
-  font-family: SfDistantGalaxy, Arial, Helvetica, sans-serif;
+  font-family: "SfDistantGalaxy", Arial, Helvetica, sans-serif;
   white-space: nowrap; 
   position: absolute;
   top: 6rem;
@@ -98,7 +98,7 @@ header .endgame-score {
   border: #002fff 1px solid;          
   outline:none;
   box-shadow: inset  #002fff 0 0 10px 0;  
-  z-index: 0;
+  z-index: 100;
   /* border-radius: 35px;   */
   
 }
@@ -120,11 +120,11 @@ header .endgame-score {
 
 .pulse-endgame::after {
 /* color: #000; */
-  animation: 3s pulse-endgame ease-in infinite;
+  animation: 5s pulse-endgame ease-in infinite;
 }
 
 .pulse-endgame::before {
-  animation: 3s pulse-endgame ease-in-out infinite;
+  animation: 5s pulse-endgame ease-in-out infinite;
 }
 @keyframes pulse-endgame {
   50% {
@@ -245,7 +245,7 @@ header .endgame-score {
   border-radius: 50%;
   z-index: 2;
   background-color: #ece8e8;
-  animation: fade-in-light 3s ease-in-out infinite;  
+  animation: fade-in-light 5s ease-in-out infinite;  
 } 
 
 @keyframes fade-in-light {
@@ -283,7 +283,7 @@ header .endgame-score {
   position: relative; 
   border-radius: 50%;
   z-index: 2;   
-  animation: fade-in-dark 3s ease-in-out infinite;  
+  animation: fade-in-dark 5s ease-in-out infinite;  
 } 
 @keyframes fade-in-dark {
   50% {

@@ -14,7 +14,7 @@ const DisplayImage = () => {
         <Hint description={displayedScene?.description} />
         </div>
       </> ) : (
-          <div className="scene-container border_black">
+          <div className="scene-container scene-endgame">
           <img className="vanish" src={displayedScene?.image} alt="" />          
           </div>
       )

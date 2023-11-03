@@ -8,8 +8,8 @@ const Warning = () => {
       <h1>ATTENTION</h1>  
       <br />    
       <p className="warning-text">
-      The following page features background music for an enhanced experience, <br />
-        And although a Mute button will be available at the top right corner, <br /> 
+      The following page will feature a background music for an enhanced experience. <br />
+        Although a Mute button will be available at the top right corner, <br /> 
         Please verify in advance that the volume level in your device isn't too high.
         <br />
         <br />      
