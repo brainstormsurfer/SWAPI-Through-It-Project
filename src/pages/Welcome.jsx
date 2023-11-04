@@ -35,7 +35,7 @@ const Welcome = () => {
   }
 
   return (
-    <div className="welcome">
+    <>
       <div className="buttons-container">
       <button className="btn-start pulse" onClick={(e) => {handleClick(e)}}>
                   <Link to="/quiz">
@@ -61,7 +61,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className="welcome-container">
+      <div className="text-container">
         <div className="wrapper">
           <div className="scroll-text">
             <h2>
@@ -131,7 +131,7 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
