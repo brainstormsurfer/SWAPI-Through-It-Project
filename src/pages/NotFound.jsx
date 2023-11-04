@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 // import { useGameContext } from "../components/context";
 // import { GAME_OVER } from "../components/ACTIONS";
+import './style/notFound.css'
 
-const ErrorPage = () => {
+const NotFound = () => {
 // const { isGameOver, dispatch } = useGameContext()
 
 // const restartHandler = () => {
@@ -31,4 +32,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default NotFound;

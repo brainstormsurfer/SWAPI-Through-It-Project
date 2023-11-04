@@ -1,0 +1,88 @@
+.page_404 {
+    height: 85rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page_404-container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 63rem;
+    width: 63rem;
+    background-image: url("../assets/404-Deathstar-transparent.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 73%;
+    position: relative;
+    font-family: SoloistHalftone, Arial, Helvetica, sans-serif;
+    font-size: 12rem;
+    box-shadow: inset #002fff 0px 0px 50px 10px;
+    border-radius: 50%;
+    text-shadow: #0c28a5 5px 3px 0px;
+  }
+  
+  .page_404-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+  }
+  
+  .page_404-container::after {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    contain: "";
+    box-shadow: #002fff 0px 0px 20px 0px;
+    z-index: -2;
+  }
+  
+  .page_404-showcase h1 {
+    color: #858585;
+    position: relative;
+  }
+  
+  .page_404-showcase .back {
+    position: relative;
+    display: flex;
+    margin-right: 2rem;
+    z-index: -2;
+  }
+  
+  .page_404-showcase .front {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .page_404 h2 {
+    display: flex;
+    font-size: 4rem;
+    color: #a5a5a5;
+    position: absolute;
+    bottom: 10rem;
+    font-weight: 500;
+  }
+  
+  .page_404 .button-container {
+    position: relative;
+    justify-self: flex-start;
+    justify-self: start;
+    align-self: center;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page_404 button {
+    padding: 1rem 3rem;
+    font-size: 2.5rem;
+    border-radius: 35px;
+  }

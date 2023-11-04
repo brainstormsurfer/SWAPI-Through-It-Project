@@ -1,0 +1,128 @@
+
+/* .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;    
+    height: 100vh;
+    max-width: 230rem;         
+    border: 5px solid pink;
+  } */
+  
+
+header .quiz-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 1rem 0;
+    font-size: 7rem;
+    font-family: "SoloistHalftone", sans-serif;
+    height: 7rem;
+    max-height: fit-content;
+    color: #ffffff;
+    font-weight: 100;
+    white-space: nowrap;
+    z-index: 5;
+  }
+  
+  header .quiz-title .special-s {
+    font-family: "Star Wars", sans-serif;
+    font-size:6rem;
+    margin-left: 4rem;
+    margin-right: 0.5rem;
+    margin-top: 10px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;  
+  }
+  
+  header .quiz-title span {
+    font-family: "SfDistantGalaxy", sans-serif;
+    color: #fbff00;
+    font-size: 7rem;
+  }
+  
+  header .quiz-title .span {
+    padding-right: 1rem;
+  }
+  
+  /* header .quiz-title .special-s {
+    font-family: "Star Wars", sans-serif;
+    font-size:6rem;
+    margin-left: 4rem;
+    margin-right: 0.5rem;
+    margin-top: 10px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;  
+  } */
+
+  
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* margin-top: 100rem; */
+    top: 100rem;
+    /* bottom: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 5rem;
+    background-image: linear-gradient(to right, #000000, #394dff, transparent);
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 10;  
+  }
+  
+  footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 2rem;
+    width: min-content;
+  }
+  
+  footer .social .fa-icon {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    color: #fff;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer .social .fa-icon:hover {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #021c8f;
+    box-shadow: inset #ffffff 0 0 4px 3px;
+  }
+  footer .social .fa-icon:active {
+    background-color: #1100ff;
+    box-shadow: inset #fff 0 0 6px 4px;
+  }
+  
+  footer p {
+    white-space: nowrap;
+  }
+  
+  /* .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .container-left {
+    display: flex;
+    align-self: flex-end;
+  } */

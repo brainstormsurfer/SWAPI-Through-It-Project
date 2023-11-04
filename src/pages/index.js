@@ -1,9 +1,10 @@
 // import Home from "./Home";
 // import About from "./About";
 
+import Warning from "./Warning"
 import Welcome from "./Welcome";
-import ErrorPage from "./ErrorPage";
+import NotFound from "./NotFound";
 import Game from "./Game";
-import EndGame from "../components/EndGame";
+import EndGame from "./EndGame";
 
-export { Welcome, ErrorPage, Game, EndGame };
+export { Warning, Welcome, NotFound, Game, EndGame };

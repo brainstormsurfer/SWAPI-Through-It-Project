@@ -1,4 +1,5 @@
-import { Game, Welcome, ErrorPage } from "./pages";
+import { Game, Welcome, NotFound } from "./pages";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -28,12 +29,11 @@ const routes = [
   },
   {
     path: "*",
-    element: <ErrorPage />,
+    element: <NotFound />,
   },
 ];
 
 function App() {
-
   const router = createBrowserRouter(routes);
   return <RouterProvider router={router} />;
 }

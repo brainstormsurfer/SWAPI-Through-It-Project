@@ -9,7 +9,6 @@ const ScoreUI = () => {
   const { state: { score, counter } } = useGameContext();  
 
   useEffect(() => {   
-    console.log("CHECK3.1")
     const currentDifference = score - difference;
     setDifference((prevDifference) => {
       if (currentDifference > prevDifference) {
@@ -40,7 +39,6 @@ const ScoreUI = () => {
   }, [counter]);
 
   useEffect(() => {
-    console.log("CHECK3.3")
     if (counter === 0 && !finalScoreEffect) {
       setFinalScoreEffect(true);
       const timeout3 = setTimeout(() => {

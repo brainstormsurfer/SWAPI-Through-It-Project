@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 2px solid yellow; */
 }
 
 html {
@@ -16,7 +17,17 @@ html {
 
 body {
   line-height: 1.6;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* height: 100vh;
+  width: 100vw; */
+  font-family: var(--font-family);
+  background-image: url("../assets/background-stars-desktop.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 ul {

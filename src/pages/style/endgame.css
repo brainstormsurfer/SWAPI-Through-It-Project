@@ -15,8 +15,8 @@ header .endgame-score {
   transform: translate(-50%, -50%);
   background-image: linear-gradient( to right, #000000, #394dff, transparent);
   background-repeat: no-repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
   color:transparent;
   background-position: -720px 0;
   animation: blue_spotlight 7s ease-in-out infinite both;

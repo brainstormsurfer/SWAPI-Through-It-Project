@@ -6,11 +6,8 @@ const CounterUI = () => {
     state: { counter },
   } = useGameContext();
   const [counterEffect, setCounterEffect] = useState("");
-  console.log("inside CounterUI counter", counter);
 
   useEffect(() => {
-    console.log("CHECK4.1")
-    console.log("use effect 1  counter",counter)
     if (counter > 0) {
       setCounterEffect("blueCounterEffect");
 

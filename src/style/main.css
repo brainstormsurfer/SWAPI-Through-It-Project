@@ -33,12 +33,104 @@
   font-weight: bold;
   src: url("../assets/fonts/SfDistantGalaxy-0l3d.ttf") format("opentype");
 }
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17rem;
+  position: relative;
+}
 
-* {
+.spinner {
+  position: relative;
+  width: 33rem;
+  height: 33rem;
+  border: 10px #000 solid;
+  border-radius: 50%;
+  border-top-color: #fbff00;
+  border-left-color: #fbff00b9;
+  border-bottom-color: #2024ffce;
+  animation: spinner 0.4s linear infinite, bg-lights 5s ease-in infinite;
+}
+
+@keyframes bg-lights {
+  50% {
+    box-shadow: inset 0px 0px 150px 0px #ffffff, 0px 0px 50px 0px #ffffff;
+  }
+}
+@keyframes spinner {
+  50% {
+    border-top-color: #ff0000ab;
+    border-left-color: #ff0000;
+    border-bottom-color: #2024ff34;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "Star Wars", sans-serif;
+  font-size: 3.5rem;
+  white-space: nowrap;
+  animation: loading-title-anim 6s linear infinite;
+}
+@keyframes loading-title-anim {
+  45% {
+    color: #ffffff8a;
+  }
+  56% {
+    color: #fbff00;
+  }
+  75% {
+    color: #ffffff83;
+  }
+  92% {
+    color: #000;
+  }
+}
+
+.loading-title-upper {
+  font-size: 3rem;
+  position: absolute;
+  top: 28%; /* Adjust the vertical position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fbff00;
+  font-family: "DistantGalaxy", sans-serif;
+  white-space: nowrap;
+}
+
+.loading-title-lower {
+  font-size: 3rem;
+  position: absolute;
+  top: 53%; /* Adjust the vertical position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fbff00;
+  font-family: "DistantGalaxy", sans-serif;
+  white-space: nowrap;
+}
+
+.loading-quiz {
+  font-family: "Star Wars", sans-serif;
+  color: #fbff00;
+  font-size: 2.8rem;
+}
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 .dis-play {
   display: none;
@@ -138,9 +230,6 @@ color: #000;
   outline: none;
 } */
 
-* {
-  /* border: 2px solid red;  */
-}
 
 .button-container {
   position: relative;
@@ -151,106 +240,13 @@ color: #000;
 }
 
 /* Other existing styles */
-.loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 17rem;
-  position: relative;
-}
 
-.spinner {
-  position: relative;
-  width: 33rem;
-  height: 33rem;
-  border: 10px #000 solid;
-  border-radius: 50%;
-  border-top-color: #fbff00;
-  border-left-color: #fbff00b9;
-  border-bottom-color: #2024ffce;
-  animation: spinner 0.4s linear infinite, bg-lights 5s ease-in infinite;
-}
 
-@keyframes bg-lights {
-  50% {
-    box-shadow: inset 0px 0px 150px 0px #ffffff, 0px 0px 50px 0px #ffffff;
-  }
-}
-@keyframes spinner {
-  50% {
-    border-top-color: #ff0000ab;
-    border-left-color: #ff0000;
-    border-bottom-color: #2024ff34;
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  font-family: "Star Wars", sans-serif;
-  font-size: 3.5rem;
-  white-space: nowrap;
-  animation: loading-title-anim 6s linear infinite;
-}
-@keyframes loading-title-anim {
-  45% {
-    color: #ffffff8a;
-  }
-  56% {
-    color: #fbff00;
-  }
-  75% {
-    color: #ffffff83;
-  }
-  92% {
-    color: #000;
-  }
-}
-
-.loading-title-upper {
-  font-size: 3rem;
-  position: absolute;
-  top: 28%; /* Adjust the vertical position as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fbff00;
-  font-family: "DistantGalaxy", sans-serif;
-  white-space: nowrap;
-}
-
-.loading-title-lower {
-  font-size: 3rem;
-  position: absolute;
-  top: 53%; /* Adjust the vertical position as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fbff00;
-  font-family: "DistantGalaxy", sans-serif;
-  white-space: nowrap;
-}
-
-.loading-quiz {
-  font-family: "Star Wars", sans-serif;
-  color: #fbff00;
-  font-size: 2.8rem;
-}
-
-body {
-  padding: 0 1rem;
+/* body {
   font-family: var(--font-family);
   background-image: url("../assets/background-stars-desktop.jpeg");
   background-size: cover;
-}
+} */
 
 a {
   text-decoration: none;
@@ -270,70 +266,6 @@ main {
   align-items: center;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  /* margin-top: 100rem; */
-  top: 100rem;
-  /* bottom: 0; */
-  /* left: 0; */
-  width: 100%;
-  height: 5rem;
-  background-image: linear-gradient(to right, #000000, #394dff, transparent);
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-  font-size: 1.5rem;
-  z-index: 10;  
-}
-
-footer .social {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-left: 2rem;
-  width: min-content;
-}
-
-footer .social .fa-icon {
-  margin-right: 1rem;
-  border: 2px #fff solid;
-  color: #fff;
-  border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer .social .fa-icon:hover {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: #021c8f;
-  box-shadow: inset #ffffff 0 0 4px 3px;
-}
-footer .social .fa-icon:active {
-  background-color: #1100ff;
-  box-shadow: inset #fff 0 0 6px 4px;
-}
-
-footer p {
-  white-space: nowrap;
-}
-
-/* .container {
-  display: flex;
-  align-items: center;
-}
-
-.container-left {
-  display: flex;
-  align-self: flex-end;
-} */
 
 .showcase {
   display: flex;
@@ -528,10 +460,7 @@ footer p {
   font-weight: 600;
 }
 
-header-content {
-  text-align: center;
-  margin-top: 20vh;
-}
+
 
 p.lead {
   font-size: 1.5rem;
@@ -591,94 +520,7 @@ p.lead {
   outline: none;
 } */
 
-.page_404 {
-  height: 85rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.page_404-container {
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 63rem;
-  width: 63rem;
-  background-image: url("../assets/404-Deathstar-transparent.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 73%;
-  position: relative;
-  font-family: SoloistHalftone, Arial, Helvetica, sans-serif;
-  font-size: 12rem;
-  box-shadow: inset #002fff 0px 0px 50px 10px;
-  border-radius: 50%;
-  text-shadow: #0c28a5 5px 3px 0px;
-}
-
-.page_404-showcase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 90%;
-}
-
-.page_404-container::after {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  contain: "";
-  box-shadow: #002fff 0px 0px 20px 0px;
-  z-index: -2;
-}
-
-.page_404-showcase h1 {
-  color: #858585;
-  position: relative;
-}
-
-.page_404-showcase .back {
-  position: relative;
-  display: flex;
-  margin-right: 2rem;
-  z-index: -2;
-}
-
-.page_404-showcase .front {
-  position: relative;
-  z-index: 2;
-}
-
-.page_404 h2 {
-  display: flex;
-  font-size: 4rem;
-  color: #a5a5a5;
-  position: absolute;
-  bottom: 10rem;
-  font-weight: 500;
-}
-
-.page_404 .button-container {
-  position: relative;
-  justify-self: flex-start;
-  justify-self: start;
-  align-self: center;
-  height: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.page_404 button {
-  padding: 1rem 3rem;
-  font-size: 2.5rem;
-  border-radius: 35px;
-}
 
 /* 
 .pulse-error {
@@ -736,56 +578,6 @@ p.lead {
 
 /* =========================== */
 
-header .quiz-title {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: 1rem 0;
-  font-size: 7rem;
-  font-family: "SoloistHalftone", sans-serif;
-  height: 7rem;
-  max-height: fit-content;
-  color: #ffffff;
-  font-weight: 100;
-  white-space: nowrap;
-  z-index: 5;
-}
-
-header .quiz-title .special-s {
-  font-family: "Star Wars", sans-serif;
-  font-size:6rem;
-  margin-left: 4rem;
-  margin-right: 0.5rem;
-  margin-top: 10px;
-  display: flex;
-  width: fit-content;
-  height: fit-content;
-  align-items: center;  
-}
-
-header .quiz-title span {
-  font-family: "SfDistantGalaxy", sans-serif;
-  color: #fbff00;
-  font-size: 7rem;
-}
-
-header .quiz-title .span {
-  padding-right: 1rem;
-}
-
-/* header .quiz-title .special-s {
-  font-family: "Star Wars", sans-serif;
-  font-size:6rem;
-  margin-left: 4rem;
-  margin-right: 0.5rem;
-  margin-top: 10px;
-  display: flex;
-  width: fit-content;
-  height: fit-content;
-  align-items: center;  
-} */
 
 .into_black {
   position: relative;
