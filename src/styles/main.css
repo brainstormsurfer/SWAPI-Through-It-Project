@@ -278,14 +278,14 @@ footer {
   /* margin-top: 100rem; */
   top: 100rem;
   /* bottom: 0; */
-  left: 0;
+  /* left: 0; */
   width: 100%;
   height: 5rem;
   background-image: linear-gradient(to right, #000000, #394dff, transparent);
   font-family: "Poppins", sans-serif;
   color: #fff;
   font-size: 1.5rem;
-  z-index: 10;
+  z-index: 10;  
 }
 
 footer .social {
@@ -293,29 +293,30 @@ footer .social {
   align-items: center;
   justify-content: space-around;
   padding-left: 2rem;
+  width: min-content;
 }
 
-footer .footer-content .social .fa-icon {
+footer .social .fa-icon {
   margin-right: 1rem;
   border: 2px #fff solid;
   color: #fff;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 4rem;
+  width: 4rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-footer .footer-content .social .fa-icon:hover {
+footer .social .fa-icon:hover {
   cursor: pointer;
   border: none;
   outline: none;
   background-color: #021c8f;
   box-shadow: inset #ffffff 0 0 4px 3px;
 }
-footer .footer-content .social .fa-icon:active {
+footer .social .fa-icon:active {
   background-color: #1100ff;
   box-shadow: inset #fff 0 0 6px 4px;
 }
@@ -337,13 +338,11 @@ footer p {
 .showcase {
   display: flex;
   width: 95vw;
-  /* height: 55rem; */
   height: auto;
-  /* grid-template-rows: 1fr 1fr; */
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  /* padding: 3rem 0; */
+  gap: 3rem;
+  
 }
 
 .counter-title {
@@ -367,18 +366,14 @@ footer p {
   margin-right: 0.2rem;
   margin-top: 0.9rem;
   display: inline;
-  /* align-items: center;   */
 }
 
 .scene-container {
-  /* position: display; */
   justify-self: center;
   width: 107rem;
   height: 58rem;
-  border-radius: 35px;
-  /* margin-top: 10rem;  */
-  border: 0.25rem ridge #fff;
-  /* border: .25rem ridge #ffee00; */
+  border-radius: 35px;  
+  border: 0.25rem ridge #fff;  
   margin: 0.5rem 4rem;
   background: rgba(0, 0, 0, 0);
 }
@@ -388,34 +383,23 @@ footer p {
   height: 100%;
   border-radius: 35px;
 }
-/* .scene-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-  z-index: 10;
-  pointer-events: none
-} */
+
 .vanish {
-  animation: vanishing 2.75s ease-in-out forwards;
+  animation: vanishing 2s ease-in-out forwards;
 }
 
 @keyframes vanishing {
   100% {
-    transform: scale(0.5) rotateX(90deg);
-    /* opacity: 0;      */
-    background-color: #000;
+    transform: scale(0.5) rotateX(270deg);
   }
 }
+
 .scene-endgame {
-  animation: scene-endgame 5s ease-out forwards;
+  animation: scene-endgame 4s ease-out forwards;
 }
 @keyframes scene-endgame {
   97% {
-    transform: rotateX(420deg) skew(65deg) scale(0.01);
+    transform: rotateX(270deg) skew(65deg) scale(0.01);
     border: 0.25px solid black;
     box-shadow: inset 0 0 500px 0 #143fff;
     opacity: 1;
@@ -424,7 +408,7 @@ footer p {
   100% {
     opacity: 0;
     scale: 0;
-    transform: rotateX(421deg) skew(66deg) scale(0);
+    transform: rotateX(270deg) skew(65deg) scale(0);
     border: 0.25px solid black;
     box-shadow: inset 0 0 500px 0 #143fff;
     /* transform: rotateX(360deg) skew(65deg) scale(.01); */
@@ -434,7 +418,7 @@ footer p {
 }
 
 .effect-horizontal {
-  animation: effect-horizontal 5s ease-out forwards;
+  animation: effect-horizontal 3s ease-out forwards;
 }
 
 @keyframes effect-horizontal {
@@ -449,7 +433,7 @@ footer p {
 }
 
 .effect-vertical {
-  animation: effect-vertical 1.5s ease-out forwards;
+  animation: effect-vertical 3s ease-out forwards;
 }
 @keyframes effect-vertical {
   to {
@@ -459,7 +443,7 @@ footer p {
 }
 
 .final-blue-effect {
-  animation: final-blue-effect 5s ease-out forwards;
+  animation: final-blue-effect 3s ease-out forwards;
 }
 
 @keyframes final-blue-effect {
@@ -481,7 +465,7 @@ footer p {
 }
 
 .final-red-effect {
-  animation: final-red-effect 5s ease-out forwards;
+  animation: final-red-effect 3s ease-out forwards;
 }
 @keyframes final-red-effect {
   50% {
@@ -499,7 +483,7 @@ footer p {
 }
 
 .final-green-effect {
-  animation: final-green-effect 5s ease-out forwards;
+  animation: final-green-effect 3s ease-out forwards;
 }
 @keyframes final-green-effect {
   50% {
@@ -820,8 +804,7 @@ header .quiz-title .span {
 }
 
 @keyframes into_black {
-  100% {
-    width: 110%;
+  100% {    
     background-color: #000000;
   }
 }
@@ -830,7 +813,7 @@ header .quiz-title .span {
   position: relative;
 }
 
-.outta_black::after {
+.outta_black::before {
   content: "";
   white-space: nowrap;
   position: absolute;
@@ -898,10 +881,10 @@ main li:active::after {
 }
 
 .greenScoreEffect {
-  animation: greenScore 2.85s ease-in-out forwards alternate-reverse;
+  animation: greenScore 2.5s ease-in-out forwards alternate-reverse;
 }
 .redScoreEffect {
-  animation: redScore 2.85s ease-in-out forwards alternate-reverse;
+  animation: redScore 2.5s ease-in-out forwards alternate-reverse;
 }
 
 .score-title,
@@ -937,18 +920,23 @@ main li:active::after {
   width: 12rem;
   height: 10rem;
   font-size: 6rem;
-  margin: -4rem;
+  margin: -4rem -7rem;
+  /* margin: 10rem -7rem; */
   z-index: -1;
   border-radius: 50%;
   color: #fbff00;
 }
 /* display: flex;
   align-self: flex-end;   */
+/* 
+  * {
+    border: 1px solid red;
+  } */
 
 .counter-container,
 .score-container {
   display: flex;
-  width: auto;
+  /* width: auto;  */
   height: 30rem;
   justify-content: center;
   flex-direction: column;
@@ -960,12 +948,12 @@ main li:active::after {
 .score-container {
   align-items: flex-end;
 }
-.score-value,
+/* .score-value,
 .counter-value {
   width: 12rem;
   height: 10rem;
   color: #fbff00;
-}
+} */
 
 .score-title,
 .counter-title {
@@ -989,10 +977,10 @@ main li:active::after {
 }
 
 .greenScoreEffect {
-  animation: greenScore 2.85s ease-in-out forwards alternate-reverse;
+  animation: greenScore 2.5s ease-in-out forwards alternate-reverse;
 }
 .redScoreEffect {
-  animation: redScore 2.85s ease-in-out forwards alternate-reverse;
+  animation: redScore 2.5s ease-in-out forwards alternate-reverse;
 }
 
 @keyframes greenScore {
@@ -1016,7 +1004,7 @@ main li:active::after {
 }
 
 .blueCounterEffect {
-  animation: blueCount 2.85s ease-out alternate-reverse;
+  animation: blueCount 2.5s ease-out alternate-reverse;
 }
 
 @keyframes blueCount {

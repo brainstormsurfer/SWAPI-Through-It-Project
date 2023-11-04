@@ -9,6 +9,7 @@ const ScoreUI = () => {
   const { state: { score, counter } } = useGameContext();  
 
   useEffect(() => {   
+    console.log("CHECK3.1")
     const currentDifference = score - difference;
     setDifference((prevDifference) => {
       if (currentDifference > prevDifference) {
@@ -28,8 +29,10 @@ const ScoreUI = () => {
     });
 
     const timeout = setTimeout(() => {
-      setScoreEffect("");
-    }, 2900);
+         if (counter > 0) {
+         setScoreEffect("");
+        }
+       }, 2500);
 
     return () => {
       clearTimeout(timeout);
@@ -37,6 +40,7 @@ const ScoreUI = () => {
   }, [counter]);
 
   useEffect(() => {
+    console.log("CHECK3.3")
     if (counter === 0 && !finalScoreEffect) {
       setFinalScoreEffect(true);
       const timeout3 = setTimeout(() => {
@@ -45,10 +49,10 @@ const ScoreUI = () => {
       
       return () => clearTimeout(timeout3);
     }
-  }, [score]);
+  }, [counter, score]);
 
   return (
-    <div className={counter === 0 && finalScoreEffect ? "dis-play" : "score-container"}>
+    <div className={counter === 0 && finalScoreEffect === "" ? "dis-play" : "score-container"}>
       <h2 className={`score-title ${counter > 0 ? "" : "effect-vertical"}`}>Score</h2>
       <h2 className={`score-value ${scoreEffect}`}>{score}</h2>
     </div>

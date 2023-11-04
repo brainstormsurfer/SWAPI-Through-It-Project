@@ -138,6 +138,9 @@
   height: 6rem;
 }
 
+.btn-start {
+   padding: 2rem 4rem;
+}
 .warning-container .btn-start {
   color: red;
   border: red 1px solid;

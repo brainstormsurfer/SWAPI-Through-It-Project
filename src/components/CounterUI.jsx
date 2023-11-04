@@ -9,13 +9,16 @@ const CounterUI = () => {
   console.log("inside CounterUI counter", counter);
 
   useEffect(() => {
+    console.log("CHECK4.1")
     console.log("use effect 1  counter",counter)
     if (counter > 0) {
       setCounterEffect("blueCounterEffect");
 
       const timer = setTimeout(() => {
+          if (counter > 0) {
         setCounterEffect("");
-      }, 2900);
+        }
+      }, 2500);
 
       return () => clearTimeout(timer);
     } else if (counter === 0) {

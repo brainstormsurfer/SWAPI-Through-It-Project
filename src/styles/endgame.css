@@ -2,7 +2,7 @@
   width: 80%;
   height: 100vh;
   margin: 0 auto;
-  animation: fade-in-poster 5s ease-in-out forwards;
+  padding-bottom: 2rem;
 }
 
 header .endgame-score {
@@ -19,14 +19,14 @@ header .endgame-score {
   -webkit-background-clip: text;
   color:transparent;
   background-position: -720px 0;
-  animation: blue_gust 7s ease-in-out infinite both;
+  animation: blue_spotlight 7s ease-in-out infinite both;
   z-index: 5;
 }
 .endgame-score span {
   font-size: 2rem;
 }
 
-@keyframes blue_gust { 
+@keyframes blue_spotlight { 
   50% {
     background-position: 200px 0;
   }  
@@ -34,12 +34,6 @@ header .endgame-score {
 
 .btn-endgame a {
   color:  rgb(0, 89, 255);
-}
-
-@keyframes vanished {
-  50% {
-      color: transparent;
-  }
 }
 
 .btn-endgame {  
@@ -120,11 +114,11 @@ header .endgame-score {
 
 .pulse-endgame::after {
 /* color: #000; */
-  animation: 5s pulse-endgame ease-in infinite;
+  animation: 3s pulse-endgame ease-in infinite;
 }
 
 .pulse-endgame::before {
-  animation: 5s pulse-endgame ease-in-out infinite;
+  animation: 3s pulse-endgame ease-in-out infinite;
 }
 @keyframes pulse-endgame {
   50% {
@@ -197,7 +191,7 @@ header .endgame-score {
   justify-content: center;  
   /* justify-self: end;    */
   /* align-self: end; */
-  z-index: 3;
+  z-index: 3;  
   }
 
   .dotsContainer {
@@ -214,7 +208,7 @@ header .endgame-score {
   padding: 4rem;
   height: 45rem;
   width: 45rem;    
-  transform: translateY(-4.5rem);
+  transform: translateY(-5rem);
   /* overflow: hidden; */
 }
 
@@ -225,8 +219,7 @@ header .endgame-score {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;    
-  /* animation: fade-in-poster 2s ease-in-out forwards;   */
+  padding-bottom: 2rem;  height: 100%;    
 }
 
 
@@ -245,7 +238,7 @@ header .endgame-score {
   border-radius: 50%;
   z-index: 2;
   background-color: #ece8e8;
-  animation: fade-in-light 5s ease-in-out infinite;  
+  animation: fade-in-light 4.5s ease-in-out infinite;  
 } 
 
 @keyframes fade-in-light {
@@ -283,7 +276,7 @@ header .endgame-score {
   position: relative; 
   border-radius: 50%;
   z-index: 2;   
-  animation: fade-in-dark 5s ease-in-out infinite;  
+  animation: fade-in-dark 4.5s ease-in-out infinite;  
 } 
 @keyframes fade-in-dark {
   50% {

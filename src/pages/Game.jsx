@@ -14,6 +14,7 @@ const Game = () => {
   const { state: {isLoading, displayedScene, counter, isGameOver}, dispatch } = useGameContext();
 
   useEffect(() => {
+    console.log("CHECK1")
     if (displayedScene) {
       const delay1 = setTimeout(() => {
         dispatch({ type: LOADING, payload: false });
@@ -23,6 +24,7 @@ const Game = () => {
 }, [displayedScene]);
 
 useEffect(() => {
+  console.log("CHECK2")
     if (counter === 0) {
       const delay2 = setTimeout(() => {
         dispatch({ type: GAME_OVER, payload: true });
