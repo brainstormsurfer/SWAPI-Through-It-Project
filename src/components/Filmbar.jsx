@@ -1,3 +1,5 @@
+import './styles/Filmbar.css'
+
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 import { useGameContext } from "./context";

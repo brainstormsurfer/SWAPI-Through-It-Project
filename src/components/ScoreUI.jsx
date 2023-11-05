@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useGameContext } from "./context";
+import './styles/sharedUI.css'
+import './styles/ScoreUI.css'
 
 const ScoreUI = () => {
   const [finalScoreEffect, setFinalScoreEffect] = useState(false);
@@ -50,9 +52,9 @@ const ScoreUI = () => {
   }, [counter, score]);
 
   return (
-    <div className={counter === 0 && finalScoreEffect === "" ? "dis-play" : "score-container"}>
-      <h2 className={`score-title ${counter > 0 ? "" : "effect-vertical"}`}>Score</h2>
-      <h2 className={`score-value ${scoreEffect}`}>{score}</h2>
+    <div className={`score-container ${counter === 0 && finalScoreEffect === "" ? "dis-play" : "shared-container"}`}>
+      <h2 className={`score-title shared-title ${counter > 0 ? "" : "effect-vertical"}`}>Score</h2>
+      <h2 className={`score-value shared-value ${scoreEffect}`}>{score}</h2>
     </div>
   );
 };

@@ -1,4 +1,6 @@
-const SocialLink = ({icon, awesomeClass, link}) => {
+import './styles/SocialLink.css'
+
+const SocialLink = ({icon, link}) => {
   return (    
     <a href={link}>
     <i className="fa-icon">

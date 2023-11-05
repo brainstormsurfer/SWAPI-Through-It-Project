@@ -1,4 +1,4 @@
-.page_404 {
+.not_found {
     height: 85rem;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     align-items: center;
   }
   
-  .page_404-container {
+  .not_found-container {
     padding: 4rem;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     text-shadow: #0c28a5 5px 3px 0px;
   }
   
-  .page_404-showcase {
+  .not_found-showcase {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@
     width: 90%;
   }
   
-  .page_404-container::after {
+  .not_found-container::after {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -44,24 +44,24 @@
     z-index: -2;
   }
   
-  .page_404-showcase h1 {
+  .not_found-showcase h1 {
     color: #858585;
     position: relative;
   }
   
-  .page_404-showcase .back {
+  .not_found-showcase .back {
     position: relative;
     display: flex;
     margin-right: 2rem;
     z-index: -2;
   }
   
-  .page_404-showcase .front {
+  .not_found-showcase .front {
     position: relative;
     z-index: 2;
   }
   
-  .page_404 h2 {
+  .not_found h2 {
     display: flex;
     font-size: 4rem;
     color: #a5a5a5;
@@ -70,7 +70,7 @@
     font-weight: 500;
   }
   
-  .page_404 .button-container {
+  .not_found .button-container {
     position: relative;
     justify-self: flex-start;
     justify-self: start;
@@ -81,7 +81,7 @@
     align-items: center;
   }
   
-  .page_404 button {
+  .not_found button {
     padding: 1rem 3rem;
     font-size: 2.5rem;
     border-radius: 35px;

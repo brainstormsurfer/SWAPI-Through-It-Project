@@ -1,0 +1,35 @@
+
+footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 2rem;
+    width: min-content;
+  }
+  
+  footer .social .fa-icon {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    color: #fff;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer .social .fa-icon:hover {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #021c8f;
+    box-shadow: inset #ffffff 0 0 4px 3px;
+  }
+  
+  footer .social .fa-icon:active {
+    background-color: #1100ff;
+    box-shadow: inset #fff 0 0 6px 4px;
+  }
+  

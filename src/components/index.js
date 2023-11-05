@@ -1,10 +1,10 @@
 // Game components
 
 import Loading from "./Loading";
-import DisplayImage from "./DisplayImage";
+import Showcase from "./Showcase";
 import Filmbar from "./Filmbar";
 import CounterUI from "./CounterUI";
 import ScoreUI from "./ScoreUI";
-import EndGame from "../pages/EndGame";
+import Hint from "./Hint";
 
-export  { Loading, Filmbar, DisplayImage, CounterUI, ScoreUI, EndGame}
+export  { Loading, Filmbar, Showcase, CounterUI, ScoreUI, Hint}

@@ -1,3 +1,5 @@
+import './styles/SpinningLetters.css'
+
 const SpinningLetters = () => {
   const gameOverChars = ["G", "A", "M", "E", "", "O", "V", "E", "R", ""];
   const delay = 0.25;

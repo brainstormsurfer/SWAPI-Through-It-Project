@@ -4,31 +4,36 @@ import {
   CounterUI,
   ScoreUI,
   Filmbar,
-  DisplayImage,
-  EndGame,
+  Showcase,
+  // Hint,
 } from "../components/index";
+import EndGame from "./EndGame";
 import { GAME_OVER, LOADING } from "../components/ACTIONS";
 import { useGameContext } from "../components/context";
-// import '../style/main.css'
 
 const Game = () => {
-  const { state: {isLoading, displayedScene, counter, isGameOver}, dispatch } = useGameContext();
+  const {
+    state: { isLoading, displayedScene, counter, isGameOver },
+    dispatch,
+  } = useGameContext();
 
+  // console.log("GAME displayedScene: ", displayedScene)
   useEffect(() => {
     if (displayedScene) {
       const delay1 = setTimeout(() => {
         dispatch({ type: LOADING, payload: false });
       }, 6000);
       return () => clearTimeout(delay1);
-    } 
-}, [displayedScene]);
+    }
+  }, [displayedScene]);
 
-useEffect(() => {
+  useEffect(() => {
     if (counter === 0) {
       const delay2 = setTimeout(() => {
         dispatch({ type: GAME_OVER, payload: true });
       }, 5000);
-      return () => clearTimeout(delay2);}          
+      return () => clearTimeout(delay2);
+    }
   }, [counter]);
 
   return (
@@ -36,14 +41,14 @@ useEffect(() => {
       {isLoading ? (
         <Loading />
       ) : (
-        <>       
+        <>
           {!isGameOver ? (
             <>
-                <Filmbar />
+              <Filmbar />
               <div className="showcase">
-                <ScoreUI />
-                  <DisplayImage />
-                <CounterUI />
+              <ScoreUI />
+                <Showcase />
+              <CounterUI />
               </div>
             </>
           ) : (

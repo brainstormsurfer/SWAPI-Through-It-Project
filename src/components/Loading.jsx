@@ -1,3 +1,4 @@
+import './styles/Loading.css'
 import { useGameContext } from "./context";
 
 const Loading = () => {

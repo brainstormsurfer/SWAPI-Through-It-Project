@@ -1,0 +1,50 @@
+.scene-container {
+  /* display: flex;
+  flex-direction: column;
+    justify-self: center; */
+    width: 107rem;
+    /* min-width: fit-content; */
+    height: 58rem;
+    border-radius: 35px;  
+    border: 0.25rem ridge #fff;  
+    margin: 0.5rem 4rem;
+    background: rgba(0, 0, 0, 0);
+    /* z-index: 10; */
+  }
+  
+  .scene-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    /* z-index:10; */
+  }
+  
+  .vanish {
+    animation: vanishing 2s ease-in-out forwards;
+  }
+  
+  @keyframes vanishing {
+    100% {
+      transform: scale(0.5) rotateX(270deg);
+    }
+  }
+  
+  .scene-endgame {
+    animation: scene-endgame 4s ease-out forwards;
+  }
+  @keyframes scene-endgame {
+    97% {
+      transform: rotateX(270deg) skew(65deg) scale(0.01);
+      border: 0.25px solid black;
+      box-shadow: inset 0 0 500px 0 #143fff;
+      opacity: 1;
+      scale: 1;
+    }
+    100% {
+      opacity: 0;
+      scale: 0;
+      transform: rotateX(270deg) skew(65deg) scale(0);
+      border: 0.25px solid black;
+      box-shadow: inset 0 0 500px 0 #143fff;
+    }
+  }

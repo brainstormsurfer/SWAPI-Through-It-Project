@@ -1,64 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap");
 
-/* .attention {
-    animation: attention 2s linear infinite;
-  }
-  
-  @keyframes attention {
-    50% { 
-       transform: scale(0.90);
-       box-shadow: inset #ffc909 0 0 20px 0;   
-      }
-  } */
-
-/* .warning-container .btn-warning { 
-    color: #e40707;
-    font-size: 2rem ;
-    cursor: pointer;
-    outline:none;
-    box-shadow: inset #e40707 0 0 10px 0;    
-} */
-
-
-/* .warning-container::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 100px 0 #ffc909;    
-  }   */
-
-
-
-/* .warning-container:nth-last-child(1) {
-    color: #000000;
-    font-weight: 600;
-} */
-/* .container {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  height: 100vh;
-  width: 100vw; 
-} */
-
-* {
-  border: 1px solid red;
-}
-
-.welcome-container {
-  /* display:block; */
-  /* flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;  */
-  /* position: relative; */
-  /* padding: 0 2rem; */
-  /* margin: 0 auto; */
-}
-
 .buttons-container {
   position: relative;
   display: flex;
@@ -68,46 +9,24 @@
 
   align-items: center;
   z-index: 1;
-  width: 95%;  
-  /* background-image: url("../assets/background-stars-top.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-   /* large 3rem */
-  /* gap: .5rem; */
-   /* iphone only*/
+  width: 95%;    
 }
 
-.buttons-container::before {
-  /* content: "";
-  position: absolute; */
-  /* border-radius: 20em; */
-  /* top: 10rem; */
-  /* left: 25rem; */
-  /* width: 90%; */
-  /* height: 25rem; */
+.buttons-container::before { 
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 10%,
     rgba(0, 0, 0, 0) 100%
   );
-  /* z-index: 5; */
 }
 
 .audio-buttons {
   display: flex;
-  gap: 2rem; /* iphone 1rem, ipad 2rem*/ 
-  /* width: fit-content; */
-  /* height: max-content; */
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;  
-  /* z-index: 6; */
 }
-/* .audio-buttons i { */
-    /* padding: 1rem 0 0; */
-    /* font-size: 1rem; */
-/* } */
 
 .btn-start a {
   color: #ffc909;
@@ -120,7 +39,6 @@
   align-items: center;
   border-radius: 35px;
   font-family: "Poppins", sans-serif;
-  /* padding: 1rem; */
   background: transparent;
   color: #ffc909;
   font-size: 2rem;
@@ -128,12 +46,11 @@
   border: #ffc909 1px solid;
   outline: none;
   box-shadow: inset #ffc909 0 0 10px 0;
-  /* z-index: 1; */
 }
 
 .btn-start {
 height: 6rem;
-width: fit-content; /* width: 15rem; */
+width: fit-content; 
 border-radius:35px; 
 padding: 2rem 4rem;  
 left: 4rem;
@@ -153,7 +70,6 @@ button::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* opacity: 0.7; */
   background: transparent;
 }
 
@@ -167,7 +83,6 @@ button::after {
   position: absolute;
   height: 100%;
   width: 100%;
-  /* color: #ffc909; */
   border-radius: 35px;
   z-index: -1;
 }
@@ -280,7 +195,8 @@ button:hover {
   to {
     top: -7500px;
     transform: 
-        /* overall text dimension*/ translateZ(-4800px)
+        /* overall text dimension*/ 
+      translateZ(-4800px)
       rotateX(36deg);
   }
 }
@@ -297,50 +213,26 @@ h2 {
   display: flex;
   height: 6rem;  
   justify-content: space-between;
-  /* padding: 0 2rem; */
-
   align-items: center;
   z-index: 1;
-  width: 100%; 
-  /* background-image: url("../assets/background-stars-top.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-   /* large 3rem */
-  /* gap: .5rem; */
-   /* iphone only*/
+  width: 100%;   
 }
 
-.buttons-container::before {
-  /* content: "";
-  position: absolute; */
-  /* border-radius: 20em; */
-  /* top: 10rem; */
-  /* left: 25rem; */
-  /* width: 90%; */
-  /* height: 25rem; */
+.buttons-container::before {  
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 10%,
     rgba(0, 0, 0, 0) 100%
   );
-  /* z-index: 5; */
 }
 
 .audio-buttons {
   display: flex;
-  gap: 1rem; /* iphone 1rem, ipad 2rem*/ 
-  /* width: fit-content; */
-  /* height: max-content; */
+  gap: 1rem; 
   justify-content: center;
   align-items: center;
   text-align: center;  
-  /* z-index: 6; */
 }
-/* .audio-buttons i { */
-    /* padding: 1rem 0 0; */
-    /* font-size: 1rem; */
-/* } */
 
 .btn-start a {
   color: #ffc909;
@@ -350,10 +242,8 @@ h2 {
 .btn-start {
   position: relative;
   display: flex;
-  /* align-items: center; */
   border-radius: 35px;
   font-family: "Poppins", sans-serif;
-  /* padding: 1rem; */
   background: transparent;
   color: #ffc909;
   font-size: 1.5rem;
@@ -361,14 +251,12 @@ h2 {
   border: #ffc909 1px solid;
   outline: none;
   box-shadow: inset #ffc909 0 0 10px 0;
-  /* z-index: 1; */
 }
 
 .btn-start {
 height: 4rem;
-width: fit-content; /* width: 15rem; */
+width: fit-content;
 border-radius:35px; 
-/* padding: 2rem 4rem;   */
 left: 1rem;
 }
 
@@ -376,18 +264,6 @@ left: 1rem;
    font-size: 2rem;   
    padding: 1rem;
 }
-
-/* button::before,
-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;  
-  background: transparent;
-} */
 
 .pulse {
   position: relative;
@@ -399,7 +275,6 @@ button::after {
   position: absolute;
   height: 100%;
   width: 100%;
-  /* color: #ffc909; */
   border-radius: 35px;
   z-index: -1;
 }

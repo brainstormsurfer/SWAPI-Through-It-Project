@@ -1,17 +1,21 @@
+import './styles/Showcase.css'
+
 import Hint from "./Hint";
 import { useGameContext } from "./context";
 
-const DisplayImage = () => {
+const Showcase = () => {
+  
   const {
     state: { counter, displayedScene },
   } = useGameContext();
+    // console.log("SHOWCASE displayedScene: ", displayedScene)
 
   return (
     displayedScene && counter > 0 ? (
       <>
         <div className="scene-container">
         <img src={displayedScene?.image} alt="" />
-        <Hint description={displayedScene?.description} />
+        <Hint />
         </div>
       </> ) : (
           <div className="scene-container scene-endgame">
@@ -21,4 +25,4 @@ const DisplayImage = () => {
     )
 };
 
-export default DisplayImage;
+export default Showcase;

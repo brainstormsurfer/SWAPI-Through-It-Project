@@ -6,7 +6,6 @@ import {
 
 import SharedLayout from "./layouts/SharedLayout";
 import Warning from "./pages/Warning";
-// import './style/main.css'
 
 const routes = [
   {

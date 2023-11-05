@@ -1,8 +1,11 @@
+import "./styles/Hint.css";
+import { useGameContext } from "../components/context";
 
-const Hint = ({description}) => {
+const Hint = () => {
+  const {state: { displayedScene }} = useGameContext();  
   return (
     <div className="hint-container">
-      <h4 className="hint">{description}</h4>
+      <h4 className="hint">{displayedScene?.description}</h4>
     </div>
   );
 };

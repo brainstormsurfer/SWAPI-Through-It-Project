@@ -1,0 +1,89 @@
+
+.hint-container {
+    display: flex;
+    position: relative;
+    width: 100rem;
+    height: 20rem;
+    font-size: 2rem;    
+  }
+  
+  .hint-container::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Hover for a Hint";
+    font-family: "DistantGalaxy", sans-serif;
+    width: 100%;
+    height: 25rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(35px);
+    font-size: 6rem;
+    z-index: -1;
+  }
+  
+  .hint-container:hover::after {
+    animation: 4s come-hint ease-in-out forwards;
+  }
+  
+  .hint-container .hint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    color: #ffee00;
+    background: #000;
+    width: 100%;
+    height: min-content;
+    max-height: 25rem;
+    font-size: 2.25rem;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    z-index: -3;
+  }
+  
+  @keyframes come-hint {
+    0% {
+      content: "Hover for a Hint";
+    }
+  
+    25% {
+      color: #363636;
+      white-space: pre;
+      content: "  for ";
+    }
+  
+    50% {
+      color: #fbff0093;
+      white-space: pre;
+      content: "         a ";
+      backdrop-filter: blur(20px);
+    }
+  
+    60% {
+      color: #fbff0096;
+      white-space: pre;
+      content: " Hover           ";
+      backdrop-filter: blur(40px);
+    }
+  
+    85% {
+      color: #222222;
+      backdrop-filter: blur(35px);
+      white-space: pre;
+      content: "               Hint";
+      font-size: 6rem;
+    }
+  
+    100% {
+      white-space: pre;
+      content: "                     ";
+      color: transparent;
+      backdrop-filter: blur(0px);
+      border: none;
+    }
+  }
+  
