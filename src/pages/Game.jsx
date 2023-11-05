@@ -9,6 +9,7 @@ import {
 } from "../components/index";
 import { GAME_OVER, LOADING } from "../components/ACTIONS";
 import { useGameContext } from "../components/context";
+// import '../style/main.css'
 
 const Game = () => {
   const { state: {isLoading, displayedScene, counter, isGameOver}, dispatch } = useGameContext();

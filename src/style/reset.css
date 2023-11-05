@@ -1,6 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/star-wars");
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: DistantGalaxy;
+  src: url("../assets/fonts/SfDistantGalaxy-0l3d.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: SfDistantGalaxyAlternate;
+  src: url("../assets/fonts/SfDistantGalaxyAlternate-OE4d.ttf")
+    format("opentype");
+}
+@font-face {
+  font-family: Soloist3D;
+  src: url("../assets/fonts/Soloist3D-3vP6.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SoloistHalftone;
+  src: url("../assets/fonts/SoloistHalftone-l6ny.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Starjedi;
+  font-weight: bold;
+  src: url("../assets/fonts/Starjedi.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: SfDistantGalaxy;
+  font-weight: bold;
+  src: url("../assets/fonts/SfDistantGalaxy-0l3d.ttf") format("opentype");
+}
 
 * {
   box-sizing: border-box;
@@ -12,22 +44,22 @@
 html {
   font-size: 62.5%;
   font-family: var(--form-font);
+  background-image: url("../assets/background-stars-desktop.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 
 body {
   line-height: 1.6;
+  height: max-content;
   /* font-size: 2rem; */
   /* display: flex;
   justify-content: center;
-  align-items: center; */
-  /* height: 100vh;
-  width: 100vw; */
+  align-items: center;  */
   font-family: var(--font-family);
-  background-image: url("../assets/background-stars-desktop.jpeg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+ 
 }
 
 ul {
@@ -40,4 +72,23 @@ a {
 
 button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem 3rem;
 }
+
+
+/* button::before,
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+} */

@@ -63,7 +63,6 @@
   position: relative;
   display: flex;
   height: 10rem;  
-    /* !to adjust mediaQ */
   justify-content: space-between; /*iphone-space-around ipad,large- space between */ 
   padding: 0 2rem;
 
@@ -74,7 +73,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
-  /* !to adjust mediaQ */
    /* large 3rem */
   /* gap: .5rem; */
    /* iphone only*/
@@ -98,7 +96,6 @@
 
 .audio-buttons {
   display: flex;
-  /* !to adjust mediaQ */
   gap: 2rem; /* iphone 1rem, ipad 2rem*/ 
   /* width: fit-content; */
   /* height: max-content; */
@@ -108,7 +105,6 @@
   /* z-index: 6; */
 }
 /* .audio-buttons i { */
-    /* !to adjust mediaQ */
     /* padding: 1rem 0 0; */
     /* font-size: 1rem; */
 /* } */
@@ -136,7 +132,6 @@
 }
 
 .btn-start {
-  /* !to adjust mediaQ */
 height: 6rem;
 width: fit-content; /* width: 15rem; */
 border-radius:35px; 
@@ -145,7 +140,6 @@ left: 4rem;
 }
 
 .btn-audio {
-      /* !to adjust mediaQ */
    font-size: 3rem;   
    padding: 1rem;
 }
@@ -302,7 +296,6 @@ h2 {
   position: relative;
   display: flex;
   height: 6rem;  
-    /* !to adjust mediaQ */
   justify-content: space-between;
   /* padding: 0 2rem; */
 
@@ -313,7 +306,6 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
-  /* !to adjust mediaQ */
    /* large 3rem */
   /* gap: .5rem; */
    /* iphone only*/
@@ -337,7 +329,6 @@ h2 {
 
 .audio-buttons {
   display: flex;
-  /* !to adjust mediaQ */
   gap: 1rem; /* iphone 1rem, ipad 2rem*/ 
   /* width: fit-content; */
   /* height: max-content; */
@@ -347,7 +338,6 @@ h2 {
   /* z-index: 6; */
 }
 /* .audio-buttons i { */
-    /* !to adjust mediaQ */
     /* padding: 1rem 0 0; */
     /* font-size: 1rem; */
 /* } */
@@ -375,7 +365,6 @@ h2 {
 }
 
 .btn-start {
-  /* !to adjust mediaQ */
 height: 4rem;
 width: fit-content; /* width: 15rem; */
 border-radius:35px; 
@@ -384,7 +373,6 @@ left: 1rem;
 }
 
 .btn-audio {
-      /* !to adjust mediaQ */
    font-size: 2rem;   
    padding: 1rem;
 }
@@ -418,11 +406,11 @@ button::after {
 
 .pulse::after {
   color: #000;
-  animation: 2s pulse 42s ease-in infinite;
+  animation: 2s pulse 32s ease-in infinite;
 }
 
 .pulse::before {
-  animation: 2s pulse 42s ease-in-out infinite;
+  animation: 2s pulse 32s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -534,6 +522,15 @@ h2 {
 
 @media screen and (min-width: 721px) and (max-width: 1200px) {
 
+  .pulse::after {
+    color: #000;
+    animation: 2s pulse 35s ease-in infinite;
+  }
+  
+  .pulse::before {
+    animation: 2s pulse 35s ease-in-out infinite;
+  }
+  
   .scroll-text {
     margin-top: 100vh;
     color: #ffc909;
@@ -559,8 +556,4 @@ h2 {
     }
   }
   
-}
-
-@media screen and (min-width: 1201px) {
-
 }

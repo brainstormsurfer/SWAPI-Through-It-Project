@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import "./style/warning.css";
+import "./style/warning.css"
 
 const Warning = () => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Warning = () => {
         <p className="enjoy">Enjoy your staying.</p>
         <br />
         <button
-          className="btn-start"
+          className="btn-warning"
           onClick={() => {
             navigate("intro");
           }}
