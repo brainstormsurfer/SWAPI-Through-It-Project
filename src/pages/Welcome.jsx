@@ -6,7 +6,7 @@ import './styles/welcome.css'
 
 const Welcome = () => {
   const audioRef = useRef(null);
-  const [isAudioLoaded, setIsAudioLoaded] = useState(false);
+  const [isMute, setIsMute] = useState(false);
 
   useEffect(() => {
 
@@ -20,12 +20,12 @@ const Welcome = () => {
   }, []);
 
   const playAudio = () => {
-    if (audioRef.current && isAudioLoaded) {
+    if (audioRef.current && isMute) {
       audioRef.current.pause();
-      setIsAudioLoaded(false);
+      setIsMute(false);
     } else {
       audioRef.current.play();
-      setIsAudioLoaded(true);
+      setIsMute(true);
     }
   };
   const handleClick = (e) => {console.log(e.target)}
@@ -35,28 +35,22 @@ const Welcome = () => {
   }
 
   return (
-    <>
+    <div className="welcome-container">
       <div className="buttons-container">
-      <button className="btn-start pulse" onClick={(e) => {handleClick(e)}}>
+      <button className="btn-start pulse-start" onClick={(e) => {handleClick(e)}}>
                   <Link to="/quiz">
-                    Start Playing
+                     Start Playing
                   </Link>
                 </button>        
         <div className="audio-buttons">
           <audio ref={audioRef}>
             <source src={sound} type="audio/mp3" />
           </audio>
-          <button className="btn-audio" onClick={playAudio}>
-            <i>
-              
-            </i>
-            {isAudioLoaded ? <VscMute /> : <VscUnmute />}
+          <button className="btn-audio" onClick={playAudio}>            
+            {isMute ? <VscMute /> : <VscUnmute />}            
           </button>
-          <button className="btn-audio" onClick={refreshPage}>
-            <i>
-              
-            </i>
-            <VscDebugRestart />
+          <button className="btn-audio" onClick={refreshPage}>            
+            <VscDebugRestart />            
           </button>
         </div>
       </div>
@@ -131,7 +125,7 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -89,7 +89,7 @@ header .endgame-score {
   width: 100%;
   top: 0;
   left: 0;
-  color: rgb(73, 85, 255);      
+  /* color: rgb(73, 85, 255);       */
   border-radius: 35px;
   z-index: -1;
   cursor: pointer;

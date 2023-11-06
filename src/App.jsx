@@ -1,11 +1,10 @@
-import { Game, Welcome, NotFound } from "./pages";
+import { Warning, Welcome, Game, NotFound } from "./pages";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
 import SharedLayout from "./layouts/SharedLayout";
-import Warning from "./pages/Warning";
 
 const routes = [
   {

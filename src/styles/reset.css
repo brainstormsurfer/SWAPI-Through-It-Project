@@ -43,16 +43,20 @@
 html {
   font-size: 62.5%;
   font-family: var(--form-font);
-  background-image: url("../assets/background-stars-desktop.jpeg");
+  /* background-image: url("../assets/background-stars-desktop.jpeg");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 
 body {
+  background-image: url("../assets/background-stars-desktop.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   line-height: 1.6;
-  height: max-content;
+  /* height: max-content; */
   /* font-size: 2rem; */
   /* display: flex;
   justify-content: center;
@@ -73,9 +77,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 35px;
+  /* border-radius: 35px; */
   font-family: "Poppins", sans-serif;
-  padding: 1rem 3rem;
+  /* padding: 1rem 3rem; */
 }
 
 
