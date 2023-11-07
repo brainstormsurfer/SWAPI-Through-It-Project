@@ -219,7 +219,7 @@ ul {
     transform: rotate(360deg);
   }
 }
-
+/* 
 .loading {
   width: 6rem;
   height: 6rem;
@@ -228,9 +228,9 @@ ul {
   margin: 0 auto;
   border-top-color: var(--primary-500);
   animation: spinner 0.3s linear infinite;
-}
+} */
 /* title */
-
+/* 
 .title {
   text-align: center;
 }
@@ -241,7 +241,7 @@ ul {
   height: 0.25rem;
   margin: 0 auto;
   margin-top: 1rem;  
-}
+} */
 /* ============= PROJECT CSS =============== */
 
 .tours {

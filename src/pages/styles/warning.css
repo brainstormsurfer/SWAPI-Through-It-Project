@@ -20,7 +20,7 @@
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  width: 50%;
+  width: 75%;
   /* min-width: 80rem; */
   padding: 2rem;
   border-radius: 15px;
@@ -37,7 +37,6 @@
   color: #ff0000;
   font-weight: 300;
   font-size: 1.6rem;
-  /* white-space: nowrap; */
   line-height: 3rem;
 }
 
@@ -47,17 +46,18 @@
   font-weight: 500;
   letter-spacing: 3px;
   margin: 2rem;
+  white-space: nowrap;
 }
 
 .btn-warning {
   color: red;
   border: red 1px solid;
-  box-shadow: inset red 0 0 10px 0;
-  font-size: 2rem;
-  padding: 1rem 3rem;
+  box-shadow: inset red 0 0 10px 0;  
+  padding: 1rem;
   width: 50%;
+  font-size: 1.7rem;
   background: transparent;  
-
+  letter-spacing: .5rem;
   /* margin-top: 1rem;     */
 }
 /* 
@@ -72,6 +72,7 @@
   outline: none;
 } */
 .btn-warning:hover {
+  color: red;
   outline: #ff0909 1.7px solid;
   box-shadow: inset #ff0909 0 0 13px 0;
 }
@@ -91,20 +92,20 @@
   font-size: 3.5rem;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .container {
     padding: 1rem;    
   }
 
   .warning-container {
-    width: 90%;    
-    background-image: linear-gradient(180deg, red, black 26%, transparent);
+    width: 85%;    
+    background-image: linear-gradient(180deg, red, black 19%, transparent);
   }
 
   .warning-text {
-    font-size: 1.3rem;
-    /* max-width: 95%;
-    min-width: 70%; */
+    font-size: 1.7rem;
+    /* max-width: 95%; */
+    min-width: 95%;
     /* white-space: nowrap; */
   }
 
@@ -114,13 +115,11 @@
   }
 
   .warning-container .btn-warning {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: 3px;
     /* padding: 0.5rem 2rem; */
-    width: 90%;
-    height: fit-content;
-    justify-content: center;
-    padding: 1.2rem;
+    width: 50%;        
+    padding: 1rem;
     /* width: fit-content; */
   }
 
@@ -129,13 +128,12 @@
   }
 }
 
-@media screen and (min-width: 721px) and (max-width: 960px) {
+@media screen and (min-width: 769px) and (max-width: 960px) {
   .container {
     padding: 3rem;
   }
 
   .warning-container {
-    width: 98%;
     background-image: linear-gradient(180deg, red, black 22%, transparent);
   }
 
@@ -164,7 +162,7 @@
   }
 }
 
-@media screen and (min-width: 961px) and (max-width: 1200px) {
+@media screen and (min-width: 961px) and (max-width: 1024px) {
   
     .container {
       padding: 3rem;
@@ -199,8 +197,9 @@
     }
 }  
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1025px) and (max-width: 1440) {
   .warning-container {    
+    width: 75%;
     background-image: linear-gradient(180deg, red, black 26%, transparent);
   }
 

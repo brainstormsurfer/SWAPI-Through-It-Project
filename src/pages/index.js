@@ -6,5 +6,6 @@ import Welcome from "./Welcome";
 import NotFound from "./NotFound";
 import Game from "./Game";
 import EndGame from "./EndGame";
+import Loading from "./Loading";
 
-export { Warning, Welcome, NotFound, Game, EndGame };
+export { Loading, Warning, Welcome, NotFound, Game, EndGame};

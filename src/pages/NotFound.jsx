@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 // import { useGameContext } from "../components/context";
 // import { GAME_OVER } from "../components/ACTIONS";
-import './styles/notFound.css'
+import './styles/NotFound.css'
 
 const NotFound = () => {
 // const { isGameOver, dispatch } = useGameContext()

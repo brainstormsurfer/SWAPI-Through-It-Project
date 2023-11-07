@@ -206,7 +206,7 @@ h2 {
 /* ! MQ Small screen */
 /* ! ====================*/
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .buttons-container {
     position: relative;
     display: flex;
@@ -406,7 +406,7 @@ h2 {
 /* ! ====================*/
 /* ! MQ Medium screen */
 /* ! ====================*/
-@media screen and (min-width: 721px) and (max-width: 960px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .buttons-container {
     position: relative;
     display: flex;
@@ -604,7 +604,7 @@ h2 {
 /* ! ====================*/
 /* ! MQ Large screen */
 /* ! ====================*/
-@media screen and (min-width: 961px) and (max-width: 1200px) {   
+@media screen and (min-width: 1025px) and (max-width: 1440) {   
     .buttons-container {
       position: relative;
       display: flex;

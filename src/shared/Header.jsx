@@ -1,3 +1,4 @@
+/*? ---- style in layouts ---- */
 import { useState, useEffect } from "react";
 import { useGameContext } from "../components/context";
 
@@ -19,9 +20,9 @@ const Header = () => {
     <header>
       {!isGameOver || !isFadeOutEffectOver ? (
     // <h4 className={isGameOver ? "quiz-title into_black" : "quiz-title"}>
-       <h4 className={`quiz-title ${!isGameOver ? isLoading ? "outta_black" : "" : "into_black"}`}>
+       <h4 className={`quiz-title ${!isGameOver ? isLoading ? "blackout" : "" : "into_black"}`}>
         The Ultimate
-          <span className="special-s">S</span>
+          <span className="special">S</span>
           <span className="span">tar wars</span> Quiz
         </h4>
       ) : (

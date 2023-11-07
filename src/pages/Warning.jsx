@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import "./styles/warning.css"
+import "./styles/Warning.css"
 
 const Warning = () => {
   const navigate = useNavigate();
@@ -9,18 +9,7 @@ const Warning = () => {
         <h1>ATTENTION</h1>
         <br />
         <p className="warning-text">
-          The following page will feature a background music for an enhanced
-          experience.
-            <br/>          
-          {/* <p className="warning-text"> */}
-          Although a Mute button will be available 
-          {/* <br /> */}
-          at the top right corner of the screen,
-          </p>
-          <p className="warning-text">
-            Please verify in advance that the volume level in your device isn't
-            too high.
-          {/* <br /> */}          
+          The following page will feature a background music for an enhanced experience. Although a Mute button will be available at the top right corner of the screen, please verify in advance that the volume level in your device isn't too high.
         </p>
         <p className="enjoy">Enjoy your staying.</p>
         <br />

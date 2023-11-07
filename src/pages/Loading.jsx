@@ -1,12 +1,13 @@
 import './styles/Loading.css'
-import { useGameContext } from "./context";
+import { useGameContext } from "../components/context";
 
 const Loading = () => {
-  const { state } = useGameContext();
-  const { isLoading } = state; 
+  const { state: isLoading } = useGameContext();  
   return (
     <>
-      {isLoading && (
+      {
+      isLoading && 
+      (
         <div className="loading">
           <div className="spinner"></div>
           <div className="loading-title">Star Wars</div>
