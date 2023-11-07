@@ -214,7 +214,7 @@ footer .footer-container p {
   font-size: 3rem;
 }
 .loading-title-upper {
-  top: 35%;
+  top: 33%;
 }
 .loading-title-lower {
   top: 55%;
@@ -322,20 +322,22 @@ footer .footer-container p {
   }
 
   .loading-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     animation: 7.5s loading-title-anim ease-in infinite;
   }
 
   .loading-title-upper,
   .loading-title-lower {
+        font-family: "Soloist3D", sans-serif;
+
     letter-spacing: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
   .loading-title-upper {
-    top: 37%;
+    top: 35%;
   }
   .loading-title-lower {
-    top: 57%;
+    top: 55%;
   }
   footer {
     display: flex;
@@ -426,7 +428,7 @@ footer .footer-container p {
     font-size: 4.1rem;
     margin-left: 2.7rem;
     margin-right: 0rem;
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .loading {
@@ -511,6 +513,19 @@ footer .footer-container p {
   /* header {
     display: none;
   } */
+  header h4 .span,
+  header .quiz-title {
+    height: 3.4rem;
+    margin-top: 0.2rem;
+    font-size: 3rem;
+  }
+
+  header .quiz-title .special {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 0rem;
+    margin-top: 0px;
+  }
 
   .footer-container {
     position: relative;
@@ -576,10 +591,10 @@ footer .footer-container p {
   }
 
   header .quiz-title .special {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     margin-left: 2rem;
     margin-right: 0rem;
-    margin-top: 6px;
+    margin-top: 1px;
   }
 
   .blackout::before {
@@ -694,7 +709,7 @@ footer .footer-container p {
     font-size: 1.74rem;
     margin-left: 2rem;
     margin-right: 0rem;
-    margin-top: 5px;
+    margin-top: 4px;
   }
   header .quiz-title span {
     font-family: "SfDistantGalaxy", sans-serif;
@@ -754,51 +769,43 @@ footer .footer-container p {
 
 
 /* Galaxy Fold 280 x 653 */
-@media screen and (max-width: 653px) {
+@media screen and (max-width: 490px) {
   body {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-        background-color: #000;
-
+    height: 100%;    
+    background-color: #000;
   }
 
   header {
-    width: fit-content;
+    /* width: fit-content; */
     height: 2rem;
+    justify-content: center;
   }
 
-  header .quiz-title {
-    height: 2.2rem;
-    margin-top: 0rem;
-    right: 2rem;
-    font-size: 1.5rem;
+  header h4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  header .quiz-title .span {
-    padding-right: 0rem;
+  header .quiz-title .special {    
+    height: .5rem;
+    font-size: 1rem;
+    margin-left: 5rem;
+    margin-right: 12rem;
+    margin-top: .5rem;
   }
 
-  header .quiz-title .special {
-    max-height: min-content;
-    font-size: 1.74rem;
-    margin-left: 1rem;
-    margin-right: 0rem;
-    margin-top: 5px;
-  }
-  header span {
-    font-family: "SfDistantGalaxy", sans-serif;
-    color: #fbff00;
-    font-size: 2rem;
-    max-width: fit-content;
+  header .quiz-title .span,
+  header .quiz-title .special 
+   {
+    display: none;
+    /* padding-right: 0rem;
+    letter-spacing: 0rem;
+    font-size: 1rem;
+    margin-left: -10rem;
+    margin-right: .5rem; */
   }
 
-  /* header .quiz-title .span {
-      padding-right: 1rem;
-    }
-     */
   .blackout {
     position: relative;
     width: 100%;
@@ -806,21 +813,20 @@ footer .footer-container p {
 
   .blackout::before {
     content: "";
-    /* white-space: nowrap; */
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 1%; */
     height: 100%;
     animation: 4s blackout 2s ease-in-out forwards;
   }
+  
   .blackout::after {
     content: "";
     white-space: nowrap;
     position: absolute;
     top: 0;
     left: -2px;
-    width: 14%;
+    width: 0%;
     height: 100%;
     z-index: 100;
     background-color: #000;
