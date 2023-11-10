@@ -55,7 +55,7 @@ const Filmbar = () => {
   return (
     <> 
       {logos && (
-        <ul>
+        <ul className="filmbar">
           {counter !== 0 ? (
             logos.map((logo) => {
               return (

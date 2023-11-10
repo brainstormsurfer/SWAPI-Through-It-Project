@@ -1,9 +1,10 @@
 
 .hint-container {
     display: flex;
+    justify-content: center;
     position: relative;
-    width: 100rem;
-    height: 20rem;
+    width: 100%;
+    height: fit-content;
     font-size: 2rem;    
   }
   

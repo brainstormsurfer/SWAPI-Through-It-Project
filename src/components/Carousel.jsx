@@ -107,7 +107,7 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container">
-      <div className={`poster-container ${quizSummary[currentIndex].score === 1 ? "posterStylesLight" : "posterStylesDark"}`}      >
+      <div className={`poster-container ${quizSummary[currentIndex].score === 1 ? "posterStylesLight" : "posterStylesDark"}`}>
         <img 
           className="posterStyles"
           alt=""
@@ -122,7 +122,7 @@ const Carousel = () => {
           ›
         </div>
       </div>
-      <div className="dotsContainer">
+      <div className="sceneDotsContainer">
 
         <div className="slider-container">
           <div style={prevSlideStyles}></div>

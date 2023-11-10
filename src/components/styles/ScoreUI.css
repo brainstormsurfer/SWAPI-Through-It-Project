@@ -1,5 +1,9 @@
 .score-container {
     align-items: flex-end;
+}
+
+.score-title {
+   /* padding-right: 2rem; */
   }
   
   .greenScoreEffect {
@@ -30,6 +34,7 @@
       color: #ff3c3c;
     }
   } 
+
 .final-red-effect {
     animation: final-red-effect 3s ease-out forwards;
   }

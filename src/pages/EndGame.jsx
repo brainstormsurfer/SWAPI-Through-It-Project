@@ -14,7 +14,8 @@ const EndGame = () => {
   }
   return (
     <>
-      {quizSummary ? (
+      { quizSummary ? (
+        
         <div className="endgame-container">
           <div className="button-container">
             <button
@@ -27,7 +28,7 @@ const EndGame = () => {
           </div>
           <Carousel />
         </div>
-      ) : (
+        ) : (
         <ErrorPage />
       )}
     </>

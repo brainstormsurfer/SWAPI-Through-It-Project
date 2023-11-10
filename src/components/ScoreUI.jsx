@@ -20,11 +20,9 @@ const ScoreUI = () => {
           setScoreEffect("final-green-effect");
         }
       } else {
-        if (counter > 0) {
-          setScoreEffect("redScoreEffect");
-        } else {
-          setScoreEffect("final-red-effect");
-        }
+        (counter > 0) ?
+          setScoreEffect("redScoreEffect") :        
+          setScoreEffect("final-red-effect");  
       }
       return currentDifference;
     });

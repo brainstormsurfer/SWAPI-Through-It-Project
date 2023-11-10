@@ -1,15 +1,12 @@
 import { useEffect } from "react";
-import Loading from "./Loading";
+import { Loading, EndGame } from "./index";
 import {
-  // Loading,
   CounterUI,
   ScoreUI,
   Filmbar,
   Showcase,
 } from "../components/index";
-import EndGame from "./EndGame";
-import { GAME_OVER, 
-  LOADING } from "../components/ACTIONS";
+import { GAME_OVER, LOADING } from "../components/ACTIONS";
 import { useGameContext } from "../components/context";
 
 const Game = () => {
@@ -19,15 +16,15 @@ const Game = () => {
   } = useGameContext();
     console.log("loading", isLoading)
 
-  // console.log("GAME displayedScene: ", displayedScene)
-  // useEffect(() => {
-  //   if (displayedScene) {
-  //     const delay1 = setTimeout(() => {
-  //       // dispatch({ type: LOADING, payload: false });
-  //     }, 6000);
-  //     return () => clearTimeout(delay1);
-  //   }
-  // }, [displayedScene]);
+  console.log("GAME displayedScene: ", displayedScene)
+  useEffect(() => {
+    if (displayedScene) {
+      const delay1 = setTimeout(() => {
+        dispatch({ type: LOADING, payload: false });
+      }, 6000);
+      return () => clearTimeout(delay1);
+    }
+  }, [displayedScene]);
 
   useEffect(() => {
     if (counter === 0) {

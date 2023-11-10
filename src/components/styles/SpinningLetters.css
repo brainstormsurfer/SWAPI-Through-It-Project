@@ -1,7 +1,8 @@
 
 main li.game-over-letter {
+  display: flex;
     font-family: "Soloist3D", sans-serif;
-    font-size: 4rem;
+    font-size: 4vw;
     color: #fbff00;
     visibility: hidden;
     animation: spin-letter 2.5s ease-in-out forwards;

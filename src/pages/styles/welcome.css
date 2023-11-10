@@ -53,6 +53,10 @@
   align-items: center;
 }
 
+.btn-start a {
+  color: #ffc909 !important;
+  font-size: 2.2rem;
+}
 
 .btn-audio,
 .btn-start {
@@ -70,17 +74,17 @@
   height: 6rem;
 }
 
-.btn-start a {
-  color: #ffc909 !important;
-  font-size: 2.2rem;
-}
+
 
 .btn-audio {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
   font-size: 2.5rem;
+  color: #ffc909;
+  padding: 1rem;
 }
+
 .pulse-start {
   position: relative;
   display: flex;
@@ -255,6 +259,7 @@ h2 {
     letter-spacing: .25rem;    
   }
 
+
   .btn-audio,
   .btn-start {
     position: relative;
@@ -268,18 +273,20 @@ h2 {
     outline: none;
     box-shadow: inset #ffc909 0 0 7px 0;
   }
+
   .btn-audio {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem;
-    width: 3.7rem;
-    height: 3.7rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
-
   .btn-start {
-    height: fit-content;    
-    width: 50%;
-    padding: .55rem;
+    max-height: 5rem;    
+    /* width: 50%;     */
+    padding: 1rem 2rem;    
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
   }
 
   .pulse-start {
@@ -325,6 +332,7 @@ h2 {
 
   .btn-audio {
     border-radius: 50%;
+    font-size: 2rem;
   }
 
   .btn-audio:hover,
@@ -404,7 +412,7 @@ h2 {
 
 /*?=========== WIP =============*/
 /* ! ====================*/
-/* ! MQ Medium screen */
+/* ! MQ screen */
 /* ! ====================*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .buttons-container {
@@ -414,8 +422,8 @@ h2 {
     height: 10rem;
     /*!change in mediaQ */
     /* width 80% + left margin 20rem for not hiding the stars at both sides */
-    width: 100vw;
-    margin: 0;
+    width: 95vw;
+    margin: 0;  
     gap: 2rem;
     padding: 2rem 4rem;
     justify-content: space-between;
@@ -451,6 +459,7 @@ h2 {
 
   .btn-start a {
     color: #ffc909;
+    font-size: 1.5rem;
   }
 
   .btn-audio,
@@ -469,8 +478,9 @@ h2 {
 
   .btn-start {
     height: 4.5rem;
+    margin-left: 3rem;
     /* width: max-content;   */
-    font-size: 1.8rem;
+    /* font-size: - a (link) */
     letter-spacing: 0.25rem;
   }
 
