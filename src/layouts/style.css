@@ -618,7 +618,7 @@ footer .footer-container p {
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
-    min-width: 50%;    
+    width: 100%;    
   }
 
   footer svg {

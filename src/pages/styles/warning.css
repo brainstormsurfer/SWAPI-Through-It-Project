@@ -16,18 +16,19 @@
   height: 100vh;
   width: 100vw;
 }
+
 .warning-container {
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  width: 75%;
+  width: 50%;
   /* min-width: 80rem; */
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
   flex-direction: column;
   background-image: linear-gradient(180deg, red, black 30%, transparent);
-  /* gap: 1rem; */
+  /* gap: 1rem; */  
 }
 
 .warning-text {
@@ -45,7 +46,7 @@
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 3px;
-  margin: 2rem;
+  margin-top: 1rem;
   white-space: nowrap;
 }
 
@@ -53,12 +54,12 @@
   color: red;
   border: red 1px solid;
   box-shadow: inset red 0 0 10px 0;  
-  padding: 1rem;
-  width: 50%;
+  padding: 1rem 7rem;
+  /* width: 50%; */
   font-size: 1.7rem;
   background: transparent;  
   letter-spacing: .5rem;
-  /* margin-top: 1rem;     */
+  /* margin-top: 0rem;     */
 }
 /* 
 .warning-container .btn-warning:hover {
@@ -118,7 +119,7 @@
     font-size: 1.7rem;
     letter-spacing: 3px;
     /* padding: 0.5rem 2rem; */
-    width: 50%;        
+    width: 95%;        
     padding: 1rem;
     /* width: fit-content; */
   }
@@ -146,11 +147,11 @@
   .warning-container .btn-warning {
     font-size: 1.5rem;
     letter-spacing: 3px;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     width: 90%;
     height: fit-content;
     justify-content: center;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
   }
 
   .warning-container h1 {
@@ -181,11 +182,10 @@
     .warning-container .btn-warning {
       font-size: 1.5rem;
       letter-spacing: 3px;
-      padding: 0.5rem 2rem;
+      padding: 1rem 5rem;
       width: 90%;
       height: fit-content;
-      justify-content: center;
-      padding: 1.5rem;
+      justify-content: center;      
     }
   
     .warning-container h1 {
@@ -213,7 +213,11 @@
   }
 
   .warning-container h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   }
   
+  .btn-warning {
+    width: 90%;    
+    background-color: yellow;
+  }
 }

@@ -19,8 +19,8 @@ const Carousel = () => {
   }
 
   const dynamicStyles = {
-    width: "23%",
-    height: "100%",
+    width: "calc(10vmax + 5rem)",
+    height: "calc(5vmax + 5rem)",
     borderRadius: "15px",
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -30,15 +30,17 @@ const Carousel = () => {
 
   const currentSlideStyles = {
     ...dynamicStyles,
-    width: "48rem",
-    height: "23rem",    
+    // width: "48rem",
+    // height: "23rem",    
+    width: "calc(15vmax + 10rem)",
+    height: "calc(7vmax + 5rem)", 
     backgroundImage: `url(${quizSummary[currentIndex].image})`,
     borderRadius: "10px",
     border: `5px ridge ${
       quizSummary[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "rgb(255, 0, 0)"
     }`,
     zIndex: "3",
-    marginBottom: "1rem",
+    // marginBottom: "1rem",
   };
 
   const prevSlideStyles = {
@@ -67,7 +69,7 @@ const Carousel = () => {
 
   const arrowContainerStyles = {
     position: "absolute",
-    top: "50%",
+    top: "10%",
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
@@ -81,12 +83,12 @@ const Carousel = () => {
 
   const leftArrowStyles = {
     ...arrowStyles,
-    transform: "translate(35rem, -50%)",
+    transform: "translate(10%, 100%)",
   };
 
   const rightArrowStyles = {
     ...arrowStyles,
-    transform: "translate(-35rem, -50%)",
+    transform: "translate(10%, 100%)",
   };
 
   const goToPrevious = () => {
