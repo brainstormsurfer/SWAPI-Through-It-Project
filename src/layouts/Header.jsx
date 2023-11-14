@@ -1,6 +1,6 @@
 /*? ---- style in layouts ---- */
 import { useState, useEffect } from "react";
-import { useGameContext } from "../components/context";
+import { useGameContext } from "../context/context"
 
 const Header = () => {
   const {

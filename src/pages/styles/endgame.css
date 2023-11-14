@@ -1,3 +1,4 @@
+
 .endgame-container {
   width: 80vw;
   margin: 0 auto;
@@ -22,6 +23,7 @@
   animation: 8s blue_spotlight 1s ease-in-out infinite both;
   z-index: 5;
 }
+
 .endgame-score span {
   font-size: 2rem;
 }
@@ -217,7 +219,7 @@
   box-shadow: 0px 0px 0px 100px #000000;
   z-index: 1;
 }
-.nav-dots {
+/* .nav-dots {
   display: flex;
   align-items: flex-end;
   gap: 2rem;
@@ -241,23 +243,8 @@
 
 .dot.active {
   box-shadow: 0px 0px 6px 4px #fff;
-}
+} */
 
-.slider-container {
-  justify-self: center;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-
-.sceneDotsContainer {
-  position: relative;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
 
 /* ! ==================== */
 
@@ -266,9 +253,9 @@
     font-family: "SfDistantGalaxy", Arial, Helvetica, sans-serif;
     white-space: nowrap;
     position: absolute;
-    /* top: 3rem; */
+    top: 3vmax;
     /* left: 50%; */
-    font-size: calc(4vmin);
+    font-size: 2vmax;
     transform: translate(-50%, -50%);
     background-image: linear-gradient(to right, #000000, #394dff, transparent);
     background-repeat: no-repeat;
@@ -288,16 +275,26 @@
       background-position: 200px 0;
     }
   }
-
+ 
   .btn-endgame a {
     color: rgb(0, 89, 255);
     /* font-size: calc(0.5vmin + 0.9rem); */
-    font-size: 2vmin;
+    font-size: 1vmax;    
   }
 
-  .btn-endgame {
-    color: rgb(0, 89, 255);
+  
+  .endgame-container .button-container {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    height:10vh;
+    width: 10vw;
+    top: 0;
     position: relative;
+  }
+
+  .button-container .btn-endgame {
+    color: rgb(0, 89, 255);
     display: flex;
     align-items: center;
     border-radius: 35px;
@@ -307,17 +304,16 @@
     cursor: pointer;
     border: #002fff 1px solid;
     outline: none;
-    box-shadow: inset #002fff 0 0 10px 0;
-    /* left: 2rem;
-    top: -2rem; 
-    justify-self: flex-start; */
-    /* margin-right: 100%; */
-    /* font-size: 4vmin; */
-    /* transform: translate(0px, 0px); */
-    /* width: calc(10vmin + 8rem); */
-    /* width: calc(10vmin + 8rem); */
-    /* height: calc(3vmin + 2rem); */
+    box-shadow: inset #002fff 0 0 10px 0;      
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    /* padding: 1vmin 3vmin; */
+ /* top: 3vmax;
+ left: 3vmax; */
   }
+  
 
   .btn-endgame:hover {
     outline: #002fff 1.5px solid;
@@ -330,14 +326,15 @@
     outline: none;
   }
 
-  .pulse-endgame {
-    position: relative;
+  .button-container  .pulse-endgame {
+    position: relative;    
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     font-family: "Poppins", sans-serif;
-    padding: 1rem 3rem;
-    background: transparent;
-    font-size: 2rem;
+    /* padding: 1rem 3rem; */
+    background: transparent;    
     font-weight: 500;
     cursor: pointer;
     border: #002fff 1px solid;
@@ -388,15 +385,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 10vmin;
   }
 
   /*! edited */
   .poster-container {
     position: relative;
     padding: 4rem;
-    width: calc(15vmax + 10rem);
-    height: calc(15vmax + 10rem);
-    transform: translateY(-25%);
+    width: 30vmax;
+    height: 30vmax;
+    transform: translate(-0%, -0%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,35 +492,6 @@
     box-shadow: 0px 0px 0px 100px #000000;
     z-index: 1;
   }
-  .nav-dots {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: min-content;
-    height: 5.5rem;
-    gap: 1rem;
-    align-self: center;
-    z-index: 10;
-    transform: translateY(-1rem);
-  }
-
-  .dot {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    width: 1.5vmax;
-    height: 1.5vmax;
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-  }
-
-  .dot.active {
-    box-shadow: 0px 0px 6px 4px #fff;
-  }
-
   .slider-container {
     justify-self: center;
     align-self: center;

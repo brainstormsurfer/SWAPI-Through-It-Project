@@ -1,0 +1,116 @@
+  .prevSlide {
+    transform: translate(20%, -46%) scale(0.8);
+  }
+  
+  .nextSlide {
+    transform: translate(-20%, -46%) scale(0.8);
+  }
+
+  .dynamicSlide {
+    filter: grayscale(100%);
+    border: 3px ridge grey;
+    width: calc(10vmax + 5rem);
+    height: calc(5vmax + 5rem);
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: slideTransform 2s linear forwards;
+  }
+  
+  .currentSlide {
+    filter: grayscale(0%);
+    width: calc(15vmax + 10rem);
+    height: calc(7vmax + 5rem);
+    border-radius: 10px;
+    z-index: 3;
+  }
+  
+  .summary-scene-correct {
+    border: 5px ridge rgb(0, 223, 67);
+  }
+  
+  .summary-scene-wrong { 
+    border: 5px ridge rgb(255, 0, 0);
+  }  
+
+
+  .arrowContainer {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .arrow {
+    font-size: 10rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .leftArrow {
+    transform: translate(10%, 100%);
+  }
+  
+  .rightArrow {
+    transform: translate(10%, 100%);
+  }
+  
+  
+  .nav-dots {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: calc(13vmax + 10rem);
+    height:fit-content;
+    gap: 1vmax;
+    align-self: center;
+    z-index: 10;
+    transform: translateY(-1.25vmin);
+  }
+
+  .dot {
+    display: flex;
+    /* flex-shrink: 0; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* margin: 0 .5vmin; */
+    width: calc(1.75vmin);
+    height: calc(1.75vmin);
+    
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .dot.active {
+    box-shadow: 0px 0px 6px 4px #fff;
+  }
+
+  .dot-background-correct { 
+    background-color: rgb(0, 223, 67); 
+    }
+
+  .dot-background-wrong { 
+    background-color: rgb(255, 0, 0); 
+    }
+
+    .slider-container {
+      justify-self: center;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    
+    .sceneDotsContainer {
+      position: relative;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
