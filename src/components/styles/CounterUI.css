@@ -1,12 +1,13 @@
 .counter-container {
     align-items: flex-start;
   }
-  
-.counter-title {  
-    /* padding-left: 2rem; */
-  }
 
-  .counter-container .special {
+  /* .counter-value {
+    margin: -9vmin -4vmin;  
+  } */
+  
+
+  /* .counter-container .special {
     font-family: "Star Wars", sans-serif;
     font-size: 3.9rem;
     font-weight: 300;
@@ -14,7 +15,7 @@
     margin-right: 0.2rem;
     margin-top: 0.9rem;
     display: flex;
-  }
+  } */
   
 .blueCounterEffect {
     animation: blueCount 2.5s ease-out alternate-reverse;

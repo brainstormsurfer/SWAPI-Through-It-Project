@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useGameContext } from "./context";
+import { useGameContext } from "../context/context";
 import './styles/sharedUI.css'
 import './styles/ScoreUI.css'
 

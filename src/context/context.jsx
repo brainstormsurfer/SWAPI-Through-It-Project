@@ -1,6 +1,6 @@
 import data from "../api/data.json";
 
-import gameReducer from "./reducer";
+import gameReducer from "../reducer/reducer";
 
 import {
   useMemo,
@@ -14,9 +14,9 @@ import {
   SET_QUIZ_SCENES,
   SET_DISPLAYED_SCENE,
   LOADING,
-} from "./ACTIONS";
+} from "../components/ACTIONS";
 
-import { getRandomScene } from "./utils";
+import { getRandomScene } from "../util/utils";
 
 const initialState = {
     isLoading: true,

@@ -1,12 +1,12 @@
 .score-container {
     align-items: flex-end;
 }
-
-.score-title {
-   /* padding-right: 2rem; */
-  }
   
-  .greenScoreEffect {
+/* .score-value {
+  margin: -8vmin -4vmin;  
+} */
+
+.greenScoreEffect {
     animation: greenScore 2.5s ease-in-out forwards alternate-reverse;
   }
 

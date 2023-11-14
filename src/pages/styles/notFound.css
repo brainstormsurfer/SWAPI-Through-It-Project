@@ -1,58 +1,89 @@
 .not_found {
-    height: 85rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin: 5% auto;
+    width: 30vmax;
+    height: 30vmax;
+    z-index: 0;
   }
   
   .not_found-container {
     padding: 4rem;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 63rem;
-    width: 63rem;
-    background-image: url("../assets/404-Deathstar-transparent.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 73%;
     position: relative;
     font-family: SoloistHalftone, Arial, Helvetica, sans-serif;
-    font-size: 12rem;
     box-shadow: inset #002fff 0px 0px 50px 10px;
     border-radius: 50%;
     text-shadow: #0c28a5 5px 3px 0px;
+    background-image: url("../../assets/404-Deathstar-transparent.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20vmax;
+    height: 30vmax;
+    width: 30vmax;
+    z-index: 0;
   }
-  
-  .not_found-showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 90%;
+
+.not_found .button-container {   
+  position: absolute;
+  height: 7vmax;
+  top: 0;
+  left: 0;
+  width: 100%;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / span 1;
+}
+
+.not_found button {    
+position: relative;
+top: 0;
+left: 0;
+width: 13vmax;
+height: 3vmax;
+border-radius: 35px;
+padding: 1vmax 3vmax;    
+}
+
+.not_found button a {    
+    font-size: 1vmax;    
   }
   
   .not_found-container::after {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: absolute;    
     top: 0;
     left: 0;
     contain: "";
-    box-shadow: #002fff 0px 0px 20px 0px;
-    z-index: -2;
+    box-shadow: #002fff 0px 0px 20px 0px;    
+  }
+    
+  .not_found-showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 25vmax;    
+    margin-right:2rem;
   }
   
-  .not_found-showcase h1 {
-    color: #858585;
-    position: relative;
+  .not_found-showcase h1 {    
+    color: #9b9b9bbe;
+    font-size: 10vmax;  
   }
   
   .not_found-showcase .back {
     position: relative;
-    display: flex;
-    margin-right: 2rem;
+    padding-right: 1rem;
     z-index: -2;
   }
   
@@ -60,29 +91,17 @@
     position: relative;
     z-index: 2;
   }
-  
+
+    
   .not_found h2 {
     display: flex;
-    font-size: 4rem;
-    color: #a5a5a5;
+    font-size: 2vmax;    
+    align-items: flex-start;
+    width: fit-content;    
+    height: 7vmax;
     position: absolute;
-    bottom: 10rem;
-    font-weight: 500;
-  }
-  
-  .not_found .button-container {
-    position: relative;
-    justify-self: flex-start;
-    justify-self: start;
-    align-self: center;
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .not_found button {
-    padding: 1rem 3rem;
-    font-size: 2.5rem;
-    border-radius: 35px;
+    bottom: 0;
+    color: #a5a5a5;   
+    font-weight: 400;   
+    white-space: nowrap;
   }

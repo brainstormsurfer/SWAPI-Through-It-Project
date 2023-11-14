@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGameContext } from "./context";
+import { useGameContext } from "../context/context";
 import { useNavigate } from "react-router-dom"; 
 
 const Carousel = () => {
@@ -29,9 +29,7 @@ const Carousel = () => {
   };
 
   const currentSlideStyles = {
-    ...dynamicStyles,
-    // width: "48rem",
-    // height: "23rem",    
+    ...dynamicStyles,   
     width: "calc(15vmax + 10rem)",
     height: "calc(7vmax + 5rem)", 
     backgroundImage: `url(${quizSummary[currentIndex].image})`,
@@ -39,8 +37,7 @@ const Carousel = () => {
     border: `5px ridge ${
       quizSummary[currentIndex].score === 1 ? "rgb(0, 223, 67)" : "rgb(255, 0, 0)"
     }`,
-    zIndex: "3",
-    // marginBottom: "1rem",
+    zIndex: "3"
   };
 
   const prevSlideStyles = {

@@ -7,7 +7,7 @@ import {
   Showcase,
 } from "../components/index";
 import { GAME_OVER, LOADING } from "../components/ACTIONS";
-import { useGameContext } from "../components/context";
+import { useGameContext } from "../context/context";
 
 const Game = () => {
   const {

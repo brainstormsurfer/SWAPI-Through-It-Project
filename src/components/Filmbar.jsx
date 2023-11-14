@@ -2,10 +2,10 @@ import './styles/Filmbar.css'
 
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
-import { useGameContext } from "./context";
+import { useGameContext } from "../context/context";
 import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, SET_QUIZ_SUMMARY } from "./ACTIONS";
 import SpinningLetters from "./SpinningLetters";
-import { filteredScenes, getRandomScene } from "./utils";
+import { filteredScenes, getRandomScene } from "../util/utils";
 
 const Filmbar = () => {
   

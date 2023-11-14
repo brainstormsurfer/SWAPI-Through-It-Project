@@ -6,7 +6,7 @@ import {
   INCREMENT_SCORE,
   LOADING,
   GAME_OVER,
-} from "./ACTIONS";
+} from "../components/ACTIONS";
 
 const gameReducer = (state, action) => {
   const { payload } = action;

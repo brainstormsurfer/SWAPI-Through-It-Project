@@ -1,6 +1,3 @@
-// import Home from "./Home";
-// import About from "./About";
-
 import Warning from "./Warning"
 import Welcome from "./Welcome";
 import NotFound from "./NotFound";

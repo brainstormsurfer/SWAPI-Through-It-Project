@@ -2,7 +2,7 @@ import './styles/sharedUI.css'
 import './styles/CounterUI.css'
 
 import { useEffect, useState } from "react";
-import { useGameContext } from "./context";
+import { useGameContext } from "../context/context";
 
 const CounterUI = () => {
   const {
@@ -41,14 +41,3 @@ const CounterUI = () => {
 };
 
 export default CounterUI;
-
-/*
-<div className={(counter === 0 && counterClass === "") ? 'dis-play' :''}>
-      <h3 className={`counter-value counter ${counterClass}`}>
-        {counter}
-      </h3>
-      <h4 className={`counter-title ${counter > 0 ? "" : "shrink-vertical"}`}>
-        <span className="special-s">S</span>cenes left
-      </h4>
-    </div>
-    */

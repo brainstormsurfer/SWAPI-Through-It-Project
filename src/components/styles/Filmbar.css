@@ -1,31 +1,28 @@
 main ul {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: center;
+    width: 100%;        
+    gap: 1vmax;      
+
   }
   
   main ul li {
-    height: 12rem;
-    width: 18rem;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: calc(25vmin + 2rem);        
   }
-  
-  main li:hover {
-    background-color: #af0000;
-  }
-  
+
   main .film-logo {
     width: 100%;
     height: 100%;
-    border-radius: 30px;
-    border: 5px #000 solid;
-    cursor: pointer;
-    position: relative;
   }
   
+  .filmbar li:hover {
+    background-color: #af0000;
+  }
+
   main li:active::after {
     content: "";
     position: absolute;
@@ -40,7 +37,7 @@ main ul {
   
   main li.game-over-letter {
     font-family: "Soloist3D", sans-serif;
-    font-size: 4rem;
+    font-size: 3vmax;
     color: #fbff00;
     visibility: hidden;
     animation: spin-letter 2.5s ease-in-out forwards;
@@ -52,83 +49,6 @@ main ul {
   main li.game-over-letter:hover {
     color: #ffffff;
     box-shadow: 0px 0px 10px 1px #ffffff;
-  }
-  
-  @keyframes spin-letter {
-    50% {
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      opacity: 0.5;
-      /* visibility: hidden; */
-      transform: rotateY(360deg);
-    }
-  }
-  
-
-  /* ========================== */
-
-  @media screen and (max-width: 688) {
-    /* main ul {
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-    }
-    
-    main ul li {
-      height: 12rem;
-      width: 18rem;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    main li:hover {
-      background-color: #af0000;
-    }
-    
-    main .film-logo {
-      width: 100%;
-      height: 100%;
-      border-radius: 30px;
-      border: 5px #000 solid;
-      cursor: pointer;
-      position: relative;
-    }
-    
-    main li:active::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 50px;
-      box-shadow: inset #ff0000 0 0 30px 0;
-      pointer-events: none;
-    }
-    
-    main li.game-over-letter {
-      font-family: "Soloist3D", sans-serif;
-      font-size: 4rem;
-      color: #fbff00;
-      visibility: hidden;
-      animation: spin-letter 2.5s ease-in-out forwards;
-      background: transparent;
-      box-shadow: 0px 0px 10px 1px #fbff00;
-      opacity: 0;
-    }
-    
-    main li.game-over-letter:hover {
-      color: #ffffff;
-      box-shadow: 0px 0px 10px 1px #ffffff;
-    } */
-  }
-
-  @media screen and (max-width: 688) {
-
   }
 
   

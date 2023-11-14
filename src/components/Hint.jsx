@@ -1,5 +1,5 @@
 import "./styles/Hint.css";
-import { useGameContext } from "../components/context";
+import { useGameContext } from "../context/context";
 
 const Hint = () => {
   const {state: { displayedScene }} = useGameContext();  

@@ -40,32 +40,20 @@
   padding: 0;
 }
 
-* {
-  border: 1px solid red;
-}
-
 html {
   font-size: 62.5%;
   font-family: var(--form-font);
-  /* background-image: url("../assets/background-stars-desktop.jpeg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; */
 }
-
 
 body {
   background-image: url("../assets/background-stars-desktop.jpeg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  max-width: 100vw;
+  width: 100vw;
   background-attachment: fixed; /*? */
-  /* font-size: 2rem; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;  */
   font-family: var(--font-family);
+  height: 100vh;
 }
 
 ul {
@@ -76,7 +64,7 @@ a {
   text-decoration: none;
 }
 
-/* Buttons with this (generic) style props include in screens:
+/* Buttons are include in the following pages :
 Warning (1), Welcome (3), Endgame (1), NotFound (1) */
 button {
   cursor: pointer;
@@ -87,16 +75,3 @@ button {
   font-family: "Poppins", sans-serif;
   padding: 1rem 3rem;
 }
-
-
-/* button::before,
-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: transparent;
-} */

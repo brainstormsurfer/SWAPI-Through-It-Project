@@ -4,23 +4,20 @@
   display: none;
 }
 
-/* .shared-title {
+.shared-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  font-family: "Star Wars", sans-serif;
-  font-size: 5rem;
-  text-align: center;
-  background: transparent;
-  position: relative;
-  z-index: 2;
-} */
+  gap: 1vmin;
+}
 
 .shared-value {
   font-family: "DistantGalaxy", sans-serif;
-  width: 12rem;
-  height: 10rem;
-  font-size: 6rem;
-  margin: -4rem -7rem;
+  width: calc(16vmin);
+  height: calc(16vmin);  
+  font-size: 10vmin;
+  margin: -7vmin -4vmin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,24 +27,13 @@
   color: #fbff00;
 }
 
-.shared-container {
-  display: flex;
-  /* height: 32rem; */
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0;  
-}
-
 .shared-title {
   display: flex;
   font-family: "DistantGalaxy", sans-serif;
-  font-size: 4rem;
+  font-size: 5vmin;
   font-weight: 400;
-  /* border-radius: 50%; */
   color: #fbff00;
-  padding: 0;
-
+  padding: 1vmax;
 }
 
 .shared-title.align-right {

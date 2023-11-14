@@ -1,5 +1,5 @@
 import Carousel from "../components/Carousel";
-import { useGameContext } from "../components/context";
+import { useGameContext } from "../context/context";
 import ErrorPage from "./NotFound";
 import { Link } from "react-router-dom";
 import './styles/Endgame.css'
@@ -14,8 +14,7 @@ const EndGame = () => {
   }
   return (
     <>
-      { quizSummary ? (
-        
+      { quizSummary ? (        
         <div className="endgame-container">
           <div className="button-container">
             <button

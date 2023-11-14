@@ -1,8 +1,7 @@
-
 main li.game-over-letter {
   display: flex;
     font-family: "Soloist3D", sans-serif;
-    font-size: 4vw;
+    font-size: 4vmin;
     color: #fbff00;
     visibility: hidden;
     animation: spin-letter 2.5s ease-in-out forwards;
@@ -23,7 +22,6 @@ main li.game-over-letter {
     }
     100% {
       opacity: 0.5;
-      /* visibility: hidden; */
       transform: rotateY(360deg);
     }
   }

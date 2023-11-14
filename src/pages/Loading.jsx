@@ -1,5 +1,5 @@
 import "./styles/Loading.css";
-import { useGameContext } from "../components/context";
+import { useGameContext } from "../context/context";
 
 const Loading = () => {
   const { state: isLoading } = useGameContext();

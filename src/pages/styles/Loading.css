@@ -46,7 +46,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    font-family: "Star Wars", sans-serif;
+    font-family: "Soloist3D", sans-serif;
     font-size: 3.5rem;
     white-space: nowrap;
     animation: loading-title-anim 6s linear infinite;

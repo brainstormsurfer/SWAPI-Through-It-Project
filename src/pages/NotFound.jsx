@@ -13,6 +13,7 @@ const NotFound = () => {
 // }
 
   return (
+    <main>
     <section className="not_found">
       <div className="not_found-container">
         <div className="button-container">          
@@ -29,6 +30,7 @@ const NotFound = () => {
         <h2>Page not found</h2>
       </div>
     </section>
+    </main>
   );
 };
 

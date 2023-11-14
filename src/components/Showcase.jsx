@@ -1,7 +1,7 @@
 import './styles/Showcase.css'
 
 import Hint from "./Hint";
-import { useGameContext } from "./context";
+import { useGameContext } from "../context/context";
 
 const Showcase = () => {
   
