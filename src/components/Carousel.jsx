@@ -20,8 +20,6 @@ const Carousel = () => {
     return null; // Return null to prevent rendering the carousel
   }
 
-
-
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? quizSummary.length - 1 : currentIndex - 1;
@@ -53,21 +51,20 @@ const Carousel = () => {
           src={quizSummary[currentIndex].poster}
         />
       </div>
-      
+
       <div className="arrowContainer">
-    
         <div className="arrow leftArrow" onClick={goToPrevious}>
           ‹
         </div>
         <div className="arrow rightArrow" onClick={goToNext}>
           ›
         </div>
-
       </div>
       <div className="sceneDotsContainer">
         <div className="slider-container">
           <div
-            className="dynamicSlide prevSlide"
+            className={` ${currentIndex !== 0 ? "prevSlide dynamicSlide" : "hidden dynamicSlide"
+            }`}
             style={{
               backgroundImage: `url(${quizSummary[currentIndex - 1]?.image})`,
             }}
@@ -83,7 +80,7 @@ const Carousel = () => {
             }}
           ></div>
           <div
-            className="dynamicSlide nextSlide"
+            className={`${currentIndex === quizSummary.length-1 ? "hidden dynamicSlide" : "nextSlide dynamicSlide"}`}
             style={{
               backgroundImage: `url(${quizSummary[currentIndex + 1]?.image})`,
             }}

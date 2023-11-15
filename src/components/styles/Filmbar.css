@@ -3,7 +3,7 @@ main ul {
     justify-content: center;
     width: 100%;        
     gap: 1vmax;      
-
+    padding: 0 1vmax;
   }
   
   main ul li {
@@ -21,6 +21,7 @@ main ul {
   
   .filmbar li:hover {
     background-color: #af0000;
+    cursor: pointer;
   }
 
   main li:active::after {
