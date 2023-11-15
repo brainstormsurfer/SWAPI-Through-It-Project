@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useGameContext } from "../context/context";
 import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, SET_QUIZ_SUMMARY } from "./ACTIONS";
 import SpinningLetters from "./SpinningLetters";
-import { filteredScenes, getRandomScene } from "../util/utils";
+import { filterScenesHandler, getRandomScene } from "../utils/utils";
 
 const Filmbar = () => {
   
@@ -22,7 +22,6 @@ const Filmbar = () => {
     }
     dispatch({ type: DECREMENT_COUNTER });
     
-    // creating quiz summary object
     const sceneWithScoringEffect = {
       ...displayedScene,
       sceneScore: quizSummaryScore,
@@ -31,12 +30,13 @@ const Filmbar = () => {
     dispatch({ type: SET_QUIZ_SUMMARY, payload: sceneWithScoringEffect });
     
     if (counter > 1) {
-    const newScene = getRandomScene(quizScenes);    
-    dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene  });
-    dispatch({ type: SET_QUIZ_SCENES, payload: {quizScenes : filteredScenes(quizScenes, newScene) } });    
-    }
-  };
-  
+    const filteredScenes = filterScenesHandler(quizScenes, displayedScene)
+    dispatch({ type: SET_QUIZ_SCENES, payload: { quizScenes : filteredScenes } });
+    const newScene = getRandomScene(quizScenes);  
+    dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene });
+  }
+};
+
   useEffect(() => {
     const logoArr = [];
     for (let i = 0; i < 9; i++) {

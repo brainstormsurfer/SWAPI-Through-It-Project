@@ -1,5 +1,5 @@
 import data from "../api/data.json";
-
+import { nanoid } from "nanoid";
 import gameReducer from "../reducer/reducer";
 
 import {
@@ -16,7 +16,7 @@ import {
   LOADING,
 } from "../components/ACTIONS";
 
-import { getRandomScene } from "../util/utils";
+import { getRandomScene } from "../utils/utils";
 
 const initialState = {
     isLoading: true,
@@ -37,6 +37,7 @@ export const GameProvider = ({ children }) => {
       const sceneObject = movie.scenes.map((scene) => {
         return ({
           ...scene,
+          id: nanoid(),
           film: movie.title,
           poster: movie.poster
         });

@@ -10,33 +10,40 @@ const ScoreUI = () => {
   
   const { state: { score, counter } } = useGameContext();  
 
-  useEffect(() => {   
-    const currentDifference = score - difference;
+  useEffect(() => {
     setDifference((prevDifference) => {
-      if (currentDifference > prevDifference) {
+      const currentDifference = score - prevDifference;
+      
+      if (currentDifference > 0) {
+        // Score increased
         if (counter > 0) {
           setScoreEffect("greenScoreEffect");
         } else {
           setScoreEffect("final-green-effect");
         }
       } else {
-        (counter > 0) ?
-          setScoreEffect("redScoreEffect") :        
-          setScoreEffect("final-red-effect");  
-      }
-      return currentDifference;
-    });
-
-    const timeout = setTimeout(() => {
-         if (counter > 0) {
-         setScoreEffect("");
+        // Score stayed the same
+        if (counter > 0) {
+          setScoreEffect("redScoreEffect"); // or any other effect for same score
+        } else {
+          setScoreEffect("final-red-effect");
         }
-       }, 2500);
-
+      }
+  
+      return score;
+    });
+  
+    const timeout = setTimeout(() => {
+      if (counter > 0) {
+        setScoreEffect("");
+      }
+    }, 2500);
+  
     return () => {
       clearTimeout(timeout);
     };
   }, [counter]);
+  
 
   useEffect(() => {
     if (counter === 0 && !finalScoreEffect) {

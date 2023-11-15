@@ -42,8 +42,7 @@ const gameReducer = (state, action) => {
       return {
         ...state,
         score: state.score + 1,
-      };
-
+      };      
     case SET_QUIZ_SUMMARY:
       const sceneWithScoringEffect = {
         ...state.displayedScene,
