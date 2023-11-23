@@ -24,11 +24,15 @@ const routes = [
         element: <Game />,
       },
       {
-        path: "*",
+        path: "/*",
         element: <NotFound />,
       },
     ],
-  },  
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ];
 
 function App() {

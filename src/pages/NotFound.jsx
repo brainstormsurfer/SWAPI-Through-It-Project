@@ -1,16 +1,24 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import './NotFound.css'
 
 const NotFound = () => {
+  const navigate = useNavigate()
+
+  const navigateHandler = () => {
+    navigate("/quiz", { replace: true });
+  }
+
   return (
     <main>
     <section className="not_found">
       <div className="not_found-container">
         <div className="button-container">          
-          <button className="btn-notfound pulse-notfound"
+          <button className="btn-notfound pulse-notfound" onClick={navigateHandler} 
            >
-            <Link to="quiz"> Start Playing </Link>
+            {/* <Link to="quiz"> Start Playing </Link> */}
+            Start Playing            
           </button>
         </div>
         <div className="not_found-showcase">
