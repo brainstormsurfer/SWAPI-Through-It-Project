@@ -1,5 +1,4 @@
 [[redirects]]
-from = "/"
-to = "/404.html"
-status = 200
+/*    /index.html   200!
+
 
