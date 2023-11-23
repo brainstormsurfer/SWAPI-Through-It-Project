@@ -32,18 +32,18 @@
 }
 
 .warning-text {
-font-family: "Poppins", Arial, Helvetica, sans-serif;
+font-family:sans-serif;
   display: flex;
   /* color: #e40707;   */
   color: #ff0000;
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 3rem;
 }
 
 .enjoy {
   color: #ff0000;
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 500;
   letter-spacing: 3px;
   margin-top: 1rem;

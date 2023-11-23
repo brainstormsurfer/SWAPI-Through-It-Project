@@ -1,7 +1,4 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
+from = "/"
+to = "/warning" 
 status = 200
-[build]
-  command = "REACT_APP_START_PAGE=warning npm run build"
-  publish = "dist"
