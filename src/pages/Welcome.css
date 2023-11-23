@@ -11,7 +11,7 @@
   background-color: #000;
 } */
 
-.buttons-container {
+.buttons-container { 
   position: relative;
   display: flex;
   align-items: center;
