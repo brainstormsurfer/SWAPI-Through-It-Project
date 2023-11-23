@@ -22,11 +22,7 @@ const routes = [
       {
         path: "/quiz",
         element: <Game />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
-      },
+      }      
     ],
   },
   {
