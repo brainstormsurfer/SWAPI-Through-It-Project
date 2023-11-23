@@ -4,26 +4,22 @@ import SharedLayout from "./layouts/SharedLayout";
 
 const routes = [
   {
-    path: "/",
-    children: [
-      {
-        index: true,
-        element: <Warning />,
-      },
-      {
-        path: "intro",
-        element: <Welcome />,
-      },
-      {
-        path: "quiz",
-        element: (
-          <>
-            <SharedLayout />
-            <Game />
-          </>
-        ),
-      },
-    ],
+    path: "", 
+    index: true,
+    element: <Warning />,
+  },
+  {
+    path: "intro",
+    element: <Welcome />,
+  },
+  {
+    path: "quiz",
+    element: (
+      <>
+        <SharedLayout />
+        <Game />
+      </>
+    ),
   },
   {
     path: "*",
