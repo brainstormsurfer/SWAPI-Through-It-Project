@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
-import '../../src/pages/styles/Warning.css'
+import './Warning.css';
+
 
 const Warning = () => {
   const navigate = useNavigate();
