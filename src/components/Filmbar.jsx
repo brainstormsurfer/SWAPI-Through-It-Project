@@ -63,7 +63,7 @@ const Filmbar = () => {
                 <li key={logo.id}>
                   <img
                     className="film-logo"
-                    src={`/assets/${logo.src}.png`}
+                    src={`/assets/img/${logo.src}.png`}
                     alt={logo.alt}
                     onClick={() => {
                       handleLogoClick(logo.alt);
