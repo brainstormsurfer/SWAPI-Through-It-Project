@@ -58,6 +58,8 @@
   font-size: 1.7rem;
   background: transparent;  
   letter-spacing: .5rem;
+  outline: #ff0909 1.7px solid;
+  border: #ff0909 1.7px solid;
   /* margin-top: 0rem;     */
 }
 /* 
