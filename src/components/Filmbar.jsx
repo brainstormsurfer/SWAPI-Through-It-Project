@@ -1,4 +1,4 @@
-import './styles/Filmbar.css'
+import './Filmbar.css'
 
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
@@ -58,12 +58,12 @@ const Filmbar = () => {
       {logos && (
         <ul className="filmbar">
           {counter !== 0 ? (
-            logos.map((logo) => {
+            logos?.map((logo, idx) => {
               return (
                 <li key={logo.id}>
                   <img
                     className="film-logo"
-                    src={logo.src}
+                    src={`../assets/logos/logo_episode0${idx + 1}.png`}
                     alt={logo.alt}
                     onClick={() => {
                       handleLogoClick(logo.alt);
