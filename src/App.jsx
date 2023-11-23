@@ -9,7 +9,7 @@ const routes = [
     children: [
       {
         index: true,
-        element: <Warning />,
+        element: process.env.REACT_APP_START_PAGE === "warning" ? <Warning /> : <Welcome />,
       },
       {
         path: "intro",
