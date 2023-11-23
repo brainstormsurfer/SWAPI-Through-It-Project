@@ -1,10 +1,13 @@
 import { Warning, Welcome, Game, NotFound } from "./pages";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import SharedLayout from "./layouts/SharedLayout";
 
 const routes = [
   {
-    path: "/", 
     index: true,
     element: <Warning />,
   },
@@ -13,13 +16,14 @@ const routes = [
     element: <Welcome />,
   },
   {
-    path: "quiz",
-    element: (
-      <>
-        <SharedLayout />
-        <Game />
-      </>
-    ),
+    path: "/",
+    element: <SharedLayout />,
+    children: [
+      {
+        path: "/quiz",
+        element: <Game />,
+      },      
+    ],
   },
   {
     path: "*",
