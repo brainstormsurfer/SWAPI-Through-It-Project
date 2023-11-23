@@ -58,12 +58,12 @@ const Filmbar = () => {
       {logos && (
         <ul className="filmbar">
           {counter !== 0 ? (
-            logos?.map((logo) => {
+            logos.map((logo) => {
               return (
                 <li key={logo.id}>
                   <img
                     className="film-logo"
-                    src={`../../src/assets/${logo.src}`}
+                    src={`/assets/${logo.src}`}
                     alt={logo.alt}
                     onClick={() => {
                       handleLogoClick(logo.alt);
