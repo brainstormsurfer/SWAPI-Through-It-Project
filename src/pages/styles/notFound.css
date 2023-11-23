@@ -105,3 +105,89 @@ padding: 1vmax 3vmax;
     font-weight: 400;   
     white-space: nowrap;
   }
+  
+.btn-notfound a {
+  font-size: 1vmax;
+  color: rgb(0, 89, 255);
+}
+
+.btn-notfound {
+  color: rgb(0, 89, 255);
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 35px;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  border: #002fff 1px solid;
+  outline: none;
+  box-shadow: inset #002fff 0 0 10px 0;
+  height: 3vmax;
+  margin-top: 3vmax;  
+}
+
+.btn-notfound:hover {
+  outline: #002fff 1.5px solid;
+  box-shadow: inset #002fff 0 0 17px 0;
+}
+
+.btn-notfound:active {
+  box-shadow: hsl(236, 100%, 48%) 0 0 30px 5px;
+  border: none;
+  outline: none;
+}
+
+.pulse-notfound {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem 3rem;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: #002fff 1px solid;
+  outline: none;
+  box-shadow: inset #002fff 0 0 10px 0;
+  z-index: 100;
+}
+
+.pulse-notfound::after,
+.pulse-notfound::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 35px;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.pulse-notfound::after {
+  animation: 3s pulse-notfound ease-in infinite;
+}
+
+.pulse-notfound::before {
+  animation: 3s pulse-notfound ease-in-out infinite;
+}
+@keyframes pulse-notfound {
+  50% {
+    color: #000;
+    background: #002fff;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.pulse-notfound:hover,
+.pulse-notfound::before:hover,
+.pulse-notfound::after:hover {
+  animation: paused;
+}

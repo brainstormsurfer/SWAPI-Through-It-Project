@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // import { useGameContext } from "../components/context";
 // import { GAME_OVER } from "../components/ACTIONS";
+// import './styles/NotFound.css'
 
 const NotFound = () => {
 // const { isGameOver, dispatch } = useGameContext()
@@ -16,8 +17,7 @@ const NotFound = () => {
     <section className="not_found">
       <div className="not_found-container">
         <div className="button-container">          
-          <button className="btn-endgame pulse-endgame"
-          //  onClick={restartHandler}
+          <button className="btn-notfound pulse-notfound"
            >
             <Link to="quiz"> Start Playing </Link>
           </button>
