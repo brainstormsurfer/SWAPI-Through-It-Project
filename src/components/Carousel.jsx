@@ -11,13 +11,8 @@ const Carousel = () => {
   const navigate = useNavigate();
 
   if (!quizSummary || quizSummary.length === 0) {
-    console.log("error : quizSummary has no data");
-    return null; // Return null when quizSummary is empty
-  }
-
-  if (!quizSummary || quizSummary.length === 0) {
     navigate("/quiz");
-    return null; // Return null to prevent rendering the carousel
+    return; 
   }
 
   const goToPrevious = () => {

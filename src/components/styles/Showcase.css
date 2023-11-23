@@ -1,30 +1,51 @@
-.showcase {
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+main ul {
   display: flex;
-  height: auto;
   justify-content: center;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 8;  
+}
+
+.filmbar li {
+ width: calc(15vmax);
+ /* height: calc(8vmax + 1rem); */
+}
+
+.showcase {
+  grid-area: 2 / 1 / 6 / 11;
+  display: flex;
+  /* height: 100%; */
+  width: 100%; 
+  justify-content: center; 
   align-items: center;
-  gap: 1vmax;
+  gap: 4rem;
+  /* background-color: violet; */
+  padding: 0 1rem;
+  height: min-content;
 }
 
 .scene-container {
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  max-width: 60vmax;
-  width: 120vmin;
-  aspect-ratio: 16 / 9;
-  height: auto;
+  grid-area: 2 / 3 / 5 / 9;
   border-radius: 35px;
-  margin: 0.5rem 4rem;
+  margin-top: 1rem;
+  /* aspect-ratio: 16 / 9; */
   background: rgba(0, 0, 0, 0);
-  gap: 1vmax;
+  gap: 1rem;  
+  width: 55%;
+  height: auto;
 }
 
 .scene-container img {
   width: 100%;
-  height: 100%;
   border-radius: 35px;
   aspect-ratio: 16 / 9;
+  object-fit: cover;
   border: 0.25rem ridge #fff;
 }
 
@@ -41,11 +62,12 @@
 .scene-endgame {
   animation: scene-endgame 4s ease-out forwards;
 }
+
 @keyframes scene-endgame {
   97% {
     transform: rotateX(270deg) skew(65deg) scale(0.01);
     border: 0.25px solid black;
-    box-shadow: inset 0 0 500px 0 #143fff;
+    box-shadow: inset 0 0 500px 0 #fbff00;
     opacity: 1;
     scale: 1;
   }
@@ -54,6 +76,6 @@
     scale: 0;
     transform: rotateX(270deg) skew(65deg) scale(0);
     border: 0.25px solid black;
-    box-shadow: inset 0 0 500px 0 #143fff;
+    box-shadow: inset 0 0 500px 0 #fbff00;
   }
 }

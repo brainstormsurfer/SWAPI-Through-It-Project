@@ -1,10 +1,18 @@
 .score-container {
-    align-items: flex-end;
+  align-items: flex-end;
 }
-  
-/* .score-value {
-  margin: -8vmin -4vmin;  
-} */
+
+.score-value {
+  z-index: -1;
+  margin: -2.5rem;  
+  align-self: flex-end;
+}
+
+.score-title {
+  display: flex;    
+  justify-content: flex-end;
+}
+
 
 .greenScoreEffect {
     animation: greenScore 2.5s ease-in-out forwards alternate-reverse;

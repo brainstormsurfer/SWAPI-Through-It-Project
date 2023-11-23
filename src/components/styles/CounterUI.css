@@ -1,10 +1,21 @@
 .counter-container {
-    align-items: flex-start;
+    grid-column: 9 / span 2;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    gap: 1rem;
+  } 
+  .counter-value {    
+    /* margin-bottom: -4vmin;  
+    margin-right: 20vmin;   */
+    z-index: -1;
   }
+  
+  .counter-title {
+    /* white-space: nowrap; */    
+    /* margin-right: 4vmin;    */
 
-  /* .counter-value {
-    margin: -9vmin -4vmin;  
-  } */
+  }
   
 
   /* .counter-container .special {

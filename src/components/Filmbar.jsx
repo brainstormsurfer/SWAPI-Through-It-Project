@@ -32,7 +32,7 @@ const Filmbar = () => {
     if (counter > 1) {
     const filteredScenes = filterScenesHandler(quizScenes, displayedScene)
     dispatch({ type: SET_QUIZ_SCENES, payload: { quizScenes : filteredScenes } });
-    const newScene = getRandomScene(quizScenes);  
+    const newScene = getRandomScene(filteredScenes);  
     dispatch({ type: SET_DISPLAYED_SCENE, payload: newScene });
   }
 };

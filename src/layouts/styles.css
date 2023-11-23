@@ -28,8 +28,7 @@ header {
 .quiz-title .span {
   font-family: "SfDistantGalaxy", sans-serif;
   color: #fbff00;
-  margin-left: 1rem;
-  margin-top: 0;
+  margin: 0 3rem;    
 }
 
 
@@ -43,7 +42,7 @@ header {
   align-items: center;
   position: absolute;
   bottom: 0;  
-  transform: translateY(100vmin);
+  transform: translateY(60vmin);
    background-image: linear-gradient(
     to right,
     #000,
@@ -146,7 +145,7 @@ footer .footer-container p {
     background-color: transparent;
   }
 }
-
+/* 
 .loading {
   display: flex;
   flex-direction: column;
@@ -190,7 +189,7 @@ footer .footer-container p {
   100% {
     color: #000;
   }
-}
+} */
 
 /*? =================== */
 /*! Screens Adjustment */
@@ -365,10 +364,18 @@ footer .footer-container p {
 /* ========================== */
 
 @media screen and (max-width: 960px) {
-  
   .quiz-title {
-    font-size: calc(7vmax - 2rem);
+    font-size: 5vmin;   
+    white-space: nowrap;
+    z-index: 5;  
   }
+  
+  .quiz-title .span {
+    font-family: "SfDistantGalaxy", sans-serif;
+    color: #fbff00;
+    margin: 0 1rem;    
+  }
+  
   .blackout::before {
     content: "";
     white-space: nowrap;
@@ -392,7 +399,8 @@ footer .footer-container p {
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
-    width: 100%;    
+    width: 100%;  
+    padding: 1rem;  
   }
 
   footer svg {
@@ -460,7 +468,18 @@ footer .footer-container p {
 /* ====================== */
 
 @media screen and (max-width: 688px) {
-
+ 
+  .quiz-title {
+    font-size: 5vmin;   
+    white-space: nowrap;
+    z-index: 5;  
+  }
+  
+  .quiz-title .span {
+    font-family: "SfDistantGalaxy", sans-serif;
+    color: #fbff00;
+    margin: 0 1rem;    
+  }
   .loading {
     display: flex;
     align-items: center;
@@ -506,15 +525,7 @@ footer .footer-container p {
   }
   
   .quiz-title {
-    font-size: 5vmin;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    font-family: "SoloistHalftone", sans-serif;
-    color: #ffffff;
-    font-weight: 100;
+    font-size: 5vmin;   
     white-space: nowrap;
     z-index: 5;  
   }
@@ -522,8 +533,7 @@ footer .footer-container p {
   .quiz-title .span {
     font-family: "SfDistantGalaxy", sans-serif;
     color: #fbff00;
-    margin-left: 1rem;
-    margin-top: 0;
+    margin: 0 1rem;    
   }
   
   .blackout {
@@ -596,6 +606,7 @@ footer .footer-container p {
   footer {
     height: 3rem;
     padding: .7rem;
+    bottom: 0;
   }
   
   .footer-container .social {

@@ -42,7 +42,6 @@
 
 html {
   font-size: 62.5%;
-  font-family: var(--form-font);
 }
 
 body {
@@ -50,10 +49,10 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100vw;
   background-attachment: fixed; /*? */
   font-family: var(--font-family);
-  height: 100vh;
+  /* height: 100vh; */
+  position: relative;
 }
 
 ul {

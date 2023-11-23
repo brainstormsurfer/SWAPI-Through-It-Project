@@ -51,8 +51,7 @@
 }
 
 .btn-warning {
-  color: red;
-  border: red 1px solid;
+  color: red;  
   box-shadow: inset red 0 0 10px 0;  
   padding: 1rem 7rem;
   /* width: 50%; */

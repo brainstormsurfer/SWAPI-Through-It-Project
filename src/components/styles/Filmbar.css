@@ -11,7 +11,7 @@ main ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(25vmin + 2rem);        
+    width: calc(16vmin + 2rem);        
   }
 
   main .film-logo {

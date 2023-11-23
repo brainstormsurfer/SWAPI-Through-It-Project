@@ -38,6 +38,14 @@ const CounterUI = () => {
       </h2>
     </div>
   );
+  // return (
+  //   <div className={`counter-container ${counter === 0 && counterEffect === "" ? "dis-play" : "shared-container"}`}>
+  //     <h2 className={`counter-value shared-value ${counterEffect}`}>{counter}</h2>
+  //     <h2 className={`counter-title shared-title ${counter > 0 ? "" : "effect-vertical"}`}>
+  //       Scenes left
+  //     </h2>
+  //   </div>
+  // );
 };
 
 export default CounterUI;

@@ -1,12 +1,10 @@
 
 .loading {
-  position: relative;
   display: flex;
-    flex-direction: column;        
-    /* margin: 17rem; */    
-    /* justify-self: center; */
-    /* margin: 0 auto; */
-  }
+  flex-direction: column;
+  align-items: center;  
+  position: relative;
+}
   
   .spinner {
     position: relative;
@@ -47,7 +45,7 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     font-family: "Soloist3D", sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     white-space: nowrap;
     animation: loading-title-anim 6s linear infinite;
   }
@@ -69,7 +67,7 @@
   .loading-title-upper {
     font-size: 3rem;
     position: absolute;
-    top: 28%; 
+    top: 33%; 
     left: 50%;
     transform: translateX(-50%);
     color: #fbff00;
@@ -80,7 +78,7 @@
   .loading-title-lower {
     font-size: 3rem;
     position: absolute;
-    top: 53%; 
+    top: 58%; 
     left: 50%;
     transform: translateX(-50%);
     color: #fbff00;
