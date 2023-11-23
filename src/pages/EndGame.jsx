@@ -1,6 +1,5 @@
 import Carousel from "../components/Carousel";
 import { useGameContext } from "../context/context";
-import NotFound from "./NotFound";
 import { Link } from "react-router-dom";
 import './EndGame.css'
 
