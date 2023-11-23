@@ -1,17 +1,8 @@
 import { Link } from "react-router-dom";
-// import { useGameContext } from "../components/context";
-// import { GAME_OVER } from "../components/ACTIONS";
+
 import './NotFound.css'
 
 const NotFound = () => {
-// const { isGameOver, dispatch } = useGameContext()
-
-// const restartHandler = () => {
-//   if (isGameOver) {
-//     dispatch({type: GAME_OVER, payload: false})
-//   }
-// }
-
   return (
     <main>
     <section className="not_found">

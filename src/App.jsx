@@ -9,11 +9,11 @@ const routes = [
     element: <Warning />,
   },
   {
-    path: "/intro",
+    path: "intro",
     element: <Welcome />,
   },
   {
-    path: "/quiz",
+    path: "quiz",
     element: (
       <>
         <SharedLayout />
@@ -22,7 +22,7 @@ const routes = [
     ),
   },
   {
-    path: "/*",
+    path: "*",
     element: <NotFound />,
   },
 ];
