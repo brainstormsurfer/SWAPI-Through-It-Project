@@ -41,8 +41,7 @@ const Filmbar = () => {
     const logoArr = [];
     for (let i = 0; i < 9; i++) {
       logoArr.push({
-        id: nanoid(),
-
+        id: nanoid(),        
          src: `/assets/logos/logo_episode0${i + 1}.png`,
         //  src: `../../src/assets/logos/logo_episode0${i + 1}.png`,
         alt: `episode0${i + 1}`,
