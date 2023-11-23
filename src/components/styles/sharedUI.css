@@ -42,7 +42,7 @@
   width: 100%;
   font-weight: 100;
   /* color: #fbff00; */
-  color: #fff;
+  color: #fbff00; 
   white-space: nowrap;
   flex-shrink: 1;
 }

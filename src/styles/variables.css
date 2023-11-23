@@ -1,5 +1,6 @@
 :root {
-    --font-family: "Poppins", sans-serif;
+    --font-family: "Poppins", Arial, Helvetica, sans-serif;
+
     --font-size: "2rem";
     --primary-font-weight: 700;
     --login-title-font-size: 2.4rem;

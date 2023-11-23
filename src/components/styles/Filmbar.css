@@ -1,20 +1,21 @@
-main ul {
+.filmbar {
     display: flex;
     justify-content: center;
-    width: 100%;        
+    max-width: 90%; 
+    margin: 0 auto;       
     gap: 1vmax;      
     padding: 0 1vmax;
   }
   
-  main ul li {
+ .filmbar li {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(16vmin + 2rem);        
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* width: fit-content;         */
   }
 
-  main .film-logo {
+.film-logo {
     width: 100%;
     height: 100%;
   }

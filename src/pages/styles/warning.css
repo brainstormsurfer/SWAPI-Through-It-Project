@@ -26,14 +26,14 @@
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
-  flex-direction: column;
-  background-image: linear-gradient(180deg, red, black 30%, transparent);
+  flex-direction: column;  
+  background-image: linear-gradient(180deg, red, black 34%, transparent);
   /* gap: 1rem; */  
 }
 
 .warning-text {
+font-family: "Poppins", Arial, Helvetica, sans-serif;
   display: flex;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   /* color: #e40707;   */
   color: #ff0000;
   font-weight: 300;
@@ -55,12 +55,12 @@
   box-shadow: inset red 0 0 10px 0;  
   padding: 1rem 7rem;
   /* width: 50%; */
-  font-size: 1.7rem;
+  font-size: 2rem;
   background: transparent;  
   letter-spacing: .5rem;
   outline: #ff0909 1.7px solid;
   border: #ff0909 1.7px solid;
-  /* margin-top: 0rem;     */
+  margin-top: 2rem;    
 }
 /* 
 .warning-container .btn-warning:hover {
@@ -90,8 +90,9 @@
 
 .warning-container h1 {
   color: #000000;
-  font-weight: 600;
-  font-size: 3.5rem;
+  font-weight: 800;
+  font-size: 4.5rem;
+  font-family: serif;
 }
 
 @media screen and (max-width: 768px) {
