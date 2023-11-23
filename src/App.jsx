@@ -6,7 +6,6 @@ import {
 
 import SharedLayout from "./layouts/SharedLayout";
 
-
 const routes = [
   {
     index: true,
@@ -21,17 +20,16 @@ const routes = [
     element: <SharedLayout />,
     children: [
       {
-        path: "quiz", 
+        path: "/quiz",
         element: <Game />,
       },
     ],
   },
   {
-    path: "*", 
+    path: "*",
     element: <NotFound />,
   },
 ];
-
 
 function App() {
   const router = createBrowserRouter(routes);
