@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
   cherryPickedKeys.forEach(key => processEnv[key] = env[key]);
 
   return {
+    outDir: 'build',
     define: {
       'process.env': processEnv
     },
