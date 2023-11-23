@@ -2,7 +2,6 @@ import Carousel from "../components/Carousel";
 import { useGameContext } from "../context/context";
 import ErrorPage from "./NotFound";
 import { Link } from "react-router-dom";
-import './styles/Endgame.css'
 
 const EndGame = () => {
   const { state: {quizSummary} } = useGameContext()
