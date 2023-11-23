@@ -134,7 +134,7 @@ footer .footer-container p {
   position: absolute;
   top: 0;
   left: 100;
-  width: 90%;
+  width: 100%;
   height: 100%;
   background-color: #000;
   animation: 4s blackout 2s ease-in-out forwards;
@@ -145,51 +145,6 @@ footer .footer-container p {
     background-color: transparent;
   }
 }
-/* 
-.loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  position: relative;
-}
-
-.spinner {
-  position: relative;
-  width: 38rem;
-  height: 38rem;
-}
-
-.loading-title {
-  font-size: 3rem;
-  animation: 7.5s loading-title-anim ease-in infinite;
-}
-
-.loading-title-upper,
-.loading-title-lower {
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-}
-.loading-title-upper {
-  top: 33%;
-}
-.loading-title-lower {
-  top: 55%;
-}
-
-@keyframes loading-title-anim {
-  40% {
-    color: #ffffff8a;
-  }
-  50% {
-    color: #fbff00;
-  }
-  90% {
-    color: #ffffff83;
-  }
-  100% {
-    color: #000;
-  }
-} */
 
 /*? =================== */
 /*! Screens Adjustment */
@@ -375,7 +330,7 @@ footer .footer-container p {
     color: #fbff00;
     margin: 0 1rem;    
   }
-  
+
   .blackout::before {
     content: "";
     white-space: nowrap;

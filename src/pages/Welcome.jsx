@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import sound from "../assets/audio/theme.mp3";
 import { VscDebugRestart, VscMute, VscUnmute } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import '/Welcome.css'
+import './Welcome.css'
 const Welcome = () => {
   const audioRef = useRef(null);
   const [isMute, setIsMute] = useState(false);
