@@ -42,7 +42,7 @@ const Filmbar = () => {
     for (let i = 0; i < 9; i++) {
       logoArr.push({
         id: nanoid(),        
-        //  src: `../assets/logos/logo_episode0${i + 1}.png`,
+         src: `../assets/logos/logo_episode0${i + 1}.png`,
         //  src: `../../src/assets/logos/logo_episode0${i + 1}.png`,
         alt: `episode0${i + 1}`,
       });
@@ -58,12 +58,12 @@ const Filmbar = () => {
       {logos && (
         <ul className="filmbar">
           {counter !== 0 ? (
-            logos?.map((logo, idx) => {
+            logos.map((logo) => {
               return (
                 <li key={logo.id}>
                   <img
                     className="film-logo"
-                    src={`../assets/logos/logo_episode0${idx + 1}.png`}
+                    src={logo.src}
                     alt={logo.alt}
                     onClick={() => {
                       handleLogoClick(logo.alt);
