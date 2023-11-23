@@ -24,7 +24,7 @@ const routes = [
         element: <Game />,
       },
       {
-        path: "/*",
+        path: "*",
         element: <NotFound />,
       },
     ],

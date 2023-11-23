@@ -60,9 +60,11 @@
 
   .score-value {
     transform: translateY(15%);
+    background-color: aqua;
   }
   .score-title {
   transform: translateY(0%);
+  background-color:bisque;
   }
   .shared-title {
     font-size: 2vmax;    
