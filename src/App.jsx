@@ -5,7 +5,6 @@ import SharedLayout from "./layouts/SharedLayout";
 const routes = [
   {
     path: "/",
-    element: <SharedLayout />,
     children: [
       {
         index: true,
@@ -17,7 +16,12 @@ const routes = [
       },
       {
         path: "quiz",
-        element: <Game />,
+        element: (
+          <>
+            <SharedLayout />
+            <Game />
+          </>
+        ),
       },
     ],
   },

@@ -1,29 +1,19 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// // https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
-/* global process */
-import { defineConfig, loadEnv } from 'vite'
-import react from '@vitejs/plugin-react'
+// Assuming cherryPickedKeys is an array of environment variable keys
+const cherryPickedKeys = ['REACT_APP_START_PAGE'];
 
-const cherryPickedKeys = [
-  "REACT_APP_START_PAGE"
-];
-
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const processEnv = {};
+  
   cherryPickedKeys.forEach(key => processEnv[key] = env[key]);
 
   return {
-    outDir: 'build',
     define: {
       'process.env': processEnv
     },
     plugins: [react()],
-  }
-})
+  };
+});

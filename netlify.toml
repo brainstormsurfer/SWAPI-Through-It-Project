@@ -4,4 +4,4 @@ to = "/index.html"
 status = 200
 [build]
   command = "REACT_APP_START_PAGE=warning npm run build"
-  publish = "build"
+  publish = "dist"
