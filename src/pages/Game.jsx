@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Loading, EndGame } from "./index";
 import '../components/styles/sharedUI.css'
 import '../components/styles/Showcase.css'
-import '../components/styles/Filmbar.css'
 import {
   CounterUI,
   ScoreUI,
