@@ -1,6 +1,6 @@
 import Carousel from "../components/Carousel";
 import { useGameContext } from "../context/context";
-import ErrorPage from "./NotFound";
+import NotFound from "./NotFound";
 import { Link } from "react-router-dom";
 import './EndGame.css'
 
@@ -28,7 +28,7 @@ const EndGame = () => {
           <Carousel />
         </div>
         ) : (
-        <ErrorPage />
+        <NotFound />
       )}
     </>
   );
