@@ -1,9 +1,9 @@
-import './Filmbar.css'
+import './styles/Filmbar.css'
 
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 import { useGameContext } from "../context/context";
-import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, SET_QUIZ_SUMMARY } from "./ACTIONS";
+import { INCREMENT_SCORE, DECREMENT_COUNTER, SET_DISPLAYED_SCENE, SET_QUIZ_SCENES, SET_QUIZ_SUMMARY } from "../ACTIONS";
 import SpinningLetters from "./SpinningLetters";
 import { filterScenesHandler, getRandomScene } from "../utils/utils";
 

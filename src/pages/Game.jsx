@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Loading, EndGame } from "./index";
-import '../components/styles/sharedUI.css'
-import '../components/styles/Showcase.css'
+// import '../components/styles/sharedUI.css'
+// import '../components/styles/Showcase.css'
 import {
   CounterUI,
   ScoreUI,
   Filmbar,
   Showcase,
 } from "../components/index";
-import { GAME_OVER, LOADING } from "../components/ACTIONS";
+import { GAME_OVER, LOADING } from "../ACTIONS";
 import { useGameContext } from "../context/context";
 
 const Game = () => {

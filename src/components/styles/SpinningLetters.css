@@ -1,5 +1,5 @@
-main li.game-over-letter {
-  display: flex;
+.filmbar .game-over-letter {
+  display: flex;  
     font-family: "Soloist3D", sans-serif;
     font-size: 4vmin;
     color: #fbff00;
@@ -10,7 +10,7 @@ main li.game-over-letter {
     opacity: 0;
   }
   
-  main li.game-over-letter:hover {
+  .filmbar .game-over-letter:hover {
     color: #ffffff;
     box-shadow: 0px 0px 10px 1px #ffffff;
   }

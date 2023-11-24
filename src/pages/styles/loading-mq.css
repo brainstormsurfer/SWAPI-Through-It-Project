@@ -1,0 +1,143 @@
+
+@media screen and (max-width: 1880px) {
+
+
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .spinner {
+      position: relative;
+      width: 30rem;
+      height: 30rem;
+    }
+  
+    .loading-title {
+      font-family: "Starjedi", sans-serif;
+      font-weight: 100;
+      font-size: 2.5rem;
+      animation: 7.5s loading-title-anim ease-in infinite;
+    }
+  
+    .loading-title-upper,
+    .loading-title-lower {
+      font-family: "Soloist3D", sans-serif;
+      font-weight: 100;
+      letter-spacing: 0.3rem;
+      font-size: 2.5rem;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1600px) {
+    
+  }
+  
+  /* ========================== */
+  
+  @media screen and (max-width: 1200px) {
+  
+  }
+  
+  /* ========================== */
+  
+  @media screen and (max-width: 960px) {
+  
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+  
+    .spinner {
+      position: relative;
+      width: 20rem;
+      height: 20rem;
+    }
+  
+    .loading-title {
+      font-family: "Starjedi", sans-serif;
+      font-weight: 100;
+      font-size: 1.5rem;
+      animation: 7.5s loading-title-anim ease-in infinite;
+    }
+  
+    .loading-title-upper,
+    .loading-title-lower {
+      font-family: "Soloist3D", sans-serif;
+      font-weight: 100;
+      letter-spacing: 0.3rem;
+      font-size: 1.5rem;
+    }
+  }
+  /* ====================== */
+  
+  @media screen and (max-width: 688px) {
+   
+    .loading {
+      display: flex;
+      align-items: center;
+      position: relative;    
+      z-index: 10;
+      margin-top:-50px;
+    }
+    .spinner {
+      position: relative;
+      width: 20rem;
+      height: 20rem;
+    }
+  
+    .loading-title {
+      font-family: "Starjedi", sans-serif;
+      font-weight: 100;
+      font-size: 1.5rem;
+      animation: 7.5s loading-title-anim ease-in infinite;
+    }
+  
+    .loading-title-upper,
+    .loading-title-lower {
+      font-family: "Soloist3D", sans-serif;
+      font-weight: 100;
+      letter-spacing: 0.3rem;
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+  /* Galaxy Fold 280 x 653 */
+  @media screen and (max-width: 490px) {
+  
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -5rem;
+      position: relative;
+    }
+  
+    .spinner {
+      position: relative;
+      width: 17rem;
+      height: 17rem;
+    }
+  
+    .loading-title {
+      font-size: 2rem;
+      animation: 7.5s loading-title-anim ease-in infinite;
+    }
+  
+    .loading-title-upper,
+    .loading-title-lower {
+      letter-spacing: 0.5rem;
+      font-size: 1rem;
+    }
+    .loading-title-upper {
+      top: 37%;
+    }
+    .loading-title-lower {
+      top: 57%;
+    }
+}

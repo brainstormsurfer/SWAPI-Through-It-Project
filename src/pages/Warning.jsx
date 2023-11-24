@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
-import './Warning.css';
-import './warning-responsive.css';
+import './styles/Warning.css';
+import './styles/warning-mq.css';
 
 
 const Warning = () => {

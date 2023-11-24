@@ -1,0 +1,100 @@
+    
+    /* ========================== */
+    
+    @media screen and (max-width: 960px) {
+      /* .quiz-title {
+        font-size: 5vmin;   
+        white-space: nowrap;
+        z-index: 5;  
+      }
+      
+      .quiz-title .span {
+        font-family: "SfDistantGalaxy", sans-serif;
+        color: #fbff00;
+        margin: 0 1rem;    
+      } */
+    
+      .blackout::before {
+        content: "";
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        left: 100;
+        /* width: 100%; */
+        /* height: 100%; */
+        background-color: #000;
+        animation: 4s blackout 2s ease-in-out forwards;
+      }
+
+    }
+    /* ====================== */
+    
+    @media screen and (max-width: 688px) {
+     
+      /* .quiz-title {
+        font-size: 5vmin;   
+        white-space: nowrap;
+        z-index: 5;  
+      }
+      
+      .quiz-title .span {
+        font-family: "SfDistantGalaxy", sans-serif;
+        color: #fbff00;
+        margin: 0 1rem;    
+      } */
+ 
+    }
+    
+    
+    /* Galaxy Fold 280 x 653 */
+    @media screen and (max-width: 490px) {
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%;  */
+        background-color: transparent;
+      }
+      
+      /* .quiz-title {
+        font-size: 5vmin;   
+        white-space: nowrap;
+        z-index: 5;  
+      }
+      
+      .quiz-title .span {
+        font-family: "SfDistantGalaxy", sans-serif;
+        color: #fbff00;
+        margin: 0 1rem;    
+      } */
+      
+      .blackout {
+        position: relative;
+        width: 100%;
+      }
+    
+      .blackout::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        animation: 4s blackout 2s ease-in-out forwards;
+      }
+      
+      .blackout::after {
+        content: "";
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        left: -2px;
+        width: 0%;
+        height: 100%;
+        z-index: 100;
+        background-color: #000;
+      }
+    
+
+    }
+    

@@ -14,7 +14,7 @@ import {
   SET_QUIZ_SCENES,
   SET_DISPLAYED_SCENE,
   LOADING,
-} from "../components/ACTIONS";
+} from "../ACTIONS";
 
 import { getRandomScene } from "../utils/utils";
 

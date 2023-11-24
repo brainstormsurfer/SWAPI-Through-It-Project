@@ -51,9 +51,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; /*? */
   font-family: var(--font-family);
-  /* height: 100vh; */
+  height: 100dvh;
   position: relative;
+  margin: 0 auto;
+  max-width: 98vw;
 }
+/* main {  
+  max-width: 95vw;   
+  max-width: 95vw;   
+} */
 
 ul {
   list-style-type: none;

@@ -2,6 +2,8 @@
 import { socialLinks } from "../components/socials";
 import SocialLink from "../components/SocialLink";
 
+import "./styles/footer-mq.css";
+
 const Footer = () => {
   const year = new Date().getFullYear();
   return (

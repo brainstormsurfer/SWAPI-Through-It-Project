@@ -1,9 +1,5 @@
 /* ===== Shared Style for CounterUI and ScoreUI =====*/
 
-.dis-play {
-  display: none;
-}
-
 .shared-container {    
   grid-row: 3 / span 1;
   display: flex;

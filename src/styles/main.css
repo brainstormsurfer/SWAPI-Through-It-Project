@@ -2,22 +2,41 @@
   display: none;
 }
 
-header {
+* {
+  border: 1px solid red;
+}
+
+main {  
+  width: 100%;  
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.filmbar {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%; 
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 10;  
+}
+
+header  {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
   background-color: transparent;
   height: 5vmax;
 }
 
 .quiz-title {
+  /* max-width: 90%;  */
   position: relative;
   display: flex;
+  justify-self: center;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-size: 5vmax;
+  font-size:calc(4vmax - .85rem) ;
   font-family: "SoloistHalftone", sans-serif;
   color: #ffffff;
   font-weight: 100;
@@ -28,7 +47,7 @@ header {
 .quiz-title .span {
   font-family: "SfDistantGalaxy", sans-serif;
   color: #fbff00;
-  margin: 0 3rem;    
+  margin: 0 1vmax;    
 }
 
 
@@ -38,10 +57,10 @@ header {
   width: 95vw;
   display: flex;  
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   position: absolute;
   bottom: 0;  
-  transform: translateY(60vmin);
+  /* transform: translateY(60vmin); */
    background-image: linear-gradient(
     to right,
     #000,
@@ -51,6 +70,7 @@ header {
     font-family: "Poppins", sans-serif;
     color: #fff;
     z-index: 10;
+    font-size: 1vmin;
   }
   
   .footer-container {
@@ -59,7 +79,7 @@ header {
     align-items: center;
     justify-content: center;    
     height: 100%;
-    border-color: yellow;    
+    /* border-color: yellow;     */
   }
   
   footer .social {
@@ -86,13 +106,13 @@ footer .social .fa-icon {
 }
 
 footer .footer-container p {
-  font-size: 1vw;
+  font-size: 2ch;
 }
 
 .button-container {
   position: relative;
   display: flex;
-  height: 13rem;
+  /* height: 13rem; */
   width: min-content;
   justify-content: flex-start;
 }
@@ -123,7 +143,7 @@ footer .footer-container p {
 
 .blackout {
   position: relative;
-  width: 100%;
+  width: 82%;
   height: 10rem;
 }
 
@@ -145,54 +165,12 @@ footer .footer-container p {
   }
 }
 
-/*? =================== */
-/*! Screens Adjustment */
-/*? =================== */
-
-@media screen and (orientation: landscape) {
-
-  .footer-container .social {
-    position: relative;
-    justify-content: center;
-    align-self: center;
-    right: 0;
-    top: 0;
-  }
-
-  footer svg {
-    color: #fff;
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-  }
-
-  footer .social .fa-icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    border: 1.8px #fff solid;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-  }
-
-  footer .footer-container p {
-    font-size: 1.3rem;
-  }
-
-  .button-container {
-    position: relative;
-    display: flex;
-    height: 13rem;
-    width: min-content;
-    justify-content: flex-start;
-  }
-}
 
 /* ========================= */
 
-@media screen and (max-width: 1880px) {
+/* @media screen and (max-width: 1880px) { */
 
-
+/* 
   .loading {
     display: flex;
     flex-direction: column;
@@ -218,14 +196,14 @@ footer .footer-container p {
     font-weight: 100;
     letter-spacing: 0.3rem;
     font-size: 2.5rem;
-  }
-  footer {    
+  } */
+  /* footer {    
     width: 100%;
-  }
-}
+  } */
+/* } */
 
-@media screen and (max-width: 1600px) {
-  footer {
+/* @media screen and (max-width: 1600px) { */
+  /* footer {
     height: 5rem;    
     font-size: 1rem;
   }
@@ -262,14 +240,14 @@ footer .footer-container p {
     font-size: 1.2rem;
     color: #fff;
     left: 0;
-  }
-}
+  } */
+/* } */
 
 /* ========================== */
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) { */
 
-  .footer-container {
+  /* .footer-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -312,13 +290,13 @@ footer .footer-container p {
     font-size: 1.2rem;
     color: #fff;
     left: 0;
-  }
-}
+  } */
+/* } */
 
 /* ========================== */
 
-@media screen and (max-width: 960px) {
-  .quiz-title {
+/* @media screen and (max-width: 960px) { */
+  /* .quiz-title {
     font-size: 5vmin;   
     white-space: nowrap;
     z-index: 5;  
@@ -340,9 +318,9 @@ footer .footer-container p {
     height: 100%;
     background-color: #000;
     animation: 4s blackout 2s ease-in-out forwards;
-  }
+  } */
 
-  footer {
+  /* footer {
     height:3.5rem;    
   }
 
@@ -389,9 +367,9 @@ footer .footer-container p {
     top: 0;
     transform: translateX(-50%);
     white-space: nowrap;
-  }
+  } */
 
-  .loading {
+  /* .loading {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -417,13 +395,13 @@ footer .footer-container p {
     font-weight: 100;
     letter-spacing: 0.3rem;
     font-size: 1.5rem;
-  }
-}
+  } */
+/* } */
 /* ====================== */
 
-@media screen and (max-width: 688px) {
+/* @media screen and (max-width: 688px) { */
  
-  .quiz-title {
+  /* .quiz-title {
     font-size: 5vmin;   
     white-space: nowrap;
     z-index: 5;  
@@ -433,8 +411,8 @@ footer .footer-container p {
     font-family: "SfDistantGalaxy", sans-serif;
     color: #fbff00;
     margin: 0 1rem;    
-  }
-  .loading {
+  } */
+  /* .loading {
     display: flex;
     align-items: center;
     position: relative;    
@@ -460,17 +438,18 @@ footer .footer-container p {
     font-weight: 100;
     letter-spacing: 0.3rem;
     font-size: 1.5rem;
-  }
-}
+  } */
+/* } */
 
 
 /* Galaxy Fold 280 x 653 */
-@media screen and (max-width: 490px) {
+/* @media screen and (max-width: 490px) {
   body {
     height: 100%;    
     background-color: #000;
   }
-  header {
+} */
+  /* header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -514,9 +493,9 @@ footer .footer-container p {
     height: 100%;
     z-index: 100;
     background-color: #000;
-  }
+  } */
 
-  .loading {
+  /* .loading {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -545,9 +524,9 @@ footer .footer-container p {
   }
   .loading-title-lower {
     top: 57%;
-  }
+  } */
   
-  .footer-container {
+  /* .footer-container {
     position: relative;
     bottom: .25rem;
     display: flex;
@@ -602,5 +581,5 @@ footer .footer-container p {
     top: .5rem;
     transform: translateX(-50%);
     white-space: nowrap;
-  }
-}
+  } */
+/* } */

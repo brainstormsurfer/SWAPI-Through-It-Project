@@ -1,4 +1,5 @@
-import "./Loading.css";
+import "./styles/Loading.css";
+import "./styles/loading-mq.css";
 import { useGameContext } from "../context/context";
 
 const Loading = () => {
