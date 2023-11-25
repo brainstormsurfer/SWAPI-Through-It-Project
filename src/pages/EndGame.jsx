@@ -2,7 +2,6 @@ import Carousel from "../components/Carousel";
 import { useGameContext } from "../context/context";
 import { Link } from "react-router-dom";
 import './styles/Endgame.css';
-// import './styles/endGame-mq.css';
 
 
 const EndGame = () => {
