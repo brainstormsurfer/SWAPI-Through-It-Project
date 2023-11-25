@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useGameContext } from "../context/context";
 import { useNavigate } from "react-router-dom";
+import "./styles/Carousel.css";
 
 const Carousel = () => {
   const {
