@@ -23,13 +23,12 @@ main {
 header  {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   background-color: transparent;
   height: 5vmax;
+  max-width: 95%;
 }
 
 .quiz-title {
-  /* max-width: 90%;  */
   position: relative;
   display: flex;
   justify-self: center;
@@ -77,7 +76,6 @@ header  {
     align-items: center;
     justify-content: center;    
     height: 100%;
-    /* border-color: yellow;     */
   }
   
   footer .social {
@@ -140,8 +138,9 @@ footer .footer-container p {
 
 .blackout {
   position: relative;
-  width: 82%;
-  height: 10rem;
+  width: 90%;
+  margin: 0 auto;
+  /* height: 10rem; */
 }
 
 .blackout::before {

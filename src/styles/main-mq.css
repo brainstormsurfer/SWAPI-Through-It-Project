@@ -1,6 +1,5 @@
 @media screen and (max-width: 1880px) {
-  body {
-  }
+
   main {
     display: grid;  
     padding-bottom: 5rem;
@@ -49,7 +48,6 @@
     max-width: 90%;
     align-items: center;
     height: 100%;          
-    /* gap: 2vmin; */
   }
 
   .counter-title {
@@ -81,124 +79,32 @@
 
 @media screen and (max-width: 960px) {
 
-  /* main ul {
-    display: flex;
-    justify-content: center;
-    gap: 1vmax;      
-  } */
-  
-  /* main ul li {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
 
   .shared-container {
     width: min-content;
   }
 
-  .shared-title {
-    /* font-size: 4vmin; */
-    /* font-weight:100;     */
-  }
-
-  .shared-value {
-    /* font-size: 8vmin; */
-  }
 
   .counter-title {
-    /* flex-shrink: 0; */
     white-space: wrap;
     width: min-content;
   }
 
-  .counter-value {
-    /* flex-shrink: 0; */
-  }
 
   .counter-container {
-    /* grid-area: 2 / 9 / 3 / 10; */
     flex-shrink: 2;
-    /* width: 100%; */
-  }
-
- .score-container {
-    /* grid-area: 2 / 1 / 3 / 2; */
-    /* width: 100%; */
-    /* margin-left: 0rem;      */
-    /* padding-right: 2rem; */
   }
 
   .score-title {
-    /* flex-shrink: 0; */
-    /* flex-wrap: wrap; */
     transform: translateY(-35%);
   }
 
   .scene-container {
-    /* grid-area: 2 / 2 / 3 / 9; */
     flex-shrink: 0;
-    /* width:100%; */
-    /* max-width: 100%; */
-    /* align-self: flex-start;
-    justify-self: center; */
-    /* margin: 0; */
   }
 }
 
 @media screen and (max-width: 668px) {
-
-  /* main ul, 
-  main li {
-    max-height: 4rem;
-  } */
-  /* main ul {
-    display: flex;
-    justify-content: center;
-    width: 100%;  
-    gap: 1vmax;      
-  } */
-  
-  /* main ul li {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(10vmin);        
-  } */
-
-  /* main .film-logo {
-    width: 100%;
-    height: 100%;
-  }
-
-   .showcase {
-    justify-self: center;
-    align-self: center;
-  }
-  .counter-title {
-    flex-shrink: 0;
-    white-space: wrap;
-  }
-
-  .counter-value {
-    flex-shrink: 0;  
-    transform: translateY(35%);      
-  }
-
-  .counter-container {
-    grid-area: 3 / 5 / 4 / 9;
-  }
-
- .score-container {
-    grid-area: 3 / 2/ 4 / 5;    
-     }
-
-  .score-title {
-    transform: translateY(100%);      
-    
-  } */
 
   .score-title {    
     transform: translateY(5%);      
