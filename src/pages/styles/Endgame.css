@@ -3,7 +3,7 @@
   max-width: 80%;
   min-width: 400px;
   padding: 0 1rem;
-  margin: 2rem auto;
+  margin-top: 2rem;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   position: absolute;
   top: 5rem;
   left: 50%;
-  font-size: 3rem;
+  font-size: 1.5vmax;
   transform: translate(-50%, -50%);
   background-image: linear-gradient(to right, #000000, #394dff, transparent);
   background-repeat: no-repeat;

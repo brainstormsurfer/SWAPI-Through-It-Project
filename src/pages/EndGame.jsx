@@ -1,8 +1,8 @@
+import './styles/endgame-mq.css';
 import Carousel from "../components/Carousel";
 import { useGameContext } from "../context/context";
 import { Link } from "react-router-dom";
 import './styles/Endgame.css';
-
 
 const EndGame = () => {
   const { state: {quizSummary} } = useGameContext()
