@@ -1,8 +1,8 @@
 
 .endgame-container {
-  width: 80vw;
+  max-width: 80%;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
   position: relative;
 }
 
@@ -125,6 +125,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .poster-container {

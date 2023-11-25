@@ -2,16 +2,15 @@
   display: none;
 }
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 main {  
   width: 100%;  
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));  
-  padding-bottom: 10rem;  
+  padding-bottom: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .filmbar {
@@ -107,7 +106,7 @@ footer .social .fa-icon {
 }
 
 footer .footer-container p {
-  font-size: 2ch;
+  font-size: 1.2rem;
 }
 
 .button-container {

@@ -1,7 +1,7 @@
-.filmbar .game-over-letter {
+.game-over-letter {
   display: flex;  
     font-family: "Soloist3D", sans-serif;
-    font-size:4vmax;
+    font-size: 3vmin;
     color: #fbff00;
     visibility: hidden;
     animation: spin-letter 2.5s ease-in-out forwards;
@@ -10,7 +10,7 @@
     opacity: 0;
   }
   
-  .filmbar .game-over-letter:hover {
+.game-over-letter:hover {
     color: #ffffff;
     box-shadow: 0px 0px 10px 1px #ffffff;
   }

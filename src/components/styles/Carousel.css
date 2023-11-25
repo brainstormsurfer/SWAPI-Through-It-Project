@@ -67,18 +67,18 @@
   }
   
   .arrow {
-    font-size: 10rem;
+    font-size: 5rem;
     color: #fff;
     cursor: pointer;
     z-index: 10;
   }
   
   .leftArrow {
-    transform: translate(10%, 100%);
+    transform: translate(10%, -50%);
   }
   
   .rightArrow {
-    transform: translate(10%, 100%);
+    transform: translate(10%, -50%);
   }
   
   

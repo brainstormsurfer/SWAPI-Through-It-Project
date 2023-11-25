@@ -6,6 +6,9 @@
   position: relative;
 }
   
+footer {
+  margin-top: 100vh;
+}
   .spinner {
     position: relative;
     width: 33rem;

@@ -75,18 +75,6 @@
   body {
     height: 100%;
   }
-
-
-    footer {
-      bottom: 0 !important;
-    }
-
-  }
-  
-  @media screen and (max-width: 1600px) {
-    footer {
-      /* height: 5rem;     */
-    }
   
     .footer-container {
       position: relative;
@@ -234,24 +222,16 @@
   
   
   /* Galaxy Fold 280 x 653 */
-  @media screen and (max-width: 490px) {
+  /* @media screen and (max-width: 490px) {
     .footer-container {
       position: relative;
-      /* bottom: .25rem; */
       display: flex;
-      /* height: fit-content; */
       justify-content: center;
       align-items: flex-start;
       max-width: 90%;  
     }
-  
-    footer {
-      /* height: min-content; */
-      /* padding: .7rem; */
-      bottom: 0;
-    }
-    
-    .footer-container .social {
+   */
+    /* .footer-container .social {
       position: relative;
       justify-content: center;
       align-self: center;
@@ -275,7 +255,6 @@
   
     footer p {
       position: relative;
-      /* height: 2rem; */
       color: transparent;    
     }
   
@@ -287,9 +266,8 @@
       font-size: 2ch;
       color: #fff;
       left: 50%;
-      /* top: .5rem; */
-      /* transform: translateX(-50%); */
+      
       white-space: nowrap;
-    }
-  }
+    } 
+  }*/
   
