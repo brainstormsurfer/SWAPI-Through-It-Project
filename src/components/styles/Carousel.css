@@ -53,11 +53,11 @@
   }
   
   .summary-scene-correct {
-    border: 5px ridge rgb(0, 223, 67);
+    border: .3vmax ridge rgb(0, 223, 67);
   }
   
   .summary-scene-wrong { 
-    border: 5px ridge rgb(255, 0, 0);
+    border: .3vmax ridge rgb(255, 0, 0);
   }  
 
 
@@ -94,7 +94,7 @@
     gap: 1vmax;
     align-self: center;
     z-index: 10;
-    transform: translateY(-1.5vmin);
+    transform: translateY(-1.2vmin);
   }
 
   .dot {

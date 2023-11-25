@@ -3,7 +3,7 @@
   max-width: 80%;
   min-width: 400px;
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 2rem auto;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   font-family: "SfDistantGalaxy", Arial, Helvetica, sans-serif;
   white-space: nowrap;
   position: absolute;
-  top: 3rem;
+  top: 5rem;
   left: 50%;
   font-size: 3rem;
   transform: translate(-50%, -50%);
