@@ -1,9 +1,9 @@
 
 .endgame-container {
-  max-width: 80%;
+  max-width: 100%;
   min-width: 400px;
   padding: 0 1rem;
-  margin: 2rem auto;
+  margin: 6vmax auto;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   font-family: "SfDistantGalaxy", Arial, Helvetica, sans-serif;
   white-space: nowrap;
   position: absolute;
-  top: 5rem;
+  top: 2rem;
   left: 50%;
   font-size: 1.5vmax;
   transform: translate(-50%, -50%);
@@ -41,6 +41,7 @@
 }
 
 .btn-endgame {
+  left: 5%;
   color: rgb(0, 89, 255);
   position: relative;
   display: flex;

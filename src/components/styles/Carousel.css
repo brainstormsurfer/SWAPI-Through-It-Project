@@ -64,7 +64,8 @@
   .arrowContainer {
     position: absolute;
     top: 40%;    
-    width: 100%;
+    width: 70%;
+    min-width: 30%;
     display: flex;
     justify-content: space-between;
   }
