@@ -1,13 +1,15 @@
 /*? ---- style in layouts ---- */
 import { socialLinks } from "../components/socials";
 import SocialLink from "../components/SocialLink";
-
 import "./styles/footer-mq.css";
+import { useGameContext } from "../context/context";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const {state: { isLoading }} = useGameContext();
   return (
     <footer>
+    {!isLoading && 
       <div className="footer-container">
         <p data-year={year}>
           This unofficial, non-commercial fan-made website is a labor of love
@@ -28,6 +30,7 @@ const Footer = () => {
           })}
         </div>
       </div>
+    }
     </footer>
   );
 };
