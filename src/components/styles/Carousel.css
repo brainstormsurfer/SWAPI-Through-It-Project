@@ -60,7 +60,7 @@
 
   .arrowContainer {
     position: absolute;
-    top: 10%;
+    top: 40%;    
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -70,15 +70,16 @@
     font-size: 5rem;
     color: #fff;
     cursor: pointer;
+    font-size: 5vmax;
     z-index: 10;
   }
   
   .leftArrow {
-    transform: translate(10%, -50%);
+    transform: translateX(10%);
   }
   
   .rightArrow {
-    transform: translate(10%, -50%);
+    transform: translateX(10%);
   }
   
   

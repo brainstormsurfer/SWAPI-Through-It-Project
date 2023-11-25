@@ -78,6 +78,7 @@
   
     .footer-container {
       position: relative;
+      margin-top: auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -166,8 +167,9 @@
   @media screen and (max-width: 960px) {
 
     footer {
-      height:min-content;    
+      /* height:min-content;     */
       padding: .25rem;
+      min-width: 500px;
     }
   
     .footer-container {

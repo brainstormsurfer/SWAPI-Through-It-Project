@@ -51,11 +51,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; /*? */
   font-family: var(--font-family);
-  /* height: 100dvh; */
-
-  position: relative;
-  margin: 0 auto;
+  position: relative;    
   max-width: 98vw;  
+  min-height: 100dvh; 
 }
 
 ul {

@@ -35,17 +35,13 @@
     }
   
     
-    .endgame-container .button-container {
+    /* .endgame-container .button-container {
       display: flex;
       align-items: flex-start;
-      position: absolute;
-      height:10vh;
       width: 10vw;
-      top: 0;
-      position: relative;
-    }
+    } */
   
-    .button-container .btn-endgame {
+.btn-endgame {
       color: rgb(0, 89, 255);
       display: flex;
       align-items: center;
@@ -58,7 +54,7 @@
       outline: none;
       box-shadow: inset #002fff 0 0 10px 0;      
       position: absolute;
-      top: 100%;
+      top: 50%;
       left: 50%;
       transform: translate(0%, -50%);
       /* padding: 1vmin 3vmin; */
@@ -246,4 +242,12 @@
     }
     
   }
-  
+  @media screen and (max-width: 480px) {
+    .arrow {
+      font-size: 5rem;
+      color: #fff;
+      cursor: pointer;
+      font-size: 5rem;
+      z-index: 10;
+    }
+  }

@@ -1,6 +1,8 @@
 
 .endgame-container {
   max-width: 80%;
+  min-width: 400px;
+  padding: 0 1rem;
   margin: 0 auto;
   /* padding-bottom: 2rem; */
   position: relative;
@@ -137,6 +139,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 .posterStyles {
   position: relative;
