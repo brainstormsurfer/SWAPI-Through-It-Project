@@ -20,7 +20,7 @@
     padding: 2.5rem;
     justify-content: space-between;
     z-index: 1;
-    background-image: url('../assets/background-stars-top.jpeg');
+    background-image: url('../../assets/background-stars-top.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -174,7 +174,7 @@ button:hover {
     font-family: 'Roboto', Helvetica, sans-serif;
     margin: 0;
     position: relative;
-     background-image: url('../assets/background-stars-desktop.jpeg');
+     background-image: url('../../assets/background-stars-desktop.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
