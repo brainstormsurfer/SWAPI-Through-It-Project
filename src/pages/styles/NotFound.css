@@ -27,8 +27,7 @@
     background-repeat: no-repeat;
     background-size: 20vmax;
     height: 30vmax;
-    width: 30vmax;
-    z-index: 0;
+    width: 30vmax;    
   }
 
 .not_found .button-container {   
@@ -81,17 +80,19 @@ padding: 1vmax 3vmax;
     font-size: 10vmax;  
   }
   
-  .not_found-showcase .back {
-    position: relative;
-    padding-right: 1rem;
-    z-index: -2;
-  }
-  
+
+  /* first four of 4(-04) */
   .not_found-showcase .front {
     position: relative;
     z-index: 2;
   }
-
+  
+  /* second four of (40-)4 */
+  .not_found-showcase .back {
+    position: relative;
+    padding-right: 2rem;
+    z-index: -2;
+  }
     
   .not_found h2 {
     display: flex;
