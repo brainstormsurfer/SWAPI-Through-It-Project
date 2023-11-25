@@ -10,7 +10,8 @@ main {
   width: 100%;  
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));  
+  padding-bottom: 10rem;  
 }
 
 .filmbar {
